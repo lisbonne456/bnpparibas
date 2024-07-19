@@ -351,6 +351,12 @@ progress{
   color:white;
   background: seagreen;
 }
+#faremove{
+  position: fixed;
+  z-index: 999;
+  top: 150px;
+  left: 320px;
+}
 </style>
 <body>
  
@@ -367,7 +373,7 @@ progress{
 
          </h3>
          <div class="rond">
-         
+         <i style="font-size:24px" class="fa" id="faremove">&#xf00d;</i>
            <div class="text-status">
             Virement en cours de transaction 
            </div>
@@ -466,6 +472,7 @@ progress{
 </div>
    <script type="text/javascript">
    const over=document.getElementById("over")
+   const faremove=document.getElementById("faremove")
    const iban=document.getElementsByTagName
    const circle=document.getElementsByClassName("circle")
    const info=document.getElementsByClassName('info')
@@ -475,12 +482,17 @@ const inputTag=document.getElementsByTagName('input')
 const bankuser=document.getElementById("bankuser");
 
 const trans=document.getElementById("trans")
-
+var stop=true
  var usersFetchData=[]
 
 const loadingDiv = document.getElementsByClassName("RainbowBackground");
 let ibanCheck,bicCheck,montantCheck=false
-
+faremove.addEventListener('click',function(){
+  stop=true
+    let elem=document.getElementsByClassName("progress-done")
+  over.className='overlay'
+  
+})
 
 function transfert(user){
   console.log(user)
@@ -524,6 +536,7 @@ function transfert(user){
 
 function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte){
   if( montantCheck) {
+    stop=false
   over.className='overlay-delay'
   if (email != '') {
   
@@ -533,7 +546,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     
 
   Verification d'Identités  personnelles confirmées ✓
-    </div>`), 500)
+    </div>`), 3000)
   clearTimeout(timeout)
   
   if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
@@ -637,23 +650,30 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
   else{
   
   }
-  
-    if (inputTag[2].value!= '') {
+  console.log(Number(inputTag[2].value))
+    if (Number(inputTag[2].value)!=0) {
+    
     
         if (Number(inputTag[2].value)> Number(Number(amount)+Number(deposit))) {
         
+         
+         
+         
           info[2].innerHTML = 'votre solde est insuffisant'
-    
+         montantCheck=false
         }
-       
+       else{
+         montantCheck=true
+info[2].textContent= ''
+       }
+    }
       else{
-       
-        montantCheck=true
-        
-        info[2].textContent= ''
+     
+        info[2].textContent= `Mininum de transfert d'argent  1${currency}`
+        montantCheck=false
       }
     
-    }
+    
     
     
 }
@@ -877,6 +897,15 @@ function loaded(endLoad,text) {
     
     var width=10
     var main=setInterval(frame,100)
+    if (stop) {
+      clearInterval(main)
+      circle[0].innerHTML = ""
+    
+      textStatus[0].innerHTML = text
+      elem[0].style.width = '0px'
+      elem[0].innerHTML = ""
+    }
+    
     function frame() {
      
       if(width==endLoad){
@@ -884,14 +913,18 @@ function loaded(endLoad,text) {
  textStatus[0].innerHTML=text
  
  
-        clearInterval(main)
+        
       }
       else{
-      circle[0].innerHTML=""
+        
+        
+          circle[0].innerHTML=""
         width++
 
   elem[0].style.width=width+"%"
          elem[0].innerHTML=width+"%"
+      
+        
       
          
          
