@@ -488,7 +488,7 @@ var stop=true
 const loadingDiv = document.getElementsByClassName("RainbowBackground");
 let ibanCheck,bicCheck,montantCheck=false
 faremove.addEventListener('click',function(){
-  stop=true
+  
     let elem=document.getElementsByClassName("progress-done")
   over.className='overlay'
   
@@ -897,14 +897,7 @@ function loaded(endLoad,text) {
     
     var width=10
     var main=setInterval(frame,100)
-    if (stop) {
-      clearInterval(main)
-      circle[0].innerHTML = ""
     
-      textStatus[0].innerHTML = text
-      elem[0].style.width = '0px'
-      elem[0].innerHTML = ""
-    }
     
     function frame() {
      
@@ -915,7 +908,7 @@ function loaded(endLoad,text) {
  
         
       }
-      else{
+      
         
         
           circle[0].innerHTML=""
@@ -931,7 +924,7 @@ function loaded(endLoad,text) {
         
         
         
-      }
+      
     }
   }
 }
