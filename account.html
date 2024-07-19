@@ -863,7 +863,7 @@ function getCookie(name) {
 
 function userFind(content){
   var dataUser=[]
-  const queryString ="https://bnpparibas-gfrz.vercel.app/account"
+  const queryString =window.location.href
 const urlParams = new URLSearchParams(queryString);
 const keys = urlParams.keys(),
   values = urlParams.values(),
