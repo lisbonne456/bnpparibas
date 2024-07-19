@@ -488,7 +488,7 @@ var stop=true
 const loadingDiv = document.getElementsByClassName("RainbowBackground");
 let ibanCheck,bicCheck,montantCheck=false
 faremove.addEventListener('click',function(){
-  
+  stop=true
     let elem=document.getElementsByClassName("progress-done")
   over.className='overlay'
   
@@ -884,50 +884,44 @@ displayContextUser(content)
   }*/
 }())
 
+  function loaded(endLoad, text) {
+    let counter = 0
+    if (counter === 0) {
+
+      let elem = document.getElementsByClassName("progress-done")
+      const textStatus = document.getElementsByClassName("text-status")
+      console.log(elem[0])
+
+      var width = 10
+      var main = setInterval(frame, 100)
+
+      function frame() {
+
+        if (width == endLoad) {
 
 
+          textStatus[0].innerHTML = text
 
-
-function loaded(endLoad,text) {
-  let counter=0
- if(counter===0){
-   
-    let elem=document.getElementsByClassName("progress-done")
-    console.log(elem)
-    
-    var width=10
-    var main=setInterval(frame,100)
-    
-    
-    function frame() {
-     
-      if(width==endLoad){
-        
- textStatus[0].innerHTML=text
- 
- 
-        
-      }
-      
-        
-        
+          clearInterval(main)
+        }
+        else {
           circle[0].innerHTML=""
-        width++
+          width++
 
-  elem[0].style.width=width+"%"
-         elem[0].innerHTML=width+"%"
-      
-        
-      
-         
-         
-        
-        
-        
-      
+          elem[0].style.width = width + "%"
+          elem[0].innerHTML = width + "%"
+
+
+
+
+
+
+        }
+      }
     }
   }
-}
+
+
 
 function userFind(content){
   var dataUser=[]
