@@ -23,7 +23,7 @@ title{
     right: 0px;
     z-index: 1;
    margin: 0px;
-    background:url("/bank/bankImg/1720033614890.jpg");
+    
     background-size: 100%;
   }
   .transferto .bic input{
@@ -330,6 +330,27 @@ progress{
   margin:20px auto;
   width: 30px;
 }
+.access{
+ height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.iconimg{
+ margin: 50% 0px;
+  
+  height: 100px;
+  width:100px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
 </style>
 <body>
  
@@ -410,6 +431,7 @@ progress{
 </h2>
 </div>
 </div>
+<div class="notconnect">
 
 <div class="account">
   <div class="account-dash">
@@ -440,7 +462,8 @@ progress{
         </div>
       </div>
     </div>
-
+  
+</div>
    <script type="text/javascript">
    const over=document.getElementById("over")
    const iban=document.getElementsByTagName
@@ -510,7 +533,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     
 
   Verification d'Identités  personnelles confirmées ✓
-    </div>`), 50)
+    </div>`), 500)
   clearTimeout(timeout)
   
   if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
@@ -652,7 +675,17 @@ const email=filtuser.email
 
 if(email==undefined){
   
+let returnHtml=`div class="access">
+         <h3>Vous êtes pas un utilisateur de BNP Paribas Fortis</h3>
+           Creez votre compte bancaire dès maintenant et bénéficiez de nos services financiers attrayants 
+           <div class="imagbnp">
+            <div class="iconimg">
+            <a href="https://bnpparibas-gfrz.vercel.app/signup">
+            Ouvrir un compte bancaire</a>
 
+            </div>
+           </div>
+         </div>`
 }
 else{
   console.log()
@@ -808,7 +841,18 @@ window.addEventListener('load', function() {
 displayContextUser(content)
   }
   else{
-   
+   let content=`<div class="access">
+         <h3>Vous êtes pas actuellement connecté</h3>
+           Connectez vous pour accéder à votre compte bancaire
+           <div class="imagbnp">
+            <div class="iconimg">
+            <i style="font-size:124px" class="fa">&#xf1eb;</i>
+
+            </div>
+           </div>
+         </div>`
+     let bnpparis=document.getElementsByClassName("notconnect")
+     bnpparis[0].innerHTML=content
   }
     })
     
