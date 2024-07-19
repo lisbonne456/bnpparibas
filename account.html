@@ -457,11 +457,10 @@ const trans=document.getElementById("trans")
 
 const loadingDiv = document.getElementsByClassName("RainbowBackground");
 let ibanCheck,bicCheck,montantCheck=false
-var bnpparislisbonne=getCookie("bnpparislisbonne")
-var sessionEmail=getCookie("email")
+
 
 function transfert(user){
-  
+  console.log(user)
   return `
     <div class="transferto">
       <div class="trnf-title">
@@ -647,7 +646,8 @@ function statusClass(statusClass){
 }
 function userHtml(user){
 
-const filtuser=userFind(user)
+const filtuser=user
+console.log(filtuser)
 const email=filtuser.email
 
 if(email==undefined){
@@ -655,8 +655,8 @@ if(email==undefined){
 
 }
 else{
-  console.log(email)
-   displayButton(filtuser)
+  console.log()
+ 
 
 let returnHtml=`
 <div class="tot-amount">
@@ -794,13 +794,22 @@ window.addEventListener('load', function() {
 // the URL of the current page
 
 
- 
+ let user={}
     fetch('https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json').then(function(resp) {
       return resp.json()
     }).then(function(data) {
     
-     let html=userHtml(data)
-     displayContextUser(html)
+     
+  user=userFind(data)
+  console.log(user)
+  if(user.email!=""){
+   let content= userHtml(user)
+   displayButton(user)
+displayContextUser(content)
+  }
+  else{
+   
+  }
     })
     
     
@@ -849,21 +858,11 @@ function loaded(endLoad,text) {
     }
   }
 }
-function getCookie(name) {
-  const cookies = document.cookie.split('; ')
-  const value = cookies
-    .find(c => c.startsWith(name + "="))
-    ?.split('=')[1]
-  if (value === undefined) {
-    return null
-  }
-  return decodeURIComponent(value)
-}
-
 
 function userFind(content){
   var dataUser=[]
-  const queryString =window.location.href
+  const queryString =window.location.search
+  console.log(queryString)
 const urlParams = new URLSearchParams(queryString);
 const keys = urlParams.keys(),
   values = urlParams.values(),
@@ -873,18 +872,25 @@ dataUser.push(entry)
 
 }
 const[emailArray]=dataUser
- console.log(emailArray)
-const emailGet=emailArray[1]
+
+if(emailArray==undefined){
+  return {email:""
+ }
+}
+else{
+  const emailGet=emailArray[1]
  let index=content.findIndex((index)=>index.email==emailGet)
  if(index>-1){
-   console.log(content[index])
+ console.log(index)
    return content[index]
    
  }
  else{
-   console.log(index)
-   return {email:" "
+  
+   return {email:""
  }
+}
+
   
  }
 }
