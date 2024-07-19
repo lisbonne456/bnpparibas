@@ -3,968 +3,375 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BNP Paribas Fortis</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+  <title></title>
+  <style>
+  @media only screen and (max-width: 360px) {
+    
   
-</head>
-
-<style>
-
-title{
-  color: white;
-  background: white;
-}
-  body{
+    
+    body{
     position: absolute;
-    top: 0%;
-    left: 0%;
-    bottom: 0px;
-    right: 0px;
-    z-index: 1;
-   margin: 0px;
-    
-    background-size: 100%;
-  }
-  .transferto .bic input{
-    margin-bottom: 20px;
-    height:50px;
-    border: 2px solid seagreen;
-    outline: none;
-    width:300px;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 4px;
-  }
-  .inp-iban{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .transferto .iban input{
-    margin-bottom: 20px;
-    height:50px;
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    border: 2px solid whitesmoke;
-    outline: none;
-    width:300px;
-    background: seagreen;
-    border-radius: 4px;
-  }
-.transfert h2{
-  margin: 20px 0px;
-  padding: 8px 0px;
- border-radius: 2px;
-  text-align: center;
-  width:300px;
-  color:seagreen;
-  background: white;
-  
  
-}
-.transferto{
-  margin: 10px 0px 0px 0px;
-  padding:0px 0px;
-  display:flex;
-
-  justify-content: center;
- 
-  background: whitesmoke;
+    
+   margin :0px;
+   padding: 0px;
+  overflow: hidden;
+      color:white;
   
-  
-}
-.transferto h2,.transferto h4{
-  color: seagreen;
-  margin: 0px;
-}
-.transferto{
-  margin: 20px 0px 0px 0px;
-  padding:20px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: whitesmoke;
-}
-  .account{
-    margin: 0px 0px 0px 0px;
-  padding: 0px 0px 20px 0px;
-    
-  background: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .account h4,.account h3{
-    color: seagreen;
-  }
-  .account-dash{
-     font-size:20px;
-    display: flex;
-    padding: 20px 0px;
-  
-  }
-  .account span{
-   display: inline;
-    height: 5px;
-    width:15px;
-    border: 0.5px solid seagreen;
-    background:seagreen;
-    margin: 10px;
-   text-shadow: 12px 2px;
-  }
-  .account-typ{
-    font-weight: bolder;
-    font-size: 18px;
-  }
-  .bnp h2{
-   
-    margin: 0px 0px 0px 0px;
-    padding: 15px 0px;
-    color: lightseagreen;
-   text-align: center;
-   box-shadow: inset 0px 0px 22px 1px lightgrey;
-border: 2px solid whitesmoke;
-    background: white;
-    
-  }
-  .tot-amount h3{
-    border-radius: 2px;
-    color: white;
-    background:seagreen;
-   margin:0px;
-   padding:4px;
-    border-bottom:0.5px solid black;
-    text-align:center;
-  }
-  .tot-amount{
-    
-    height: 150px;
-    background: whitesmoke;
-   margin: 10px 0px;
-    
-   border-radius: 8px;
-  }
-  .money{
-    border-radius: 2px;
-   
-    width:300px;
-   padding: 18px 0px;
-  background:white;
-   font-size: 20px;
-    text-align: center;
     }
- .btn-send button{
-   margin: 0 auto;
-   text-align: center;
-   outline: none:
-   font-size:20px;
-   border:0.5px solid seagreen;
-   width:360px;
-   padding:8px;
-   background:seagreen;
-   color:white;
-   font-size:18px;
- } 
-
-.hist{
-  
-  background: whitesmoke;
-  text-align: center;
-  
-} 
-.hist h2{
-  background: seagreen;
-  
-
-}
-.svg img{
-  height: 80px;.
-  width: 80px;
- margin:20px auto;
-  border:none;
-border-radius: 50%;
-}
-
-footer {
- text-align: center;
-  background: whitesmoke;
-
-  letter-spacing: 3px;
-padding: 20px 0px;
-
-
-}
-.overlay{
-  position:fixed;
-  top: -20%;
-  bottom: 0%;left: 0%;right: 0%;
-  background: whitesmoke;
-  display:none;
- opacity: 0.5;
- transition:1s opacity;
- overflow:hidden;
-}
-.overlay-delay{
-  position:fixed;
-  top: 0%;
-  bottom: 0%;left: 0%;right: 0%;
-  background:black;
-  display:block;
- opacity: 0.98;
- overflow:hidden;
- transition-property: opacity,position,background;
- transition-duration: 1s, 500ms;
- transition-timing-function:ease-out;
- transition-delay: 0s, 2s;
-}
-
-.message{
- position: absolute;
- top: 20%;
-
- width:100%;
- z-index:100;
- opacity: 1;
- color: green;
-
- overflow: hidden;
-  background: white;
-}
-.message h2,.message h3{
-  color: seagreen;
-  text-align:center;
-  letter-spacing: 2px;
-}
-.actived{
-  margin: 20px auto;
-  text-align: center;
-  color:seagreen;
-}
-.not-actived {
- margin: 20px auto;
-  text-align: center;
-  color: red;
-}
-.actif{
-  color: seagreen;
-  background: white;
-  padding: 10px 0px;
-  text-align: center;
-}
-.text-rond{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position: relative;
- font-size: 28px;
-  height: 80px;
-  width:0px;
-  border: 1px solid seagreen;
-  border-radius:50%;
-  transform: scale(0.5);
-  
-}
-.text-status{
-  opacity: 1;
- position: relative;
- transform: translateX(0px);
- text-align: center;
- transition: opacity 5s ease;
-}
-.curr{
-  
-  font-size: 40px;
-  color: seagreen;
-}
- 
-
-.info{
-  color: red;
-}
-progress{
-   position: absolute;
-    top: 100%;
-   
-   background :whitesmoke;
-    height:30px;
-    width:400px;
-    text-align: center;
+    .account{
+ padding: 10px 0px;
+    }
+    .account h1{
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+      overflow: hidden;
+    position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  height:100%;
     
-    box-sizing:border-box;
-    border-radius:20px;
-  }
-  .progress-done{
-    font-family: sans-serif;
-    font-weight: bolder;
-    height: 100%;
-    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
-    border-radius:20px;
-  display: grid;
-  place-items: center;
-  margin: 20px auto;
-    width: 400px;
-    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
-    width: 0;
-    transition: width,5s ease; 
-    transition-timing-function: 4s;
-  }
-.processing{
-  
-  
-}
-.icon{
-  margin: 30px 0px;
-  display: flex;
-  
-  justify-content: center;
-  align-content: center;
-}
-.icon div{
-  margin-right: 10px;
-}
-.circle{
-  margin:20px auto;
-  width: 30px;
-}
-.access{
- height: 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.iconimg{
- margin: 50% 0px;
+ 
+    opacity: 0.9;
+      
+   
+      overflow: hidden;
+    }
+.signup img{
   
   height: 100px;
-  width:100px;
-  color: seagreen;
+  width: 360px;
 }
-.access a{
-  text-decoration: none;
-  padding: 10px;
-  color:white;
-  background: seagreen;
-}
-#faremove{
-  position: fixed;
-  z-index: 999;
-  top: 150px;
-  left: 320px;
-}
-</style>
-<body>
- 
-    
+    input{
   
-  <div class="overlay" id="over">
-   
-  
-  <div class="opacity">
-        <div class="message">
-          <h2>BNP Paribas Fortis</h2>
-         <h3>Send Your Money <i class="fa fa-send-o" style="font-size:25px"></i>
-        
-
-         </h3>
-         <div class="rond">
-         <i style="font-size:24px" class="fa" id="faremove">&#xf00d;</i>
-           <div class="text-status">
-            Virement en cours de transaction 
-           </div>
-
-             <div class="circle">
-              <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
-
-             </div>
-       <div class="progress">
- 
-         <div class="progress-done">
- 
-         </div>
-       </div>
-  
-</div>
-             <div class="processing">
-           <div class="icon">
-             <div>
-                <i style="font-size:24px" class="fa">&#xf1f0;</i>
-             </div>
-              
-             <div>
-                 <i class="fa fa-paypal" style="font-size:24px" aria-hidden="true"></i>
-             </div>
-               <div>
-                 <i style="font-size:24px" class="fa">&#xf179;</i>
-               </div>
-             <div>
-                 <i style="font-size:24px" class="fa">&#xf15a;</i>
-             </div>
-              <div>
-                 <i style="font-size:24px" class="fa">&#xf1f5;</i>
-              </div>
-             <div>
-                 <i style="font-size:24px" class="fa">&#xf1f1;</i>
-             </div>
-              <div>
-                 <i style="font-size:24px" class="fa">&#xf1c0;</i>
-              </div>
-             <div>
-                 <i style="font-size:24px" class="fa">&#xf1ee;</i>
-             </div>
-           </div>
-             </div>
-    </div>
-  </div>
-         </div>
-        </div>
-      </div>
-      
-  
-</div>
-
-<div class="bnp">
-  <h2>BNP Paribas Fortis
-
-<div class="svg">
-
-  <img src="https://raw.githubusercontent.com/lisbonne456/gitau/master/bnp-paribas (1).jpg" alt="">
-</h2>
-</div>
-</div>
-<div class="notconnect">
-
-<div class="account">
-  <div class="account-dash">
-      <span></span> <span></span>  
-      Your dashboard 
-  <span></span> <span></span>
-  </div>
-<div id="bankuser" class="account">
-  
-</div>
-
-
-    </div>
-  
-
-
-  </div>
- 
-  <div class="btn-send" id="trans">
-    
-  </div>
-  
-  </div>
-
-    
-    </div>
-
-        </div>
-      </div>
-    </div>
-  
-</div>
-   <script type="text/javascript">
-   const over=document.getElementById("over")
-   const faremove=document.getElementById("faremove")
-   const iban=document.getElementsByTagName
-   const circle=document.getElementsByClassName("circle")
-   const info=document.getElementsByClassName('info')
-   const textStatus=document.getElementsByClassName("text-status")
-const inputTag=document.getElementsByTagName('input')
-
-const bankuser=document.getElementById("bankuser");
-
-const trans=document.getElementById("trans")
-var stop=true
- var usersFetchData=[]
-
-const loadingDiv = document.getElementsByClassName("RainbowBackground");
-let ibanCheck,bicCheck,montantCheck=false
-faremove.addEventListener('click',function(){
-  stop=true
-    let elem=document.getElementsByClassName("progress-done")
-  over.className='overlay'
-  
-})
-
-function transfert(user){
-  console.log(user)
-  return `
-    <div class="transferto">
-      <div class="trnf-title">
-  
-        <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
-  
-      </div>
-      <div class="inp-iban">
-        <div class="iban">
-          <h4>IBAN</h4>
-       <input disabled type="text" value="${user.cardBank.iban}" placeholder="IBAN">
-        </div>
-      
-        <div class="info">
-  
-        </div>
-        <div class="iban">
-          <h4>BIC</h4>
-         <input disabled type="text" value="${user.cardBank.bic}" placeholder="BIC" >
-        </div>
-        
-        <div class="info">
-  
-        </div>
-        <div class="bic">
-         <h4>Montant</h4>
-          <input type="number" value="" placeholder="25€">
-          <div class="info">
-        </div>
-        
-  
-        </div>
-      </div>
-    </div>
- <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}")> Transfert</button>
-  `
-}
-
-function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte){
-  if( montantCheck) {
-    stop=false
-  over.className='overlay-delay'
-  if (email != '') {
-  
-  
-  const timeout = setTimeout(loaded(50, `
-  <div class="actived">
-    
-
-  Verification d'Identités  personnelles confirmées ✓
-    </div>`), 3000)
-  clearTimeout(timeout)
-  
-  if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
- 
-    const timeout = setTimeout(loaded(70, `
-    <div class="actived">
-      
-   
-              <h4>IBAN</h4>
-            Virement instantané de ${inputTag[2].value} ${currency}
-          
-            <div class="iban-transf">
-            
-     ${iban} --------->FR26493HGLlo
-            </div>
-                       </div>
-            `), 1000)
-    clearTimeout(timeout)
-    
-    
- 
-    if (status==300) {
- const timeout = setTimeout(loaded(85,
- `
- <div class="not-actived">
-   
-
- Votre compte bancaire n'est pas encore activé car votre solde montant est de 0€. <div>
-   IBAN:${iban}
- </div>
- <div>
-   BIC:${bic}
- </div>
- Veillez conctater le service financier de la banque BNP Paribas Fortis à l'adresse mail suivante pour une activation réussie 
- reunierprospere@gmail.com
-</div> `), 3000)
- clearTimeout(timeout)
-
-    
-    }
-    else {
-      if (Number(assurance)===0) {
-        if(typeofCompte=='Donation'){
-        const timeout = setTimeout(loaded(92, `
-        <div class="not-actived">
-         <h3>votre assurance risque est vide (0€).
-        </h3> 
-        Une Assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
-  
-        </div>
-                      `), 1000)
-        clearTimeout(timeout)
-        
-        
-        }
-        if(typeofCompte=="Prêt"){
-        const timeout = setTimeout(loaded(92, `
-        <div class="not-actived">
-         <h3>votre assurance risque est vide (0€).
-        </h3> 
-        Une Assurance risque est demandée par la banque BNP
-        Paribas Fortis pour  couvrir le risque d'un non remboursement d'un prêt suites à des problème financier par le bénéficiaire du prêt.
-  
-        </div>
-                      `), 1000)
-        clearTimeout(timeout)
-        
-        }
-        
-    
-        
-      }
-      else{
-        const timeout = setTimeout(loaded(99, `
-        <div class="not-actived">
-         
-       Une taxe de 5% est applicable sur tout transfert d'argent chez BNP Paribas Fortis.
-       <div>
-         Montant TTVA hors Transfert d'Argent s'élève 
-       </div>
-       <div>
-        ${ ((Number(inputTag[2].value))*(0.1)+5).toFixed(2)}
-         ${currency}
-       </div>
-            <h3>
-              ç'est presque fini
-            </h3>
-        </div>
-         
-                      `), 1000)
-        clearTimeout(timeout)
-        
-      
-      }
-      
-    }
-    
-  }
-  }
-  }
-  else{
-  
-  }
-  console.log(Number(inputTag[2].value))
-    if (Number(inputTag[2].value)!=0) {
-    
-    
-        if (Number(inputTag[2].value)> Number(Number(amount)+Number(deposit))) {
-        
-         
-         
-         
-          info[2].innerHTML = 'votre solde est insuffisant'
-         montantCheck=false
-        }
-       else{
-         montantCheck=true
-info[2].textContent= ''
-       }
-    }
-      else{
+     height:35px;
+      width:300px;
+      margin:20px 10px;
+      display: block;
+     border: 0.5px solid green;
+      border-radius: 4px;
+      font-size: 18px;
+    letter-spacing: 2px;
+      outline: none;
      
-        info[2].textContent= `Mininum de transfert d'argent  1${currency}`
-        montantCheck=false
-      }
-    
-    
-    
-    
-}
-
-function statusCheck(status){
-  if (status===420) return 'Yes'
-  else return 'Not'
-}
-function statusClass(statusClass){
-  
-  if (statusClass===420) return "actived"
-  else return 'not-actived'
-}
-function userHtml(user){
-
-const filtuser=user
-console.log(filtuser)
-const email=filtuser.email
-
-if(email==undefined){
-  
-let returnHtml=`div class="access">
-         <h3>Vous êtes pas un utilisateur de BNP Paribas Fortis</h3>
-           Creez votre compte bancaire dès maintenant et bénéficiez de nos services financiers attrayants 
-           <div class="imagbnp">
-            <div class="iconimg">
-            <a href="https://bnpparibas-gfrz.vercel.app/signup">
-            Ouvrir un compte bancaire</a>
-
-            </div>
-           </div>
-         </div>`
-}
-else{
-  console.log()
- 
-
-let returnHtml=`
-<div class="tot-amount">
-  <h3> Total Amount</h3>
-  <div class="money">
-    ${filtuser.tot_amount}
-        <div class="curr">
-          ${filtuser.currency}
-        </div>
-  </div>
-</div>
-<div class="tot-amount">
-  <h3> Total Deposit</h3>
-  <div class="money">
-    ${filtuser.tot_deposit}
-        <div class="curr">
-          ${filtuser.currency}
-        </div>
-  </div>
-</div>
-<div class="tot-amount">
-  <h3>Total Balance</h3>
-  <div class="money">
-    ${filtuser.tot_amount+filtuser.tot_deposit}
-    <div class="curr">
-         ${filtuser.currency}
-    </div>
- 
-  </div>
-</div>
-
-</div>
-<div class="transfert" id="trf-user">
-  <div class="account-dtl">
-    <h2>Account details </h2>
-  </div>
-  <div class="account-typ">
-    <h3> Service Financier</h3>
-    <div>
-     ${filtuser.typeofCompte}
-    </div>
-    <div class="account-duree">
-      <h3>Email <i class="fa fa-envelope" aria-hidden="true"></i></h3>
-      <div>
-       ${filtuser.email} 
-      </div>
-      <div class="account-typ">
-        <h3>Name</h3>
-        <div>
-         ${filtuser.name}
-        </div>
-        <div class="account-typ">
-          <h3>FirstName</h3>
-          <div>
-            ${filtuser.prenom}
-          </div>
-           <div class="account-typ">
-             <h3>Pays</h3>
-             <div>
-               ${filtuser.pays}
-             </div>
-          <div class="account-typ">
-            <h3>Frais d'assurance</h3>
-            <div>${filtuser.assurance}
-               
-                   ${filtuser.currency}
-                 
-            </div>
-            </div>
-            
-                <div class="account-typ">
-                 <h4>Contrat</h4>
-                  ${filtuser.contrat}
-                </div>
-            
-                <div class="account-typ">
-                 <h4>BankName</h4>
-                  ${filtuser.cardBank.bankName}
-                </div>
-            <div class="account-typ">
-              <h3>Carte bancaire 
-              <i class="fa fa-credit-card" aria-hidden="true"></i>
-              </h3>
-              <div>
-                <h4> IBAN
-              
-                </h4>
-              </di>
-              <div class="account-typ">
-                ${filtuser.cardBank.iban}
-              </div>
-              <div clclass="account-typ">
-                <h4>BIC</h4>
-               ${filtuser.cardBank.bic}
-              </div>
-              <div class="account-typ">
-              <h4>Status Bank Account</h4>
-              <div class="actif">
-                Activé 
-              </div>
-              <div class="${statusClass(filtuser.status)}">
-               ${
-               
-               statusCheck(filtuser.status)
-               } 
-              </div>
-             
-              </div>
-            </div>
-`
-return returnHtml
-}
-}
-function displayButton(userDetails){
-  trans.innerHTML=transfert(userDetails)
-}
-  function displayContextUser(content){
-  
-  bankuser.innerHTML=content
-  
-}
-
-window.addEventListener('load', function() {
- 
-  
-  // shirt, blue, , m
-  
-
-
-// You can get url_string from window.location.href if you want to work with
-// the URL of the current pag
-
-
-// You can get url_string from window.location.href if you want to work with
-// the URL of the current page
-
-
- let user={}
-    fetch('https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json').then(function(resp) {
-      return resp.json()
-    }).then(function(data) {
-    
-     
-  user=userFind(data)
-  console.log(user)
-  if(user.email!=""){
-   let content= userHtml(user)
-   displayButton(user)
-displayContextUser(content)
-  }
-  else{
-   let content=`<div class="access">
-         <h3>Vous êtes pas actuellement connecté</h3>
-           Connectez vous pour accéder à votre compte bancaire
-           <div class="imagbnp">
-            <div class="iconimg">
-            <i style="font-size:124px" class="fa">&#xf1eb;</i>
-
-            </div>
-           </div>
-         </div>`
-     let bnpparis=document.getElementsByClassName("notconnect")
-     bnpparis[0].innerHTML=content
-  }
-    })
-    
-    
-  
-  /*else{
-  
-    location.href="https://sites.google.com/view/bnpparisecuadore/accueil/bnpparissingnup?authuser=0"
-  }*/
-}())
-
-  function loaded(endLoad, text) {
-    let counter = 0
-    if (counter === 0) {
-
-      let elem = document.getElementsByClassName("progress-done")
-      const textStatus = document.getElementsByClassName("text-status")
-      console.log(elem[0])
-
-      var width = 10
-      var main = setInterval(frame, 100)
-
-      function frame() {
-
-        if (width == endLoad) {
-
-
-          textStatus[0].innerHTML = text
-
-          clearInterval(main)
-        }
-        else {
-          circle[0].innerHTML=""
-          width++
-
-          elem[0].style.width = width + "%"
-          elem[0].innerHTML = width + "%"
-
-
-
-
-
-
-        }
-      }
     }
+    
+  .password ,.email{
+    font-style: bold;
+    text-shadow: 2px 2px 8px lightgreen;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 30px auto;
+    width:100px;
+    color: seagreen;
   }
-
-
-
-function userFind(content){
-  var dataUser=[]
-  const queryString =window.location.search
-  console.log(queryString)
-const urlParams = new URLSearchParams(queryString);
-const keys = urlParams.keys(),
-  values = urlParams.values(),
-  entries = urlParams.entries();
-for (const entry of entries) {
-dataUser.push(entry)
-
-}
-const[emailArray]=dataUser
-
-if(emailArray==undefined){
-  return {email:""
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   font-size: 18px;
+   width:100%;
+    }
+    button{
+      padding:10px 0px;
+     width: 300px;
+        background: white;
+        color:seagreen;
+        border: 0.5px solid darkgreen;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: darkgreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+      text-align: center;
+      font-size:18px;
+      margin: 5px auto;
+    }
+  
+ 
+ #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: absolute;
+   color: black;
+  padding: 20px 10px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 200;
+   top:-400px;
+   left: 0px;
+   background: whitesmoke;
+  
+ 
+   transition :top 3s ease;
  }
+ footer {
+   position:fixed;
+   top: 0px;
+  bottom: 0px;
+  margin: 600px 40px;
+  color:seagreen;
+
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-align: center;
+  
 }
-else{
-  const emailGet=emailArray[1]
- let index=content.findIndex((index)=>index.email==emailGet)
+
+  }
+  </style>
+</head>
+
+
+
+<body>
+  <div id="headears">
+    <header>
+   
+    </header>
+  
+  <div id="isCompte">
+    <div>
+      Vous n'aviez pas de compte chez BNP Paribas Fortis.
+      Veillez vous approchez de l'une de nos agences bancaires près de chez ou contactez par mail nôtre service financier pour en faire la demande de création de votre compte bancaire
+    </div>
+  </div>
+
+ 
+
+
+<div class="signup">
+  <img src="https://raw.githubusercontent.com/lisbonne456/gitau/master/bnp-paribas (1).jpg" alt="">
+  <div class="account">
+ <h1>BNP Paribas Fortis</h1> 
+
+    <div class="email">
+      MailBox@ </div>
+      <div>
+           <input id="mail" type="text"placeholder="r@gmail.com" value="" />
+      </div>
+   
+       <div class="info">
+    
+       </div>
+     <div class="password">
+       Password
+       
+     </div>
+     <div>
+           <input id="passw" type="password" placeholder="secretpassword" value=""/>
+     </div>
+
+   <div class="info">
+     
+   </div>
+ 
+</div>
+ <div class="btn-sign">
+         <button id=" btn"type="button" onclick="add()" >
+         signup
+         </button>
+     </div>
+       
+       </div> 
+      
+      </div>
+     
+     <script type="text/javascript" charset="utf-8">
+   
+     var userConnectMail='',userConnectPassword=""
+     const isCompte=document.getElementById("isCompte")
+     
+     const btn=document.getElementById('btn')
+     const password = document.getElementById('passw')
+     const mail = document.getElementById("mail")
+     const info=document.getElementsByClassName('info')
+     
+     mail.addEventListener("focus",function(){
+       isCompte.style.top='-400px'
+     })
+     password.addEventListener("focus", function() {
+       isCompte.style.top = '-400px'
+     })
+   function add(){
+    
+     if(password.value!=''&& mail.value!=''){
+       userConnectMail=userFindEmail(mail.value,contenu)
+       userConnectPassword=userFindPassword(password.value,contenu)
+       if(password.value.length>=8){
+         
+         info[1].innerHTML=""
+       }
+       else{
+         info[1].innerHTML='password should have lenght 8'
+       }
+     if(mail.value!=''){
+    
+       const index = mail.value.indexOf('@')
+       if (index > -1) {
+         info[0].innerHTML = ''
+       }
+       else {
+         info[0].innerHTML = 'Email should contain @ '
+       }
+     }
+     
+     
+     if(mail.value==userConnectMail.email& password.value==userConnectMail.password){
+   
+     const link=document.getElementById("link")
+       
+ window.location.href=`http://localhost:7700/bank/account.html?authuser=${mail.value}`
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+       
+       
+     }
+     else{
+      
+  isCompte.style.top='0px'
+     }
+     }
+     else{
+       if(mail.value==''){
+     
+         info[0].innerHTML='veillez renseigner le champ Mail'
+       }
+       if(password.value==''){
+       
+         info[1].textContent="veillez renseigner le champ password"
+       }
+       if(mail.value!=''){
+       
+          userConnectMail=userFindEmail(mail.value,contenu)
+         const index=mail.value.indexOf('@')
+         if(index>-1){
+           info[0].innerHTML=''
+         }
+         else{
+           info[0].innerHTML='Email should contain @ '
+         }
+        
+       }
+       if(password.value!=''){
+       userConnectPassword  =userFindPassword(password.value,contenu)
+     
+         info[1].textContent=''
+       
+         
+       }
+     }
+   }
+   
+   
+   function setCookie(name, value, days) {
+     const date = new Date()
+     date.setDate(date.getDate() + days)
+     document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path="/"`
+   }
+   
+   var contenu=[]
+   
+  
+  function userFetchInfo(user){
+ return user
+  }
+  
+function userFindEmail(mail,content){
+ 
+ 
+ let index=content.findIndex((index)=>index.email==mail )
  if(index>-1){
- console.log(index)
    return content[index]
    
  }
  else{
-  
-   return {email:""
+   return {email:''
  }
-}
-
   
  }
 }
-</script>
+function userFindPassword(password,content){
+  
+  let index= content.findIndex((pass)=>pass.password==password)
+  if(index>-1){
+   return content[index]}
+ else{
+   return {password:''
+ }
+  
+ }
+ 
+}
 
 
-</body>
-    <footer>
-    All right reserved ©2024
+
+
+
+
+function getCookie(name) {
+  const cookies = document.cookie.split('; ')
+  const value = cookies
+    .find(c => c.startsWith(name + "="))
+    ?.split('=')[1]
+  if (value === undefined) {
+    return null
+  }
+  return decodeURIComponent(value)
+}
+let sessionEmail=""
+let bnpparislisbonne=""
+window.onload=function(){
+  fetch('https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json').then(function(resp) {
+    return resp.json()
+  }).then(function(data) {
+  
+  
+   contenu=(userFetchInfo(data))
+  
+  })
+  
+  if(sessionEmail!=null|| sessionEmail!=undefined && bnpparislisbonne!=null||bnpparislisbonne!=undefined){
    
-    
+  }
+  
+}
+   console.log(window.innerHeight)
+
+     </script>
+    <footer>
+      All Right Reserved ©2024
     </footer>
+</body>
+
 </html>
