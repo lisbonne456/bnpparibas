@@ -848,13 +848,15 @@ window.addEventListener('load', function() {
     }).then(function(data) {
     
      
- 
+ let cookies=getCookie('email')
+ console.log(cookies+'okay')
   
   if(cookies!=undefined && cookies!=''){
-   let content= userHtml(cookies)
-   displayButton(cookies)
+    user=userFind(cookies,data)
+   let content= userHtml(user)
+   displayButton(user)
 displayContextUser(content)
-window.location.href="https://ytmp3s.nu/PyDK/"
+
   }
   else{
    let content=`<div class="access">
@@ -927,43 +929,22 @@ function getCookie(name) {
   }
   return decodeURIComponent(value)
 }
-let cookies=getCookie('email')
 
 
-function userFind(content){
-  var dataUser=[]
-  const queryString =window.location.search
-  console.log(queryString)
-const urlParams = new URLSearchParams(queryString);
-const keys = urlParams.keys(),
-  values = urlParams.values(),
-  entries = urlParams.entries();
-for (const entry of entries) {
-dataUser.push(entry)
 
-}
-const[emailArray]=dataUser
+function userFind(userCookie,content){
+  
 
-if(emailArray==undefined){
-  return {email:""
- }
-}
-else{
-  const emailGet=emailArray[1]
- let index=content.findIndex((index)=>index.email==emailGet)
+ 
+ let index=content.findIndex((index)=>index.email==userCookie)
  if(index>-1){
  console.log(index)
    return content[index]
    
  }
- else{
-  
-   return {email:""
- }
-}
+ 
 
   
- }
 }
 </script>
 
