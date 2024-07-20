@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap');
+*{
+margin:0;  
+padding:0;
+box-sizing:border-box;
+}  
+
+body{
+background:#131418;  
+font-family: 'poppins', sans-serif;
+}
+
+.container{
+padding:20px;   
+width:330px;
+background:white;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+border-radius:7px;
+}
+
+.container .app-name{
+height:40px;   
+width:100%;
+position:absolute;
+top:0;
+left:0;
+border-top-left-radius:7px;
+border-top-right-radius:7px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+display:flex;
+align-items:center;
+padding:10px 10px 10px 20px;
+font-size:13px;
+color:#131418;
+}
+
+.container fieldset{
+all:unset; 
+border:1px solid grey;
+border-radius:3px;
+height:50px;
+}
+
+.container fieldset span{
+margin-left:8px;   
+position:absolute;
+font-size:16px;
+}
+
+.container fieldset input{
+all:unset;
+height:35px;
+width:90%;
+margin-top:-10px; 
+font-size:14px;
+}
+
+.container fieldset legend{
+margin-left:10px;    
+font-size:13px;
+color:grey;
+}
+
+.container .fieldset-one{
+margin-top:40px;  
+width:100%;
+}
+
+.container .fieldset-one input{
+margin-left:25px;
+}
+
+.container .fieldset-two,.container .fieldset-three{
+width:45%;
+margin-top:10px;
+float:left;
+}
+
+.container .fieldset-three{
+margin-left:25px;        
+}
+
+.container .fieldset-two span,.container .fieldset-three span{
+margin-left:80px;       
+}
+
+.container .fieldset-two input,.container .fieldset-three input{
+width:65px;  
+padding-left:10px;
+}
+
+.container .fieldset-three input{
+width:90px;        
+}
+
+.container .fieldset-three span{
+margin-left:110px;       
+}
+
+.container .calculate-btn{
+all:unset; 
+height:40px;
+width:100%;
+color:white;
+background:black;
+border-radius:3px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+top:15px;
+cursor:pointer;
+}
+
+.container .result{
+margin-top:40px;
+height:190px;
+width:100%;
+background:#F5F5F5;
+border-radius:3px;
+padding:10px;
+}
+
+.container table{
+border-collapse:collapse;  
+width:100%;
+}
+
+.container table tr td{
+padding:8px;   
+border-bottom:1px solid grey;
+font-size:16px;
+}
+
+.container table tr td:nth-child(even){
+color:#3CB371;
+text-align:center;
+padding-left:15px;
+}
+
+.container table tr td:nth-child(odd){
+color:#696969;      
+font-size:15px;
+}
+
+::selection{
+color:white;        
+background:#000;        
+}
