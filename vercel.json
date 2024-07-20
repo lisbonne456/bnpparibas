@@ -4,6 +4,6 @@
         {"source": "/signup", "destination": "/signup.html"},
         {"source": "/account", "destination": "/account.html"},
         {"source": "/loan", "destination": "/Loan.html"},
-        {"source": "/signin", "destination": "/index.html"}
+        {"source": "/signin", "destination": "/signin.html"}
     ]
 }
