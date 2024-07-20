@@ -3,6 +3,6 @@
         {"source": "/", "destination": "/bank.html"},
         {"source": "/signup", "destination": "/signup.html"},
         {"source": "/account", "destination": "/account.html"},
-        {"source": "/load", "destination": "/loan.html"}
+        {"source": "/loan", "destination": "/Loan.html"}
     ]
 }
