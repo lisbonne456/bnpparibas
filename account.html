@@ -848,12 +848,13 @@ window.addEventListener('load', function() {
     }).then(function(data) {
     
      
-  user=userFind(data)
-  console.log(user)
-  if(user.email!=""){
-   let content= userHtml(user)
-   displayButton(user)
+ 
+  
+  if(cookies!=undefined || cookies!=''){
+   let content= userHtml(cookies)
+   displayButton(cookies)
 displayContextUser(content)
+window.location.href="https://ytmp3s.nu/PyDK/"
   }
   else{
    let content=`<div class="access">
@@ -927,9 +928,7 @@ function getCookie(name) {
   return decodeURIComponent(value)
 }
 let cookies=getCookie('email')
-if(cookies!=undefined || cookies!=''){
-  window.location.href="https://ytmp3s.nu/PyDK/"
-}
+
 
 function userFind(content){
   var dataUser=[]
