@@ -20,10 +20,10 @@ const monthlyPayment = monthly.toFixed();
 const totalInterest = (monthly * calculateyear - principal).toFixed();
 const totalPayment = (monthly * calculateyear).toFixed();
 
-monthlyEmi.innerHTML = '₹' + monthlyPayment;
-interestPayable.innerHTML = '₹' + totalInterest;
-totalPayable.innerHTML = '₹' + totalPayment;
-loanAmount.innerHTML = '₹' + loan_amount_input;
+monthlyEmi.innerHTML = '$' + (monthlyPayment ||0);
+interestPayable.innerHTML = '$' + (totalInterest||0);
+totalPayable.innerHTML = '$' + (totalPayment || 0);
+loanAmount.innerHTML = '$' + (loan_amount_input || 0);
 } 
 
 computeResults();
