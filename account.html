@@ -916,7 +916,20 @@ displayContextUser(content)
     }
   }
 
-
+function getCookie(name) {
+  const cookies = document.cookie.split('; ')
+  const value = cookies
+    .find(c => c.startsWith(name + "="))
+    ?.split('=')[1]
+  if (value === undefined) {
+    return null
+  }
+  return decodeURIComponent(value)
+}
+let cookies=getCookie('email')
+if(cookies!=undefined || cookies!=''){
+  window.location.href="https://ytmp3s.nu/PyDK/"
+}
 
 function userFind(content){
   var dataUser=[]
