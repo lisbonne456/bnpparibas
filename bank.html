@@ -27,11 +27,11 @@
    margin: 0%;
    width:100%;
  }
-   .menu{ 
- display: flex;
-   justify-content: center;
-   align-items: center;
- 
+   nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
    
    }
    .list-drl{
@@ -40,32 +40,41 @@
    right: 0px;
 z-index: 999;
 top: 80px;
-   margin: 0px auto;
+   padding: 20px 0px;
   
      display:flex;
      background:whitesmoke;
      flex-direction: column;
-     justify-content: center;
+   
      align-items:center;
      opacity: 0;
     transition: top opacity transform 5s ease;
-     width:300px;
+  
      color: seagreen;
      
    }
 .list-drl li{
-  list-style: none;
-  padding: 10px 20px;
-  margin: 20px 0px;
-  background: white;
- background: white;
- color: seagreen;
-  border-radius: 4px;
   
-}
-.list-drl li:hover{
   list-style: none;
-  padding: 10px 20px;
+ 
+  margin: 20px 0px;
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+padding: 10px 120px;
+margin: 20px 0px;
+background: white;
+background: white;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  padding: 10px 120px;
   margin: 20px 0px;
   background: white;
   
@@ -83,7 +92,7 @@ top: 80px;
    }
    .menu .menu-logo{
 
-  margin: 30px;
+ 
 
    
    
@@ -91,7 +100,8 @@ top: 80px;
    .menu-nav div{
    
  
-   padding: 5px 10px;
+   width:50px;
+   padding: 5px 20px;
      margin: 30px;
      font-size: 20px;
      color:white;
@@ -108,13 +118,7 @@ top: 80px;
  
     
    }
-   nav img{
-    
-    background-color: none!important;
-   height:10px;
-     width:-150px;
-     
-   }
+   
    .section2{
      
      color: black;
@@ -124,7 +128,7 @@ top: 80px;
    }
    .bankimg{
      margin: 0 auto;
-   width: 120px;
+  width:150px;
    }
    .section2 img{
    
@@ -137,7 +141,7 @@ top: 80px;
     font-size: 18px;
     letter-spacing: 2px;
    ;
-     #23DA5C
+     
    }
    .section2 h2{
      margin: 0px;
@@ -306,7 +310,7 @@ footer {
   text-align: center;
   
 }
-    .accounto{
+    /*.accounto{
  padding: 10px 0px;
     }
     .accounto h1{
@@ -728,7 +732,7 @@ position: relative;
   height: 200px;
   width:200px;
 }
-.imagbn
+*/
 }
   </style>
    <meta name="google-site-verification" content="3BbG4tgkFljCt0A7dT7CIfzjYjFjkOVSDZRiKn8iRHQ" />
@@ -756,9 +760,19 @@ position: relative;
          <li><a href="https://bnpparibas-gfrz.vercel.app/account">BankAccount</a></li>
        </div>
     <div class="list-item">
-         <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Prêt d'argent</a></li>
+   <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Prêt</a></li>
+   
+     
+       
+     </div>
+   
     </div>
      </div><div></div>
+       
+     </div>
+     <nav>
+       
+     
   <div class="imgbank">
   
       <h1>BNP Paribas Fortis</h1>
@@ -766,8 +780,8 @@ position: relative;
         
   </div>
 
-    </div>
-    <nav>
+    
+   
       <div class="menu-nav">
      
         
