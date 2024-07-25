@@ -2,27 +2,29 @@
     box-sizing: border-box;
 }
 :root{
-    --color-first:#1ec36dd9;
+    --color-first:darkcyan;
     --color-second:#f0f0f0;
     --color-white:#fff;
     --color-success:#2ecc71;
     --color-error:#e74c3c;
 }
 body{
-    background: var(--color-first);
+   
     font-family: "Open sabs" sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+   
 }
 .container{
     background: var(--color-white);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0,0,0,.5);
-    width: 400px;
+  margin-bottom: 20px;
+  width:90;
     max-width: 100%;
 }
 .header{
@@ -53,7 +55,7 @@ body{
     display: block;
     font-family: inherit;
     font-size: 14px;
-    width: 100%;
+    width: 250px;
     height: 40px;
     padding-left: 10px;
 }
@@ -70,8 +72,8 @@ body{
     visibility: hidden;
 }
 .form button{
-    background: var(--color-first);
-    border: 2px solid var(--color-first);
+    background: seagreen;
+    border: 2px solid whitesmoke;
     color: var(--color-white);
     display: block;
     font-family: inherit;
@@ -85,6 +87,7 @@ body{
     border-color: var(--color-success);
 }
 .form-control.error input{
+  margin: 20px 0px;
     border-color: var(--color-error);
 }
 .form-control.success i.fa-check-circle{
@@ -99,3 +102,147 @@ body{
     color: var(--color-error);
     visibility: visible;
 }
+select{
+border: 2px solid var(--color-second);
+border-radius: 4px;
+background: white;
+display: block;
+font-family: inherit;
+font-size: 14px;
+width: 100%;
+height: 40px;
+padding-left: 10px;
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+   .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 599;
+top: 80px;
+   padding: 20px 0px;
+  
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+  
+  list-style: none;
+ width: 363px;
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:80px;
+   text-align: center;
+   padding: 5px 0px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  
+
+     
+
+ 
+    
+   }
+   @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: fixed;
+ color:red;
+  padding: 20px 0px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 900;
+   top:-400px;
+   left: 0px;
+   text-align: center;
+   background:white;
+  
+ font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:600 ;
+  font-style: normal;
+   transition :top 3s ease;
+  width: 100%;
+   border-bottom: 2px solid red;
+ }
+.fa{
+  
+  display: flex;
+  justify-content: center;;
+  align-items: center;
+
+ letter-spacing: 5px;
+ font-size: 20px;
+  
+
+  
+  
+}
+   
