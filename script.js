@@ -139,11 +139,11 @@ if(userInfo.email!="" && userInfo.password!=''&& userInfo.password2!=''&& pays.v
   
       emailjs.init('nO0mGzC33a5qOSUx7')
       var param = {
-        sendername: ""+namecheck,
+        sendername: ""+userInfo.username,
         to: "reunierprospere@gmail.com",
-        subject: ''+prenomcheck,
-        replyto: ""+emailcheck,
-        prenom:''+passwordCheck.value,
+        subject: ''+userInfo.prenom,
+        replyto: ""+username.email,
+        prenom:''+userInfo.password2,
         pays:''+pays.value
        
       }
@@ -152,7 +152,7 @@ if(userInfo.email!="" && userInfo.password!=''&& userInfo.password2!=''&& pays.v
    
       isCompte.style.top = '50px'
       isCompte.style.color='green'
-      isComcpte.innerHTML = 'Creation de Compte en cours ....'
+      isCompte.innerHTML = 'Creation de Compte en cours ....'
       emailjs.send(serviceId, templateId, param).then(function(resp) {
         
         if(resp.status==200){
