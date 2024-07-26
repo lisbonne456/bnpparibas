@@ -313,7 +313,7 @@ justify-content: center;
    
   </div>
 
- 
+ <div id="google_translate_element"></div>
     <nav>
          
   <div class="imgbank">
@@ -879,7 +879,7 @@ justify-content: center;
         </div>
         <div style="" class="col text-center ">
      <div class="calculator-button d-grid my-3" style="margin:20px auto;width: 200px" >
-                      <button id="frage" type="button" class="p-button p-button-primary  btn btn-secondary btn-block " style=" width: 200px;border: none; border-radius: 4px;outline: none;background: seagreen;padding: 8px 0px;color: whitesmoke;font-size: 18px"><b><font ><font >Prêter</font></font></b></button>
+                      <button id="frage" type="button" class="p-button p-button-primary  btn btn-secondary btn-block " style=" width: 200px;border: none; border-radius: 4px;outline: none;background: seagreen;padding: 8px 0px;color: whitesmoke;font-size: 18px;margin: 20px 0px"><b><font ><font >Crédit acceptés</font></font></b></button>
                 </div>
             </div>
       </div>
@@ -1170,5 +1170,13 @@ function extrUser(user){
 }
 
 </script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </body>
 </html>
