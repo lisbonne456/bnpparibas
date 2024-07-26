@@ -370,7 +370,7 @@ nav{
    right: 0px;
 z-index: 999;
 top: 80px;
-margin: 30px 0px;
+margin: 80px 0px;
    padding: 20px 0px;
   
      display:none;
@@ -664,8 +664,8 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
   
 
   
-  if(bankInter==false){
-    
+  if(bankInter==0){
+    console.log(bankInter+'interna')
     const timeout = setTimeout(loaded(50, `
       <div class="actived">
         
@@ -709,63 +709,42 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     
     
     }
-          if (Number(assurance)=== 0) {
-            if (typeofCompte == 'Donation') {
-              const timeout = setTimeout(loaded(92, `
+      else{
+        if (assurance== 0) {
+      if (typeofCompte == 'Donation') {
+        const timeout = setTimeout(loaded(92, `
+                <div class="not-actived">
+                 <h3>votre assurance risque est vide (0€).
+                </h3> 
+                une assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
+          
+                </div>
+                              `), 1000)
+        clearTimeout(timeout)
+      }
+      if (typeofCompte == "Prêt") {
+        const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
              <h3>votre assurance risque est vide (0€).
             </h3> 
-            une assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
+            une assurance est demandée par la banque BNP
+            Paribas Fortis pour  couvrir en cas de non remboursement d'un crédit  financiers par le bénéficiaire du credit financier.
       
             </div>
                           `), 1000)
-              clearTimeout(timeout)
-            }
-            if(typeofCompte=="Prêt"){
-        const timeout = setTimeout(loaded(92, `
-        <div class="not-actived">
-         <h3>votre assurance risque est vide (0€).
-        </h3> 
-        une assurance est demandée par la banque BNP
-        Paribas Fortis pour  couvrir en cas de non remboursement d'un crédit  financiers par le bénéficiaire du credit financier.
-  
-        </div>
-                      `), 1000)
         clearTimeout(timeout)
-        
-        }
-        
+    
+      }
+    
+    }      
 
             } 
-          else{
-        const timeout = setTimeout(loaded(99, `
-        <div class="not-actived">
          
-       Une taxe de 10% est applicable sur tout transfert d'argent chez BNP Paribas Fortis.
-       <div>
-         Transfert d'Argent hors Montant s'élève Montant TTVA
-       </div>
-       <div>
-        ${ ((Number(inputTag[1].value))*(0.1)+5).toFixed(2)}
-         ${currency}
-       </div>
-            <h3>
-              ç'est presque fini
-            </h3>
-        </div>
-         
-                      `), 1000)
-        clearTimeout(timeout)
-        
-      
       }
-      
     }
-
-    }
-    else {
-      console.log('superbe')
-          const timeout = setTimeout(loaded(50, `
+      else{
+        console.log(bankInter+'interna')
+    const timeout = setTimeout(loaded(50, `
       <div class="actived">
         
     
@@ -773,18 +752,18 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         </div>`), 3000)
     clearTimeout(timeout)
     console.log(bankInter+'yeah')
-    if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
- console.log('bah')
+    if (Number(amount) +Number(deposit)>= Number(inputTag[1].value)) {
+ 
     const timeout = setTimeout(loaded(70, `
     <div class="actived">
       
    
               <h4>IBAN</h4>
-            Virement instantané de ${inputTag[2].value} ${currency}
+            Virement instantané de ${inputTag[1].value} ${currency}
           
             <div class="iban-transf">
             
-  BNP Paribas Fortis vers ${iban}
+  BNP Paribas Fortis vers ${id}
             </div>
                        </div>
             `), 1000)
@@ -796,10 +775,10 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
        
     
      Votre compte bancaire n'est pas encore activé car votre solde montant est de 0€. <div>
-       IBAN
+       Numéro Compte Bancaire (ID)
      </div>
      <div>
-       IBAN:${iban}
+       N° Compte Bancaire :${id}
      </div>
      Veillez conctater le service financier de la banque BNP Paribas Fortis à l'adresse mail suivante pour une activation réussie 
      reunierprospere@gmail.com
@@ -808,61 +787,43 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     
     
     }
-          if (Number(assurance)=== 0) {
-            if (typeofCompte == 'Donation') {
-              const timeout = setTimeout(loaded(92, `
+      else{
+        if (assurance== 0) {
+      if (typeofCompte == 'Donation') {
+        const timeout = setTimeout(loaded(92, `
+                <div class="not-actived">
+                 <h3>votre assurance risque est vide (0€).
+                </h3> 
+                une assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
+          
+                </div>
+                              `), 1000)
+        clearTimeout(timeout)
+      }
+      if (typeofCompte == "Prêt") {
+        const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
              <h3>votre assurance risque est vide (0€).
             </h3> 
-            une assurance est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
+            une assurance est demandée par la banque BNP
+            Paribas Fortis pour  couvrir en cas de non remboursement d'un crédit  financiers par le bénéficiaire du credit financier.
       
             </div>
                           `), 1000)
-              clearTimeout(timeout)
-            }
-            if(typeofCompte=="Prêt"){
-        const timeout = setTimeout(loaded(92, `
-        <div class="not-actived">
-         <h3>votre assurance risque est vide (0€).
-        </h3> 
-        une assurance risque est demandée par la banque BNP
-        Paribas Fortis pour  couvrir en cas de non remboursement d'un crédit par le bénéficiaire du crédit.
-  
-        </div>
-                      `), 1000)
         clearTimeout(timeout)
-        
-        }
-        
+    
+      }
+    
+    }      
 
-            } 
-          else{
-        const timeout = setTimeout(loaded(99, `
-        <div class="not-actived">
+            
          
-       Une taxe de 10% est applicable sur tout transfert d'argent chez BNP Paribas Fortis.
-       <div>
-         Transfert d'Argent hors Montant s'élève Montant TTVA
-       </div>
-       <div>
-        ${ ((Number(inputTag[1].value))*(0.1)+5).toFixed(2)}
-         ${currency}
-       </div>
-            <h3>
-              ç'est presque fini
-            </h3>
-        </div>
-         
-                      `), 1000)
-        clearTimeout(timeout)
-        
+      }
+    }
       
       }
       
-    }
-
-      
-    }
+    
   }
     
    
@@ -1203,7 +1164,7 @@ window.addEventListener('load', function() {
 
 
  let user={}
-    fetch('https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json').then(function(resp) {
+    fetch("https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json").then(function(resp) {
       return resp.json()
     }).then(function(data) {
     
