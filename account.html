@@ -355,6 +355,7 @@ progress{
 }
 #faremove{
   position: fixed;
+  display: none;
   z-index: 999;
   top: 150px;
   left: 320px;
@@ -668,6 +669,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
   
   if(bankInter==0){
     console.log(bankInter+'interna')
+   
     const timeout = setTimeout(loaded(50, `
       <div class="actived">
         
@@ -693,6 +695,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
             `), 1000)
     clearTimeout(timeout)
     if (status == 300) {
+      
       const timeout = setTimeout(loaded(85,
         `
      <div class="not-actived">
@@ -714,6 +717,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
       else{
         if (assurance== 0) {
       if (typeofCompte=='Donation') {
+     
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
                  <h3>votre assurance risque est vide (0€).
@@ -723,8 +727,10 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
                 </div>
                               `), 1000)
         clearTimeout(timeout)
+        faremove.style.display='block'
       }
       if (typeofCompte == "crédit") {
+        
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
              <h3>votre assurance risque est vide (0€).
@@ -746,6 +752,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     }
       else{
         console.log(bankInter+'interna')
+    
     const timeout = setTimeout(loaded(10, `
       <div class="actived">
         
@@ -771,6 +778,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
             `), 1000)
     clearTimeout(timeout)
     if (status == 300) {
+      faremove.style.display='block'
       const timeout = setTimeout(loaded(85,
         `
      <div class="not-actived">
@@ -792,6 +800,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
       else{
         if (assurance== 0) {
       if (typeofCompte == 'Donation') {
+    
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
                  <h3>votre assurance risque est vide (0€).
@@ -801,8 +810,10 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
                 </div>
                               `), 1000)
         clearTimeout(timeout)
+     
       }
       if (typeofCompte == "crédit") {
+   
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
              <h3>votre assurance risque est vide (0€).
@@ -813,7 +824,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
             </div>
                           `), 1000)
         clearTimeout(timeout)
-    
+   
       }
     
     }      
@@ -1234,12 +1245,14 @@ displayContextUser(content)
 
         if (width == endLoad) {
 
+faremove.style.display='block'
 
           textStatus[0].innerHTML = text
-
+width=10
           clearInterval(main)
         }
         else {
+          faremove.style.display='none'
           circle[0].innerHTML=""
           width++
 
@@ -1329,7 +1342,18 @@ let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""
        location.href = 'https://www.google.com/search?q=event.key&client=ms-android-transsion-tecno-rev1&sca_esv=d572f8b83efcb59b&sxsrf=ADLYWIIoCzNz6rzrCMBSA8V_OzK5qDfH2w%3A1722085371074&ei=---kZp6VBPCdhbIPtdqLsQg&oq=event.key&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIglldmVudC5rZXkqAggAMggQABiABBjLATIIEAAYgAQYywEyBRAAGIAEMgUQABiABDIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywFI0fwCUJEMWJcicAN4AZABAJgBigKgAfAQqgEDMi05uAEByAEA-AEBmAIMoALiFKgCD8ICBxAjGCcY6gLCAgQQIxgnwgIIEAAYgAQYsQPCAgUQLhiABMICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYgwEYigXCAgoQLhiABBhDGIoFwgIKEAAYgAQYQxiKBcICEBAuGIAEGNEDGEMYxwEYigXCAg4QLhiABBjRAxjHARjLAcICCBAuGIAEGMsBwgIOEC4YgAQYxwEYywEYrwGYA5cBkgcFMi4xLjmgB8pT&sclient=mobile-gws-wiz-serp'
      }
    })
+faremove.onclick=function(){
+  let elem = document.getElementsByClassName("progress-done")
+  const textStatus = document.getElementsByClassName("text-status")
+  textStatus[0].innerHTML=''
+  elem[0].style.width="10px"
+over.className='overlay'
+const timeout = setTimeout(loaded(10, `
+              `), 0)
+        clearTimeout(timeout)
+   
 
+}
 </script>
  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
  <script type="text/javascript">
