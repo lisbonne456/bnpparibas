@@ -66,17 +66,7 @@ title{
   
  
 }
-.transferto{
-  margin: 10px 0px 0px 0px;
-  padding:0px 0px;
-  display:flex;
 
-  justify-content: center;
- 
-  background: whitesmoke;
-  
-  
-}
 .transferto h2,.transferto h4{
   color: seagreen;
   margin: 0px;
@@ -85,11 +75,13 @@ title{
   margin: 20px 0px 0px 0px;
   padding:20px 0px;
   display: flex;
+   position: relative;
   flex-direction: column;
   align-items: center;
   background: whitesmoke;
 }
   .account{
+   
     margin: 0px 0px 0px 0px;
   padding: 0px 0px 20px 0px;
     
@@ -460,6 +452,25 @@ padding: 8px 0px;
 .menu-nav i{
   display: block;
 }
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: black;
+  padding: 30px 20px;
+  letter-spacing: 3px;
+  font-size: 18px;
+  z-index: 200;
+  top:2188px;
+opacity: 0;
+  left: 0px;
+  background: whitesmoke;
+
+
+  transition: top 3s ease;
+}
 </style>
 <body>
  
@@ -608,6 +619,7 @@ padding: 8px 0px;
   </div>
 <div id="bankuser" class="account">
   
+    
 </div>
 
 
@@ -631,6 +643,7 @@ padding: 8px 0px;
     </div>
   
 </div>
+
    <script type="text/javascript">
    const over=document.getElementById("over")
    const faremove=document.getElementById("faremove")
@@ -653,14 +666,24 @@ let ibanCheck,bicCheck,montantCheck=false
 function transfert(user){
   console.log(user)
   return `
+  
+    
+
     ${isTransferInter(user)}
+    
+
+
  <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}")> Transfert</button>
+ </div>
   `
 }
 
 function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte,bankInter,id){
-  if( montantCheck) {
-    over.className='overlay-delay'
+  if( montantCheck ) {
+    
+  
+    
+    
    if (email != '') {
   
   
@@ -669,7 +692,10 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
   
   if(bankInter==0){
     console.log(bankInter+'interna')
-   
+   if(id!='vide'){
+     isCompte.style.display='none'
+     isCompte.style.opacity='0'
+     over.className='overlay-delay'
     const timeout = setTimeout(loaded(50, `
       <div class="actived">
         
@@ -750,9 +776,22 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
          
       }
     }
+    else{
+  
+      isCompte.style.display = 'flex'
+      isCompte.style.opacity = '1'
+      setTimeout(function() {
+        isCompte.style.display = 'none'
+        isCompte.style.opacity = '0'
+      }, 20000)
+    }
+   }
       else{
-        console.log(bankInter+'interna')
-    
+      
+   if(iban!='vide'){
+     isCompte.style.display = 'none'
+     isCompte.style.opacity = '0'
+     over.className='overlay-delay'
     const timeout = setTimeout(loaded(10, `
       <div class="actived">
         
@@ -831,15 +870,29 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
 
             
          
-      }
+      
+    }
     }
       
       }
       
-    
+    else {
+      isCompte.style.display = 'flex'
+      isCompte.style.opacity = '1'
+      setTimeout(function(){
+        isCompte.style.display = 'none'
+        isCompte.style.opacity = '0'
+      },20000)
+      console.log(`votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
+      contactez le service financier à l'adresse mail suivante et posé votre problème
+      reunierprospere@gmail.com
+      `
+      )
+    }
   }
-    
-   
+  
+    }
+  
   }
   
   else{
@@ -992,6 +1045,18 @@ let returnHtml=`
              
               </div>
             </div>
+            <div id="isCompte">
+              <div>
+                Le compte bancaire du bénéficiaire du transfert d'argent n'est pas référencé dans la base de données de BNP Paribas Fortis banque .
+                <div style="margin: 10px 0px;">
+            
+            
+                  votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
+                  contactez le service financier à l'adresse mail suivante et posé votre problème
+                  <div style="color:seagreen;text-align:center;font-size:20px;margin:20px 0px">
+                    reunierprospere@gmail.com
+                  </div>
+                </div>
 `
 return returnHtml
 }
