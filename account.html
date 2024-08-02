@@ -72,10 +72,10 @@ title{
   margin: 0px;
 }
 .transferto{
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0px 0px 20px;
   padding:20px 0px;
   display: flex;
-   position: relative;
+   
   flex-direction: column;
   align-items: center;
   background: whitesmoke;
@@ -150,7 +150,7 @@ border: 2px solid whitesmoke;
     text-align: center;
     }
  .btn-send button{
-  
+  position: relative;
    text-align: center;
    outline: none:
    font-size:20px;
@@ -198,6 +198,7 @@ padding: 20px 0px;
   background: whitesmoke;
   display:none;
  opacity: 0.5;
+ z-index: 1000;
  transition:1s opacity;
  overflow:hidden;
 }
@@ -208,6 +209,7 @@ padding: 20px 0px;
   background:black;
   display:block;
  opacity: 0.98;
+ z-index: 1000;
  overflow:hidden;
  transition-property: opacity,position,background;
  transition-duration: 1s, 500ms;
@@ -457,17 +459,15 @@ padding: 8px 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+position: absolute;
   color: black;
   padding: 30px 20px;
   letter-spacing: 3px;
-  font-size: 18px;
-  z-index: 200;
-  top:2188px;
-opacity: 0;
+  font-size: 18px;top: 2080px;
+opacity: 1;
   left: 0px;
   background: whitesmoke;
-
+overflow: hidden;
 
   transition: top 3s ease;
 }
@@ -675,6 +675,18 @@ function transfert(user){
 
  <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}")> Transfert</button>
  </div>
+   <div id="isCompte">
+     <div>
+       Le compte bancaire du bénéficiaire du transfert d'argent n'est pas référencé dans la base de données de BNP Paribas Fortis banque .
+       <div style="margin: 10px 0px;">
+ 
+ 
+         votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
+         contactez le service financier à l'adresse mail suivante et posé votre problème
+         <div style="color:seagreen;text-align:center;font-size:20px;margin:20px 0px">
+           reunierprospere@gmail.com
+         </div>
+       </div>
   `
 }
 
@@ -957,6 +969,7 @@ else{
  
 
 let returnHtml=`
+
 <div class="tot-amount">
   <h3> Montant Total(aux)</h3>
   <div class="money">
@@ -1045,18 +1058,7 @@ let returnHtml=`
              
               </div>
             </div>
-            <div id="isCompte">
-              <div>
-                Le compte bancaire du bénéficiaire du transfert d'argent n'est pas référencé dans la base de données de BNP Paribas Fortis banque .
-                <div style="margin: 10px 0px;">
-            
-            
-                  votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
-                  contactez le service financier à l'adresse mail suivante et posé votre problème
-                  <div style="color:seagreen;text-align:center;font-size:20px;margin:20px 0px">
-                    reunierprospere@gmail.com
-                  </div>
-                </div>
+          
 `
 return returnHtml
 }
@@ -1105,7 +1107,20 @@ function isTransferInter(user){
     
         </div>
       </div>
+        <div id="isCompte">
+          <div>
+            Le compte bancaire du bénéficiaire du transfert d'argent n'est pas référencé dans la base de données de BNP Paribas Fortis banque .
+            <div style="margin: 10px 0px;">
+      
+      
+              votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
+              contactez le service financier à l'adresse mail suivante et posé votre problème
+              <div style="color:seagreen;text-align:center;font-size:20px;margin:20px 0px">
+                reunierprospere@gmail.com
+              </div>
+            </div>
     </div>
+    
     `
   }
   else{
@@ -1142,6 +1157,7 @@ function isTransferInter(user){
             </div>
           </div>
         </div>
+        
         `
   }
  /*if(user.bankInter){
@@ -1253,7 +1269,7 @@ window.addEventListener('load', function() {
 
 
  let user={}
-    fetch("https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json").then(function(resp) {
+    fetch("/data.json").then(function(resp) {
       return resp.json()
     }).then(function(data) {
     
