@@ -70,6 +70,7 @@ title{
 .transferto h2,.transferto h4{
   color: seagreen;
   margin: 0px;
+
 }
 .transferto{
   margin: 20px 0px;
@@ -91,8 +92,13 @@ title{
     flex-direction: column;
     align-items: center;
   }
-  .account-typ h3,.account-typ h2{
+  .account-typ h3,.account-typ h2,.account-typ h4{
     color: seagreen;
+    margin-left: 2px;
+  }
+  .account-typ h2{
+    text-align: center;
+  width:100%;
     margin-left: 2px;
   }
   .account-dash{
@@ -676,7 +682,7 @@ function transfert(user){
     
 
 
- <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}")> Transferir</button>
+ <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}","${user.cardBank.iscredit}")> Transferir</button>
  </div>
    <div id="isCompte">
      <div>
@@ -693,7 +699,7 @@ function transfert(user){
   `
 }
 
-function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte,bankInter,id){
+function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte,bankInter,id,credit){
   if( montantCheck ) {
     
   
@@ -757,7 +763,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     }
       else{
         if (assurance== 0) {
-      if (typeofCompte=='0') {
+      if (credit=='0') {
      
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
@@ -769,7 +775,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         clearTimeout(timeout)
         faremove.style.display='block'
       }
-      if (typeofCompte == "1") {
+      if (credit == "1") {
         
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
@@ -844,7 +850,7 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
     }
       else{
         if (assurance== 0) {
-      if (typeofCompte == '0') {
+      if (credit == '0') {
     
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
@@ -854,7 +860,7 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
         clearTimeout(timeout)
      
       }
-      if (typeofCompte == "1") {
+      if (credit== "1") {
    
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
@@ -984,7 +990,7 @@ let returnHtml=`
 </div>
 <div class="transfert" id="trf-user">
   <div class="account-typ">
-    <h2 <style="text-align:center">Información de la cuenta</h2>
+    <h2>Información de la cuenta</h2>
   </div>
   <div class="account-typ">
     <h3 style="margin-left:2px"> Servicios financieros</h3>
