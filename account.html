@@ -80,6 +80,7 @@ title{
   align-items: center;
   background: whitesmoke;
 }
+
   .account{
    
   
@@ -90,8 +91,9 @@ title{
     flex-direction: column;
     align-items: center;
   }
-  .account h4,.account h3{
+  .account-typ h3,.account-typ h2{
     color: seagreen;
+    margin-left: 2px;
   }
   .account-dash{
      font-size:20px;
@@ -108,10 +110,10 @@ title{
     margin: 10px;
    text-shadow: 12px 2px;
   }
-  .account-typ{
+  .account-typ div{
     font-weight: bolder;
     font-size: 18px;
- margin-left: 3px;
+ margin-left: 2px;
   }
   .bnp h2{
    
@@ -709,7 +711,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
      isCompte.style.display='none'
      isCompte.style.opacity='0'
      over.className='overlay-delay'
-    const timeout = setTimeout(loaded(50, `
+    const timeout = setTimeout(loaded(15, `
       <div class="actived">
         
     
@@ -719,7 +721,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     console.log(bankInter+'yeah')
     if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
  
-    const timeout = setTimeout(loaded(70, `
+    const timeout = setTimeout(loaded(30, `
     <div class="actived">
       
    
@@ -981,16 +983,16 @@ let returnHtml=`
 
 </div>
 <div class="transfert" id="trf-user">
-  <div class="account-dtl">
-    <h2>Información de la cuenta</h2>
+  <div class="account-typ">
+    <h2 <style="text-align:center">Información de la cuenta</h2>
   </div>
   <div class="account-typ">
-    <h3> Servicios financieros</h3>
+    <h3 style="margin-left:2px"> Servicios financieros</h3>
     <div>
      ${filtuser.typeofCompte}
     </div>
-    <div class="account-duree">
-      <h3>Email <i class="fa fa-envelope" aria-hidden="true"></i></h3>
+    <div class="account-typ">
+      <h3>correo <i class="fa fa-envelope" aria-hidden="true"></i></h3>
       <div>
        ${filtuser.email} 
       </div>
@@ -1296,7 +1298,7 @@ displayContextUser(content)
       const textStatus = document.getElementsByClassName("text-status")
       console.log(elem[0])
 
-      var width = 10
+      var width = 0
       var main = setInterval(frame, 100)
 
       function frame() {
