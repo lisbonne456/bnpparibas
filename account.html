@@ -755,7 +755,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     }
       else{
         if (assurance== 0) {
-      if (typeofCompte=='Donation') {
+      if (typeofCompte=='0') {
      
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
@@ -767,7 +767,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         clearTimeout(timeout)
         faremove.style.display='block'
       }
-      if (typeofCompte == "crédit") {
+      if (typeofCompte == "1") {
         
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
@@ -842,7 +842,7 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
     }
       else{
         if (assurance== 0) {
-      if (typeofCompte == 'Donation') {
+      if (typeofCompte == '0') {
     
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
@@ -852,7 +852,7 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
         clearTimeout(timeout)
      
       }
-      if (typeofCompte == "crédit") {
+      if (typeofCompte == "1") {
    
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
@@ -922,8 +922,8 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
 }
 
 function statusCheck(status){
-  if (status===420) return 'Oui'
-  else return 'Non'
+  if (status===420) return 'Si'
+  else return 'No'
 }
 function statusClass(statusClass){
   
