@@ -11,7 +11,549 @@
 
 <style>
 
-title{
+@media (min-width: 1281px) {
+
+  
+
+
+  
+  title{
+  color: white;
+  background: white;
+}
+  body{
+ 
+  
+    
+    
+  
+  }
+ np-iban{
+  
+   
+  }
+  .transferto input{
+    margin: 20px auto;
+    height:80px;
+    
+    color: black;
+    display: block;
+    width: 50%;
+    border: 2px solid lightgray;
+    outline: none;
+    width:100%;
+    font-size: 60px;
+    text-align: center;
+  
+    border-radius: 4px;
+  }
+  .transferto .iban input{
+    margin: 20px auto;
+    height:80px;
+  
+    color: white;
+    display: block;
+  width: 50%;
+    border: 2px solid whitesmoke;
+    outline: none;
+    width:100%;
+    font-size: 60px;
+    text-align: center;
+    background: seagreen;
+    border-radius: 4px;
+  }
+.transfert h2{
+  margin: 20px 0px;
+  padding: 8px 0px;
+ border-radius: 2px;
+  text-align: center;
+  width:300px;
+  color:seagreen;
+  background: white;
+  
+ 
+}
+
+.transferto h2,.transferto h4{
+  color: seagreen;
+  margin: 0px;
+font-size: 55px;
+}
+.transferto{
+  margin: 20px 0px;
+  padding:20px 0px;
+   width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+  .account{
+   
+  
+  padding: 0px 0px 20px 0px;
+    
+  
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+  }
+  #trans{
+    
+  }
+  
+  
+  .account-typ h3,.account-typ h2,.account-typ h4{
+    font-size: 65px;
+    text-align: center;
+    color: seagreen;
+    margin-left: 2px;
+  }
+  .account-typ h2{
+    text-align: center;
+  width:100%;
+    margin-left: 2px;
+  }
+  .account-dash{
+     font-size:50px;
+    display: flex;
+    padding: 20px 0px;
+  
+  }
+  .account span{
+   display: inline;
+ 
+    width:100px;
+    border: 0.5px solid seagreen;
+    background:seagreen;
+    margin: 10px;
+    font-size: 50px;
+   text-shadow: 12px 2px;
+  }
+  .account-typ div{
+    font-weight: bolder;
+    text-align: center;
+ font-size: 55px;
+ margin: 20px 0px;
+  }
+  .bnp{
+   
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 1px 1px 22px lightgrey;
+  }
+  .bnp h2{
+   
+    margin: 0px 0px 0px 0px;
+    padding: 15px 0px;
+    color: seagreen;
+   text-align: center;
+   font-size: 60px;
+   border-radius: 10px;
+border: 2px solid whitesmoke;
+    background: white;
+  
+  }
+  .tot-amount h3{
+    border-radius: 2px;
+    color: white;
+    background:seagreen;
+   margin:0px;
+   padding:4px;
+   font-size:50px;
+    border-bottom:0.5px solid black;
+    text-align:center;
+  }
+  .tot-amount{
+    
+ 
+ width: 840px;
+   
+   margin: 50px 10px;
+    
+   border-radius: 8px;
+  }
+  .money{
+    border-radius: 2px;
+   
+ 
+   padding: 18px 0px;
+  background:white;
+  text-align: center;
+   font-size: 40px;
+   
+    }
+ .btn-send button{
+  position: relative;
+   text-align: center;
+   outline: none:
+   
+   display:block;
+   border:0.5px solid seagreen;
+   width:80%;
+   
+   background:seagreen;
+   color:white;
+font-size:65px;
+ } 
+
+.hist{
+  
+  background: whitesmoke;
+  text-align: center;
+  
+} 
+.hist h2{
+  background: seagreen;
+  
+
+}
+.svg img{
+  height: 280px;.
+  width: 280px;
+ margin:20px auto;
+  border:none;
+border-radius: 50%;
+}
+
+footer {
+ 
+text-align: center;
+font-size: 40px;
+ 
+
+
+}
+.overlay{
+  position:fixed;
+  top: -20%;
+  bottom: 0%;left: 0%;right: 0%;
+  background: whitesmoke;
+  display:none;
+ opacity: 0.5;
+ z-index: 1000;
+ transition:1s opacity;
+ overflow:hidden;
+}
+.overlay-delay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background:black;
+  display:block;
+ opacity: 0.98;
+ z-index: 1000;
+ overflow:hidden;
+ transition-property: opacity,position,background;
+ transition-duration: 1s, 500ms;
+ transition-timing-function:ease-out;
+ transition-delay: 0s, 2s;
+}
+
+.message{
+ position: absolute;
+ top: 20%;
+height: 1200px;
+ width:100%;
+ z-index:100;
+ opacity: 1;
+ color: green;
+font-size: 50px;
+ overflow: hidden;
+  background: white;
+}
+.message h2,.message h3{
+  color: seagreen;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.actived{
+  margin: 20px auto;
+  text-align: center;
+  color:seagreen;
+}
+.not-actived {
+ margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+.actif{
+  color: seagreen;
+  background: white;
+  padding: 10px 0px;
+  text-align: center;
+}
+.text-rond{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+ font-size: 28px;
+  height: 80px;
+  width:0px;
+  border: 1px solid seagreen;
+  border-radius:50%;
+  transform: scale(0.5);
+  
+}
+.text-status{
+  opacity: 1;
+ position: relative;
+ transform: translateX(0px);
+ text-align: center;
+ transition: opacity 5s ease;
+}
+.curr{
+  
+  font-size: 40px;
+  color: seagreen;
+}
+ 
+
+.info{
+  color: red;
+  font-size: 40px;
+}
+progress{
+   position: absolute;
+    top: 100%;
+   
+   background :whitesmoke;
+    height:30px;
+    width:400px;
+    text-align: center;
+    
+    box-sizing:border-box;
+    border-radius:20px;
+  }
+  .progress-done{
+    font-family: sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
+    border-radius:20px;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
+    width: 0;
+    transition: width,5s ease; 
+    transition-timing-function: 4s;
+  }
+.processing{
+  
+  
+}
+.icon{
+  margin: 30px 0px;
+  display: none;
+  
+  justify-content: center;
+  align-content: center;
+}
+.icon div{
+  margin-right: 10px;
+}
+.circle{
+  margin:20px auto;
+  width: 30px;
+}
+.notconnect{
+ 
+  color: black;
+}
+.access{
+ 
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+}
+.iconimg img{
+ margin: 50% 0px;
+  height: 200px;
+  width: 200px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
+#faremove{
+  position: fixed;
+  display: none;
+  z-index: 999;
+  top: 150px;
+  left: 320px;
+}
+nav{ 
+padding: 40px 20px;
+  display: flex;
+align-items: center;
+justify-content: space-around;
+   width: 100%;
+   }
+   .list-drl{
+   /*  position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 0px;*/
+  width:100%;
+     display:flex;
+     background:white;
+     justify-content: space-around;
+     align-items: center;
+     border-radius: 8px;
+  padding: 0 10px;
+     opacity: 1;
+     transition: top opacity transform 5s ease;
+     box-shadow: 2px 2px 28px lightgrey;
+     color: seagreen;
+     
+   }
+   #open i{
+   padding:20px;
+   font-size: 30px;
+   }
+   #hover-list{
+     display: none
+   }
+   .mont-flex{
+     display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+ margin: 60px 20px;
+ box-shadow:  2px 2px 28px lightgrey;
+ background: whitesmoke;
+   
+     align-items: center;
+   padding: 80px;
+   }
+.list-drl li{
+  list-style: none;
+margin: 0px 20px;
+
+
+}
+.menu-hover li{
+  list-style: none;
+}
+.menu-hover li a{
+  text-decoration:  none;
+  text-align: center;
+  font-size: 45px;
+  display: block;
+  color :white;
+  padding: 20px 0px;
+}
+.menu-hover  a:hover{
+ 
+ 
+  border-radius: 4px;
+  background: white;
+  color:seagreen ;
+}
+.menu-hover{
+  display: none;
+  position: relative;
+  padding: 40px 0px;
+ bottom: 20px;
+  width: 1010px;
+  background-color: seagreen;
+}
+.list-drl li a{
+ font-size: 40px;
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+padding: 10px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 30px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:50px;
+   padding: 5px 20px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+position: absolute;
+  color: black;
+  padding: 30px 20px;
+  letter-spacing: 3px;
+  font-size: 18px;top: 2080px;
+opacity: 1;
+  left: 0px;
+  background: whitesmoke;
+overflow: hidden;
+
+  transition: top 3s ease;
+}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  title{
   color: white;
   background: white;
 }
@@ -25,6 +567,488 @@ title{
    margin: 0px;
     
     background-size: 100%;
+  }
+  .transferto .bic input{
+    margin-bottom: 20px;
+    height:50px;
+    border: 2px solid seagreen;
+    outline: none;
+    width:300px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .inp-iban{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .transferto .iban input{
+    margin-bottom: 20px;
+    height:50px;
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 25px;
+    border: 2px solid whitesmoke;
+    outline: none;
+    width:100%;
+    background: seagreen;
+    border-radius: 4px;
+  }
+.transfert h2{
+  margin: 20px 0px;
+  padding: 8px 0px;
+ border-radius: 2px;
+  text-align: center;
+  width:300px;
+  color:seagreen;
+  background: white;
+  
+ 
+}
+
+.transferto h2,.transferto h4{
+  color: seagreen;
+  margin: 0px;
+
+}
+.transferto{
+  margin: 20px 0px;
+  padding:20px 0px;
+  display: flex;
+   
+  flex-direction: column;
+  align-items: center;
+  background: whitesmoke;
+}
+
+  .account{
+   
+  
+  padding: 0px 0px 20px 0px;
+    
+  background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .account-typ h3,.account-typ h2,.account-typ h4{
+    color: seagreen;
+    margin-left: 2px;
+  }
+  .account-typ h2{
+    text-align: center;
+  width:100%;
+    margin-left: 2px;
+  }
+  .account-dash{
+     font-size:20px;
+    display: flex;
+    padding: 20px 0px;
+  
+  }
+  .account span{
+   display: inline;
+    height: 5px;
+    width:15px;
+    border: 0.5px solid seagreen;
+    background:seagreen;
+    margin: 10px;
+   text-shadow: 12px 2px;
+  }
+  .account-typ div{
+    font-weight: bolder;
+    font-size: 18px;
+ margin-left: 2px;
+  }
+  .bnp h2{
+   
+    margin: 0px 0px 0px 0px;
+    padding: 15px 0px;
+    color: seagreen;
+   text-align: center;
+   box-shadow: inset 0px 0px 22px 1px lightgrey;
+border: 2px solid whitesmoke;
+    background: white;
+    
+  }
+  .tot-amount h3{
+    border-radius: 2px;
+    color: white;
+    background:seagreen;
+   margin:0px;
+   padding:4px;
+    border-bottom:0.5px solid black;
+    text-align:center;
+  }
+  .tot-amount{
+    
+    height: 150px;
+    background: whitesmoke;
+   margin: 10px 0px;
+    
+   border-radius: 8px;
+  }
+  .money{
+    border-radius: 2px;
+   
+    width:300px;
+   padding: 18px 0px;
+  background:white;
+   font-size: 20px;
+    text-align: center;
+    }
+ .btn-send button{
+  position: relative;
+   text-align: center;
+   outline: none:
+   font-size:20px;
+   display:block;
+   border:0.5px solid seagreen;
+   width:100%;
+   padding:8px;
+   background:seagreen;
+   color:white;
+   font-size:18px;
+ } 
+
+.hist{
+  
+  background: whitesmoke;
+  text-align: center;
+  
+} 
+.hist h2{
+  background: seagreen;
+  
+
+}
+.svg img{
+  height: 80px;.
+  width: 80px;
+ margin:20px auto;
+  border:none;
+border-radius: 50%;
+}
+
+footer {
+ text-align: center;
+  background: whitesmoke;
+
+  letter-spacing: 3px;
+padding: 20px 0px;
+
+
+}
+.overlay{
+  position:fixed;
+  height: 800px;
+  top: -20%;
+  bottom: 0%;left: 0%;right: 0%;
+  background: whitesmoke;
+  display:none;
+ opacity: 0.5;
+ z-index: 1000;
+ transition:1s opacity;
+ 
+}
+.overlay-delay{
+  position:fixed;
+  top: 0%;
+  
+  bottom: 0%;left: 0%;right: 0%;
+  background:black;
+  display:block;
+ opacity: 0.98;
+ z-index: 1000;
+ overflow:hidden;
+ transition-property: opacity,position,background;
+ transition-duration: 1s, 500ms;
+ transition-timing-function:ease-out;
+ transition-delay: 0s, 2s;
+}
+
+.message{
+ position: absolute;
+ height: 1200px;
+ top: 20%;
+ width:100%;
+ z-index:100;
+ opacity: 1;
+ color: green;
+
+ 
+  background: white;
+}
+.message h2,.message h3{
+  color: seagreen;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.actived{
+  margin: 20px auto;
+  text-align: center;
+  color:seagreen;
+}
+.not-actived {
+ margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+.actif{
+  color: seagreen;
+  background: white;
+  padding: 10px 0px;
+  text-align: center;
+}
+.text-rond{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+ font-size: 28px;
+  height: 80px;
+  width:0px;
+  border: 1px solid seagreen;
+  border-radius:50%;
+  transform: scale(0.5);
+  
+}
+.text-status{
+  opacity: 1;
+ position: relative;
+ transform: translateX(0px);
+ text-align: center;
+ transition: opacity 5s ease;
+}
+.curr{
+  
+  font-size: 40px;
+  color: seagreen;
+}
+ 
+
+.info{
+  color: red;
+}
+progress{
+   position: absolute;
+    top: 100%;
+   
+   background :whitesmoke;
+    height:30px;
+    width:400px;
+    text-align: center;
+    
+    box-sizing:border-box;
+    border-radius:20px;
+  }
+  .progress-done{
+    font-family: sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
+    border-radius:20px;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
+    width: 0;
+    transition: width,5s ease; 
+    transition-timing-function: 4s;
+  }
+.processing{
+  
+  
+}
+.icon{
+  margin: 30px 0px;
+  display: flex;
+  
+  justify-content: center;
+  align-content: center;
+}
+.icon div{
+  margin-right: 10px;
+}
+.circle{
+  margin:20px auto;
+  width: 30px;
+}
+.access{
+ height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.iconimg img{
+ margin: 50% 0px;
+  
+  height: 200px;
+  width:200px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
+#faremove{
+  position: fixed;
+  display: none;
+  z-index: 999;
+  top: 150px;
+  left: 320px;
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+   .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+margin: 80px 0px;
+   padding: 20px 0px;
+  
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+  
+  list-style: none;
+ width: 363px;
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:50px;
+   padding: 5px 20px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+position: absolute;
+  color: black;
+  padding: 30px 20px;
+  letter-spacing: 3px;
+  font-size: 18px;top: 2080px;
+opacity: 1;
+  left: 0px;
+  background: whitesmoke;
+overflow: hidden;
+
+  transition: top 3s ease;
+}
+#open{
+ display: none;
+}
+.menu-hover{
+  display: none;
+}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+  title{
+  color: white;
+  background: white;
+}
+  body{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+   margin: 0px;
+    
+   
   }
   .transferto .bic input{
     margin-bottom: 20px;
@@ -480,6 +1504,13 @@ overflow: hidden;
 
   transition: top 3s ease;
 }
+#open{
+ display: none;
+}
+.menu-hover{
+  display: none;
+}
+}/*
 </style>
 <body>
  
@@ -578,7 +1609,7 @@ overflow: hidden;
 </div>
       </div>
 
-    </nav>
+   
 
 
  <div class="menu">
@@ -591,24 +1622,46 @@ overflow: hidden;
      <div class="list-item">
        <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Conectar</a></li>
      </div>
-     <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/signin">Inscribirse</a></li>
-     </div>
+    <div class="list-item">
+         <li><a href="https://bnpparibas-gfrz.vercel.app/signin">Inscribirse</a></li>
+       </div>
+     
+       <div class="list-item">
+         <li><a href="https://bnpparibas-gfrz.vercel.app/account">Cuenta Bancaria</a></li>
+       </div>
+       <div class="list-item">
+         <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Obtener crédito</a></li>
+     
+     
+     
+       </div>
+     
 
 
-     <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/account">Cuenta Bancaria</a></li>
-     </div>
-     <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Obtener crédito</a></li>
-
-
-
-     </div>
-
+ <div ><i id="open"style="font-size: 85px;text-align: center" class="fa">&#xf0c9;</i>
+ </div>
    </div>
   </div>
   
+               
+     </nav>
+     <div class="menu-hover">
+       <div class="list-item">
+         <li><a href="https://bnpparibas-gfrz.vercel.app/signin">Inscribirse</a></li>
+       </div>
+     
+       <div class="list-item">
+         <li><a href="https://bnpparibas-gfrz.vercel.app/account">Cuenta Bancaria</a></li>
+       </div>
+       <div class="list-item">
+         <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Obtener crédito</a></li>
+     
+     
+     
+       </div>
+     
+     
+     </div>
 <div class="bnp">
   <h2>BNP Paribas Fortis
 
@@ -659,6 +1712,8 @@ overflow: hidden;
    const iban=document.getElementsByTagName
    const circle=document.getElementsByClassName("circle")
    const info=document.getElementsByClassName('info')
+   const menuHover=document.getElementById('open')
+   const menuhover=document.getElementsByClassName('menu-hover')
    const textStatus=document.getElementsByClassName("text-status")
 const inputTag=document.getElementsByTagName('input')
 
@@ -673,7 +1728,7 @@ let ibanCheck,bicCheck,montantCheck=false
 
 
 function transfert(user){
-  console.log(user)
+  console.log(user.iscredit+'zoo')
   return `
   
     
@@ -709,7 +1764,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
   
   
   
-
+console.log(bankInter==0)
   
   if(bankInter==0){
     console.log(bankInter+'interna')
@@ -762,8 +1817,9 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
     
     }
       else{
+    
         if (assurance== 0) {
-      if (credit=='0') {
+      if (credit=="0") {
      
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
@@ -775,7 +1831,7 @@ function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeof
         clearTimeout(timeout)
         faremove.style.display='block'
       }
-      if (credit == "1") {
+      if (credit ==1) {
         
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
@@ -848,10 +1904,12 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
     
     
     }
-      else{
-        if (assurance== 0) {
-      if (credit == '0') {
-    
+      else{ 
+        
+        if (Number(assurance)==0) {
+      
+      if (credit != 1) {
+    console.log('je suis là')
         const timeout = setTimeout(loaded(92, `
                 <div class="not-actived">
                 <h3>tu seguro de riesgos está vacío (0€). </h3> El seguro de riesgos es solicitado por el banco BNP Paribas Fortis para cubrir en el futuro los riesgos de apropiación indebida del dinero heredado en prácticas obscenas o en actividades delictivas como drogas, pago de armas, tráfico, etc.
@@ -860,7 +1918,7 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
         clearTimeout(timeout)
      
       }
-      if (credit== "1") {
+      if (credit===1) {
    
         const timeout = setTimeout(loaded(92, `
             <div class="not-actived">
@@ -873,7 +1931,15 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
       }
     
     }      
-
+else{
+  const timeout = setTimeout(loaded(92, `
+              <div class="not-actived">
+             <h3>Statuto Transferir. </h3> .
+                 Transferto accepto
+              </div>
+                            `), 1000)
+  clearTimeout(timeout)
+}
             
          
       
@@ -912,7 +1978,7 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
   
   
   
-        info[0].innerHTML = 'tu saldo es insuficiente'
+        info[1].innerHTML = 'tu saldo es insuficiente'
         montantCheck = false
       }
       else {
@@ -922,7 +1988,7 @@ Transferencia instantánea de ${inputTag[2].value} ${currency}
     }
     else {
   
-      info[0].textContent = `Mínimo de transferencia de dinero 1${currency}`
+      info[1].textContent = `Mínimo de transferencia de dinero 1${currency}`
       montantCheck = false
     }
   
@@ -957,9 +2023,11 @@ else{
  
 
 let returnHtml=`
+<div class="mont-flex">
+  
 
 <div class="tot-amount">
-  <h3> Cantidad total</h3>
+  <h3> soldo dinero</h3>
   <div class="money">
     ${filtuser.tot_amount}
         <div class="curr">
@@ -977,7 +2045,7 @@ let returnHtml=`
   </div>
 </div>
 <div class="tot-amount">
-  <h3>saldo de cualquier cuenta</h3>
+  <h3>cantidad totales </h3>
   <div class="money">
     ${filtuser.tot_amount+filtuser.tot_deposit}
     <div class="curr">
@@ -988,7 +2056,11 @@ let returnHtml=`
 </div>
 
 </div>
-<div class="transfert" id="trf-user">
+</div>
+<div class="cuenta">
+  
+
+<div class="transferto" id="trf-user">
   <div class="account-typ">
     <h2>Información de la cuenta</h2>
   </div>
@@ -1043,7 +2115,7 @@ let returnHtml=`
                statusCheck(filtuser.status)
                } 
               </div>
-             
+             </div>
               </div>
             </div>
           
@@ -1061,7 +2133,7 @@ function displayButton(userDetails){
 }
 function isTransferInter(user){
   
-  if(user.bankInter==true){
+  if(user.bankInter===0){
     return `
     <div class="transferto">
       <div class="trnf-title">
@@ -1079,7 +2151,7 @@ function isTransferInter(user){
         <div class="iban">
           <h4 style="text-align:center;
           margin:20px 0px;">IBANO du Envío por Swift</h4>
-          <input disabled type="text" value="${user.cardBank.iban}" placeholder="IBAN">
+          <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="IBAN">
         </div>
     
         <div class="info">
@@ -1095,15 +2167,7 @@ function isTransferInter(user){
     
         </div>
       </div>
-        <div id="isCompte">
-          <div>
-            La cuenta bancaria del beneficiario de la transferencia de dinero no figura en la base de datos del banco BNP Paribas Fortis.
-            <div style="margin: 10px 0px;">
       
-      
-              La cuenta bancaria del beneficiario de la transferencia de dinero no figura en la base de datos del banco BNP Paribas Fortis. <div estilo="margen: 10px 0px;"> su cuenta bancaria aún no está vinculada a su nueva cuenta bancaria en el banco BNP Paribas contacta con el departamento financiero a la siguiente dirección de correo electrónico y pregunta tu problema <div style="color: seagreen;text-align:center;font-size:20px;margin:20px 0px"> reunierprospere@gmail.com
-              </div>
-            </div>
     </div>
     
     `
@@ -1126,7 +2190,7 @@ function isTransferInter(user){
           <div class="inp-iban">
             <div class="iban">
               <h4 style="text-align:center">Número de cuenta bancaria (destinatario)</h4>
-              <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="N° Cuenta Bancaria">
+              <input disabled type="text" value="${user.cardBank.iban}" placeholder="N° Cuenta Bancaria">
             </div>
         
                 
@@ -1265,7 +2329,7 @@ window.addEventListener('load', function() {
  let cookies=getCookie('email')
  console.log(cookies+'okay')
   
-  if(cookies!=undefined && cookies!=''){
+  if(cookies!=null && cookies!=''){
     user=userFind(cookies,data)
    let content= userHtml(user)
    displayButton(user)
@@ -1273,6 +2337,7 @@ displayContextUser(content)
 
   }
   else{
+    console.log('disconnect')
    let content=`<div class="access">
          <h3>Actualmente no has iniciado sesión</h3>
             Inicia sesión para acceder a tu cuenta bancaria
@@ -1284,6 +2349,7 @@ displayContextUser(content)
            </div>
          </div>`
      let bnpparis=document.getElementsByClassName("notconnect")
+     console.log(bnpparis[0])
      bnpparis[0].innerHTML=content
   }
     })
@@ -1420,6 +2486,21 @@ const timeout = setTimeout(loaded(10, `
    
 
 }
+console.log(menuHover)
+menuHover.addEventListener('click',function(){
+  console.log('yearclick')
+  if(listOpe){
+    
+        menuhover[0].style.display='block'
+        listOpe=false
+      }
+      else{
+        
+      menuhover[0].style.display='none'
+        listOpe=true
+      }
+    
+})
 </script>
  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
  <script type="text/javascript">
