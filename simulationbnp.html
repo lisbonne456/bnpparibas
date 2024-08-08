@@ -291,8 +291,7 @@ justify-content: center;
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/global/images/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">            
-    <script type="text/javascript" src="/global/js/vendor/jquery/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/global/css/base.css">
+  
     <link rel="stylesheet" href="https://www.posojsi.com/primeicons-master/demo-files/demo.css">
     <script src="https://kit.fontawesome.com/779f88c1ba.js" crossorigin="anonymous"></script>   
     
@@ -346,7 +345,7 @@ justify-content: center;
        <li><a href="https://bnpparibas-nine.vercel.app/signup ">Signup</a></li>
      </div>
      <div class="list-item">
-       <li><a href="https://bnpparibas-nine.vercel.app/ssignin">SignIn</a></li>
+       <li><a href="https://bnpparibas-nine.vercel.app/signin">SignIn</a></li>
      </div>
 
 
@@ -1150,10 +1149,11 @@ window.onchange=function(){
       userGet.currency=user.currency
       currence[0].innerHTML=userGet.currency
       currence[1].innerHTML=userGet.currency
+  
       for (let i = 0; i < op.length; i++) {
         const getContent = op[i].value +userGet.currency
       
-     
+    
         op[i].innerHTML=getContent
       
           
