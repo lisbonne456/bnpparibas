@@ -1141,7 +1141,7 @@ var cookies='',userGet={name:"",
 window.onchange=function(){
  cookies=getCookie('email')
  if(cookies!=''&& cookies!=undefined){
-  fetch('/data.json').then(function(resp) {
+  fetch("https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json").then(function(resp) {
       return resp.json()
     }).then(function(data) {
       const user=extrUser(data)
